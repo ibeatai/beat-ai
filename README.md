@@ -15,7 +15,7 @@
 ## 日常开发常用Rust库
 ### Web/HTTP
 * HTTP客户端
-  * [seanmonstar/reqwest](https://github.com/seanmonstar/reqwest) — an ergonomic HTTP Client for Rust. 
+  * [seanmonstar/reqwest](https://github.com/seanmonstar/reqwest) — An easy and powerful Rust HTTP Client一个简单又强大的HTTP客户端，`reqwest`是目前使用最多的HTTP库 🌟🌟🌟🌟🌟
 
 * Web框架
   * [actix/actix-web](https://github.com/actix/actix-web) — A lightweight async web framework for Rust with websocket support 
