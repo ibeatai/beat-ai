@@ -125,8 +125,8 @@
   * [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) — 专门为VSCode设计的LLDB Debug扩展
 
 ### 性能优化
-* [bheisler/criterion.rs](https://github.com/bheisler/criterion.rs) — Statistics-driven benchmarking library for Rust
-* [Bytehound](https://github.com/koute/bytehound) — A memory profiler for Linux
+* [bheisler/criterion.rs](https://github.com/bheisler/criterion.rs) 比官方提供的benchmark库更好，目前已经成为事实上标准的性能测试工具
+* [Bytehound](https://github.com/koute/bytehound) Linux下的内存分析工具，可以用来分析：内存泄漏、内存分配、调用栈追踪，甚至它还有一个浏览器UI! 懂的人都懂，性能测试工具的UI服务是多么稀缺和珍贵！
 * [ellisonch/rust-stopwatch](https://github.com/ellisonch/rust-stopwatch) — A stopwatch library 
 * FlameGraphs
   * [llogiq/flame](https://github.com/llogiq/flame) 
