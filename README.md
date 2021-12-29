@@ -67,10 +67,16 @@
   * [fede1024/rust-rdkafka](https://github.com/fede1024/rust-rdkafka) [[rdkafka](https://crates.io/crates/rdkafka)] — [librdkafka](https://github.com/edenhill/librdkafka) bindings 
   * [gklijs/schema_registry_converter](https://github.com/gklijs/schema_registry_converter) [[schema_registry_converter](https://crates.io/crates/schema_registry_converter)] — to integrate with [confluent schema registry](https://www.confluent.io/product/confluent-platform/data-compatibility/) 
   * [kafka-rust/kafka-rust](https://github.com/kafka-rust/kafka-rust) 
+* Nats
+  * [nats-io/nats.rs](https://github.com/nats-io/nats.rs) — Rust client for NATS, the cloud native messaging system. 
 
-
-## 网络协议
-
+## 网络、通信协议
+* Grpc
+  * [tikv/grpc-rs](https://github.com/tikv/grpc-rs) — The gRPC library for Rust built on C Core library and futures
+* QUIC
+  * [cloudflare/quiche](https://github.com/cloudflare/quiche) — cloudflare implementation of the QUIC transport protocol and HTTP/3 
+* MQTT
+  * [](https://github.com/bytebeamio/rumqtt) - MQTT3.1.1/5
 ## 内容搜索
 
 * ElasticSearch
@@ -119,5 +125,6 @@
   * [dtolnay/serde-yaml](https://github.com/dtolnay/serde-yaml) [[serde\_yaml](https://crates.io/crates/serde_yaml)] — YAML support for [Serde](https://github.com/serde-rs/serde) framework 
   * [vitiral/stfu8](https://github.com/vitiral/stfu8) [[stfu8](https://crates.io/crates/stfu8)] — Sorta Text Format in UTF-8 
 
-
+## Email
+* [lettre/lettre](https://github.com/lettre/lettre) — an SMTP-library for Rust 
 # 精选Rust开源项目(值得学习)
