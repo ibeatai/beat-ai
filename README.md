@@ -132,6 +132,7 @@
 
 
 ### 编解码
+* [Serde](https://github.com/serde-rs/serde) 一个超高性能的通用序列化/反序列化框架，可以跟多种协议的库联合使用，实现统一编解码格式
 * CSV
   * [BurntSushi/rust-csv](https://github.com/BurntSushi/rust-csv) 高性能CSV读写库，支持[Serde](https://github.com/serde-rs/serde)
 * JSON
@@ -144,15 +145,12 @@
 * TOML
   * [alexcrichton/toml-rs](https://github.com/alexcrichton/toml-rs) TOML编码/解码，可以配合`serde`使用
 * XML
-  * [media-io/yaserde](https://github.com/media-io/yaserde) — Yet Another Serializer/Deserializer specialized for XML 
-  * [tafia/quick-xml](https://github.com/tafia/quick-xml) 高性能XMLHigh performance XML pull reader/writer 
+  * [tafia/quick-xml](https://github.com/tafia/quick-xml) 高性能XML库，可以配合`serde`使用，文档较为详细
 * YAML
-  * [chyh1990/yaml-rust](https://github.com/chyh1990/yaml-rust) — The missing YAML 1.2 implementation for Rust. 
-  * [dtolnay/serde-yaml](https://github.com/dtolnay/serde-yaml) [[serde\_yaml](https://crates.io/crates/serde_yaml)] — YAML support for [Serde](https://github.com/serde-rs/serde) framework 
-  * [vitiral/stfu8](https://github.com/vitiral/stfu8) [[stfu8](https://crates.io/crates/stfu8)] — Sorta Text Format in UTF-8 
+  * [dtolnay/serde-yaml](https://github.com/dtolnay/serde-yaml) 使用`serde`编解码`YAML`格式的数据
 
 ### Email
-* [lettre/lettre](https://github.com/lettre/lettre) — an SMTP-library for Rust 
+* [lettre/lettre](https://github.com/lettre/lettre) — Rust SMTP库
 
 ### 常用正则模版
 
