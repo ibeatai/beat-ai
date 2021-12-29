@@ -51,7 +51,7 @@
 
 
 * Postgre
-  * [sfackler/rust-postgres](https://github.com/sfackler/rust-postgres) [[postgres](https://crates.io/crates/postgres)] — A native [PostgreSQL](https://www.postgresql.org/) client
+  * [sfackler/rust-postgres](https://github.com/sfackler/rust-postgres) 纯Rust实现的Postgre客户端
 
 * Sqlite
   * [rusqlite](https://github.com/rusqlite/rusqlite) — [Sqlite3](https://www.sqlite.org/index.html) bindings
