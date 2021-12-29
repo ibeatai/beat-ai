@@ -93,20 +93,18 @@
   * [cloudflare/quiche](https://github.com/cloudflare/quiche) 大名鼎鼎`cloudflare`提供的QUIC实现，据说在公司内部重度使用，有了大规模生产级别的验证，非常值得信任，同时该库还实现了HTTP/3
   * [quinn-rs/quinn](https://github.com/quinn-rs/quinn) 提供异步API调用，纯Rust实现，同时提供了几个有用的网络库
 * MQTT
-  * [bytebeamio/rumqtt](https://github.com/bytebeamio/rumqtt) - MQTT3.1.1/5协议库，同时实现了客户端与服务器端broker
-  * [ntex-rs/ntex-mqtt](https://github.com/ntex-rs/ntex-mqtt) - 客户端与服务端框架，支持MQTT3.1.1与5协议
-  * [eclipse/paho.mqtt.rust](https://github.com/eclipse/paho.mqtt.rust) - 老牌MQTT框架，对MQTT支持较全, 其它各语言的实现也有
+  * [bytebeamio/rumqtt](https://github.com/bytebeamio/rumqtt)  MQTT3.1.1/5协议库，同时实现了客户端与服务器端broker
+  * [ntex-rs/ntex-mqtt](https://github.com/ntex-rs/ntex-mqtt)  客户端与服务端框架，支持MQTT3.1.1与5协议
+  * [eclipse/paho.mqtt.rust](https://github.com/eclipse/paho.mqtt.rust)  老牌MQTT框架，对MQTT支持较全, 其它各语言的实现也有
 
 ### 异步网络编程
 
-* [async-std](https://async.rs/) [[async-std]](https://crates.io/crates/async-std) - Async version of the Rust standard library 
-* [dpc/mioco](https://github.com/dpc/mioco) — Scalable, coroutine-based, asynchronous IO handling library 
-* [mio](https://github.com/tokio-rs/mio) — MIO is a lightweight IO library for Rust with a focus on adding as little overhead as possible over the OS abstractions 
-* [rust-lang/futures-rs](https://github.com/rust-lang/futures-rs) — Zero-cost futures in Rust 
-* [TeaEntityLab/fpRust](https://github.com/TeaEntityLab/fpRust) — Monad/MonadIO, Handler, Coroutine/doNotation, Functional Programming features for Rust
-* [Xudong-Huang/may](https://github.com/Xudong-Huang/may) — rust stackful coroutine library 
-* [zonyitoo/coio-rs](https://github.com/zonyitoo/coio-rs) — A coroutine I/O library with a working-stealing scheduler 
-* [tokio-rs/tokio](https://github.com/tokio-rs/tokio) — A network application framework for rapid development and highly scalable production deployments of clients and servers.
+* [tokio-rs/tokio](https://github.com/tokio-rs/tokio) 最火的异步网络库，除了复杂上手难度高一些外，没有其它大的问题。同时tokio团队提供了多个非常优秀的Rust库，整个生态欣欣向荣，用户认可度很高
+* [async-std](https://async.rs/) 跟标准库API很像的异步网络库，相对简单易用，但是貌似开发有些停滞，还有就是功能上不够完善。但是对于普通用户来说，这个库非常值得一试，它在功能和简单易用上取得了很好的平衡
+* [actix](https://github.com/actix/actix) 基于Actor模型的异步网络库，但这个库的开发貌似已经停滞，他们团队一直在专注于`actix-web`的开发
+* [mio](https://github.com/tokio-rs/mio) 严格来说，MIO与之前三个不是同一个用途的，MIO = Meta IO，是一个底层IO库，往往用于构建其它网络库，当然如果你对应用网络性能有非常极限的要求， 可以考虑它，因为它的层次比较低，所带来的抽象负担小，所以性能损耗小
+* 如果你要开发生产级别的项目，我推荐使用tokio，稳定可靠，功能丰富，控制粒度细；自己的学习项目或者没有那么严肃的开源项目，我推荐`async-std`，简单好用，值得学习；当你确切知道需要Actor网络模型时，就用`actix`
+
 
 ### 搜索平台
 
