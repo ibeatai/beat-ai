@@ -71,8 +71,8 @@
 
 ### 分布式
 #### 服务发现
-- [jimmycuadra/rust-etcd](https://github.com/jimmycuadra/rust-etcd) [[etcd](https://crates.io/crates/etcd)] — A client library for CoreOS's etcd.
-- [luncj/etcd-rs](https://github.com/luncj/etcd-rs) — An asynchronous etcd client for rust 
+- [luncj/etcd-rs](https://github.com/luncj/etcd-rs) — 异步实现的Rust etcd客户端，优点是有一定的文档、作者较为活跃,意味着你提问题他可能会回答，不过，如果你不放心，还是考虑使用HTTP的方式访问ETCD
+
 #### 消息队列
 * Kafka
   * [fede1024/rust-rdkafka](https://github.com/fede1024/rust-rdkafka) [[rdkafka](https://crates.io/crates/rdkafka)] — [librdkafka](https://github.com/edenhill/librdkafka) bindings 
