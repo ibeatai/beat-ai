@@ -2,6 +2,7 @@
 在设计上，我们并没有参考其它awesome-XXX常用的方式：在首页放非常非常长的列表，什么都囊括在内。而是选择了一个**用户友好的方式**来呈现内容:
 - 主页Readme.md放置日常开发常用的Rust库、Rust精品学习资料、优秀开源库精选推荐, 其中**Rust库只推荐最优秀且持续更新的**，那些几年不更新的统统剔除掉，少数精品的呈现才不会让用户过于纠结，甚至不知道如何选择
 - 其它各种库，统统使用单独的.md文件存放，例如图像处理.md，游戏开发.md等等
+- 绝大部分子项中的库按照推荐度优先级排序，越靠前，推荐度越高
 
 ## 目录
 - 日常开发常用的Rust库: 
@@ -15,22 +16,22 @@
 ## 日常开发常用Rust库
 ### Web/HTTP
 * HTTP客户端
-  * [seanmonstar/reqwest](https://github.com/seanmonstar/reqwest) — An easy and powerful Rust HTTP Client一个简单又强大的HTTP客户端，`reqwest`是目前使用最多的HTTP库 🌟🌟🌟🌟🌟
+  * [seanmonstar/reqwest](https://github.com/seanmonstar/reqwest) — An easy and powerful Rust HTTP Client一个简单又强大的HTTP客户端，`reqwest`是目前使用最多的HTTP库 
 
 * Web框架
-  * [actix/actix-web](https://github.com/actix/actix-web) — 性能极高的Web框架，就是团队内部有些问题，未来存在一定的不确定性
-  * [Rocket](https://github.com/SergioBenitez/Rocket) — 功能强大，API简单的Web框架，但是主要开发者目前因为个人原因无法进行后续开发，未来存在不确定性
   * [axum](https://github.com/tokio-rs/axum) - 基于Tokio和Hyper打造，模块化设计较好，目前口碑很好，值得使用Ergonomic and modular web framework built with Tokio, Tower, and Hyper
+  * [Rocket](https://github.com/SergioBenitez/Rocket) — 功能强大，API简单的Web框架，但是主要开发者目前因为个人原因无法进行后续开发，未来存在不确定性
+  * [actix/actix-web](https://github.com/actix/actix-web) — 性能极高的Web框架，就是团队内部有些问题，未来存在一定的不确定性
+
+
 
  总体来说，上述三个web框架都有很深的用户基础，其实都可以选用，如果让我推荐，顺序如下: `axum` > `Rocket` > `actix-web`。 不过如果你不需要多么完善的web功能，只需要一个性能极高的http库，那么`actix-web`是非常好的选择，它的性能非常非常非常高！
 
 ### 日志监控
 * 日志
 [[crates.io](https://crates.io/keywords/log)] [[github](https://github.com/search?q=rust+log)]
-  * [slog-rs/slog](https://github.com/slog-rs/slog) — Structured, composable logging for Rust 
   * [tokio-rs/tracing](https://github.com/tokio-rs/tracing) — An application level tracing framework for async-aware structured logging, error handling, metrics, and more 
-  * [estk/log4rs](https://github.com/estk/log4rs) — highly configurable logging framework modeled after Java's Logback and log4j libraries 
-  * [jesusprubio/leg](https://github.com/jesusprubio/leg) — Elegant print for lazy devs. Make your CLIs nicer with minimal effort.
+  * [estk/log4rs](https://github.com/estk/log4rs) — 模仿JAVA `logback`和`log4j`实现的日志库, 可配置性较强
   * [rust-lang/log](https://github.com/rust-lang/log) — Logging implementation for Rust 
   * [seanmonstar/pretty-env-logger](https://github.com/seanmonstar/pretty-env-logger) — A pretty, easy-to-use logger for Rust. 
 
