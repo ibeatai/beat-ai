@@ -41,12 +41,14 @@
 
 * ORM
   * [rbatis/rbatis](https://github.com/rbatis/rbatis) — 国内团队开发的ORM，异步、性能高、简单易上手
-  * [diesel-rs/diesel](https://github.com/diesel-rs/diesel) — 安全、扩展性强的Rust ORM库，支持Mysql、Postgre、SqlLite
+  * [diesel-rs/diesel](https://github.com/diesel-rs/diesel) — 安全、扩展性强的Rust ORM库，支持`Mysql`、`Postgre`、`SqlLite`
 
 
 * Mysql
-  * [blackbeam/mysql_async](https://github.com/blackbeam/mysql_async) — asyncronous Rust Mysql driver based on Tokio.
-  * [blackbeam/rust-mysql-simple](https://github.com/blackbeam/rust-mysql-simple) — A native MySql client 
+  * [blackbeam/rust-mysql-simple](https://github.com/blackbeam/rust-mysql-simple) — 纯Rust实现的Mysql驱动,提供连接池
+  * [blackbeam/mysql_async](https://github.com/blackbeam/mysql_async) — 基于Tokio实现的异步Mysql驱动
+  * 上面两个都是一个团队出品，前者文档更全、star更多，建议使用前者
+
 
 * Postgre
   * [sfackler/rust-postgres](https://github.com/sfackler/rust-postgres) [[postgres](https://crates.io/crates/postgres)] — A native [PostgreSQL](https://www.postgresql.org/) client
