@@ -127,16 +127,13 @@
 ### 性能优化
 * [bheisler/criterion.rs](https://github.com/bheisler/criterion.rs) 比官方提供的benchmark库更好，目前已经成为事实上标准的性能测试工具
 * [Bytehound](https://github.com/koute/bytehound) Linux下的内存分析工具，可以用来分析：内存泄漏、内存分配、调用栈追踪，甚至它还有一个浏览器UI! 懂的人都懂，性能测试工具的UI服务是多么稀缺和珍贵！
-* [ellisonch/rust-stopwatch](https://github.com/ellisonch/rust-stopwatch) — A stopwatch library 
-* FlameGraphs
-  * [llogiq/flame](https://github.com/llogiq/flame) 
-  * [mrhooray/torch](https://github.com/mrhooray/torch) — generates FlameGraphs based on DWARF Debug Info
-* [sharkdp/hyperfine](https://github.com/sharkdp/hyperfine) — A command-line benchmarking tool 
+* [llogiq/flame](https://github.com/llogiq/flame) 专为Rust打造的火焰图分析工具，可以告诉你程序在哪些代码上花费的时间过多，非常适合用于代码性能瓶颈的分析。与`perf`不同，`flame`库允许你自己定义想要测试的代码片段，只需要在代码前后加上相应的指令即可，非常好用
+* [sharkdp/hyperfine](https://github.com/sharkdp/hyperfine) 一个命令行benchmark工具，支持任意shell命令，支持缓存清除、预热、多次运行统计分析等，尽量保证结果的准确性
 
 
 ### 编解码
 * CSV
-  * [BurntSushi/rust-csv](https://github.com/BurntSushi/rust-csv) — A fast and flexible CSV reader and writer, with support for Serde 
+  * [BurntSushi/rust-csv](https://github.com/BurntSushi/rust-csv) 高性能CSV读写库，支持[Serde](https://github.com/serde-rs/serde)
 * JSON
   * [importcjj/rust-ajson](https://github.com/importcjj/rust-ajson) [[ajson]](https://crates.io/crates/ajson) —  Get JSON values quickly 
   * [maciejhirsz/json-rust](https://github.com/maciejhirsz/json-rust) [[json](https://crates.io/crates/json)] — JSON implementation in Rust 
