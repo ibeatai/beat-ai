@@ -90,7 +90,8 @@
   * [tikv/grpc-rs](https://github.com/tikv/grpc-rs) 国产开源之光Tidb团队出品的gRPC框架, 基于C的代码实现, 就是最近好像不是很活跃
   * 其实这两个实现都很优秀，把`tonic`放在第一位，主要是因为它是纯Rust实现，同时社区也更为活跃，但是并不代表它比`tikv`的更好！
 * QUIC
-  * [cloudflare/quiche](https://github.com/cloudflare/quiche) — cloudflare implementation of the QUIC transport protocol and HTTP/3 
+  * [cloudflare/quiche](https://github.com/cloudflare/quiche) 大名鼎鼎`cloudflare`提供的QUIC实现，据说在公司内部重度使用，有了大规模生产级别的验证，非常值得信任，同时该库还实现了HTTP/3
+  * [quinn-rs/quinn](https://github.com/quinn-rs/quinn) 提供异步API调用，纯Rust实现，同时提供了几个有用的网络库
 * MQTT
   * [bytebeamio/rumqtt](https://github.com/bytebeamio/rumqtt) - MQTT3.1.1/5协议库，同时实现了客户端与服务器端broker
   * [ntex-rs/ntex-mqtt](https://github.com/ntex-rs/ntex-mqtt) - 客户端与服务端框架，支持MQTT3.1.1与5协议
