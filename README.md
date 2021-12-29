@@ -22,19 +22,15 @@
   * [axum](https://github.com/tokio-rs/axum) - 基于Tokio和Hyper打造，模块化设计较好，目前口碑很好，值得使用Ergonomic and modular web framework built with Tokio, Tower, and Hyper
   * [Rocket](https://github.com/SergioBenitez/Rocket) — 功能强大，API简单的Web框架，但是主要开发者目前因为个人原因无法进行后续开发，未来存在不确定性
   * [actix/actix-web](https://github.com/actix/actix-web) — 性能极高的Web框架，就是团队内部有些问题，未来存在一定的不确定性
-
-
-
- 总体来说，上述三个web框架都有很深的用户基础，其实都可以选用，如果让我推荐，顺序如下: `axum` > `Rocket` > `actix-web`。 不过如果你不需要多么完善的web功能，只需要一个性能极高的http库，那么`actix-web`是非常好的选择，它的性能非常非常非常高！
+  * 总体来说，上述三个web框架都有很深的用户基础，其实都可以选用，如果让我推荐，顺序如下: `axum` > `Rocket` > `actix-web`。 不过如果你不需要多么完善的web功能，只需要一个性能极高的http库，那么`actix-web`是非常好的选择，它的性能非常非常非常高！
 
 ### 日志监控
 * 日志
 [[crates.io](https://crates.io/keywords/log)] [[github](https://github.com/search?q=rust+log)]
   * [tokio-rs/tracing](https://github.com/tokio-rs/tracing) — An application level tracing framework for async-aware structured logging, error handling, metrics, and more 
+  * [rust-lang/log](https://github.com/rust-lang/log) — 官方日志库，事实上的API标准, 但是三方库未必遵循
   * [estk/log4rs](https://github.com/estk/log4rs) — 模仿JAVA `logback`和`log4j`实现的日志库, 可配置性较强
-  * [rust-lang/log](https://github.com/rust-lang/log) — Logging implementation for Rust 
-  * [seanmonstar/pretty-env-logger](https://github.com/seanmonstar/pretty-env-logger) — A pretty, easy-to-use logger for Rust. 
-
+  * 在其它文章中，也许会推荐slog，但是我们不推荐，一个是因为近半年未更新，一个是`slog`自己也推荐使用`tracing`。
 * 监控
   * [OpenTelemetry](https://crates.io/crates/opentelemetry) — OpenTelemetry provides a single set of APIs, libraries, agents, and collector services to capture distributed traces and metrics from your application. You can analyze them using Prometheus, Jaeger, and other observability tools.
   * [vectordotdev/vector](https://github.com/vectordotdev/vector) — A High-Performance, Logs, Metrics, & Events Router.
