@@ -137,7 +137,7 @@
 * JSON
   * [serde-rs/json](https://github.com/serde-rs/json) 快到上天的JSON库，也是Rust事实上的标准JSON库，你也可以使用它的大哥[serde](https://github.com/serde-rs/serde)，一个更通用的序列化/反序列化库
 * MsgPack
-  * [3Hren/msgpack-rust](https://github.com/3Hren/msgpack-rust) — A pure Rust low/high level MessagePack implementation 
+  * [3Hren/msgpack-rust](https://github.com/3Hren/msgpack-rust) 纯Rust实现的MessagePack编解码
 * ProtocolBuffers
   * [stepancheg/rust-protobuf](https://github.com/stepancheg/rust-protobuf) 
   * [tokio-rs/prost](https://github.com/tokio-rs/prost) 
