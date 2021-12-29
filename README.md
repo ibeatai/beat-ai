@@ -37,7 +37,7 @@
 
 ### SQL客户端
 * 通用
-  * [launchbadge/sqlx](https://github.com/launchbadge/sqlx) - async PostgreSQL/MySQL/SQLite connection pool with strong typing support
+  * [launchbadge/sqlx](https://github.com/launchbadge/sqlx) - 异步实现、高性能、纯Rust代码的SQL库，支持`PostgreSQL`, `MySQL`, `SQLite`,和 `MSSQL`.
 
 * ORM
   * [diesel-rs/diesel](https://github.com/diesel-rs/diesel) — an ORM and Query builder for Rust
