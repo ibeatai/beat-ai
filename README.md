@@ -135,11 +135,7 @@
 * CSV
   * [BurntSushi/rust-csv](https://github.com/BurntSushi/rust-csv) 高性能CSV读写库，支持[Serde](https://github.com/serde-rs/serde)
 * JSON
-  * [importcjj/rust-ajson](https://github.com/importcjj/rust-ajson) [[ajson]](https://crates.io/crates/ajson) —  Get JSON values quickly 
-  * [maciejhirsz/json-rust](https://github.com/maciejhirsz/json-rust) [[json](https://crates.io/crates/json)] — JSON implementation in Rust 
-  * [pikkr/pikkr](https://github.com/pikkr/pikkr) [[pikkr](https://crates.io/crates/pikkr)] — JSON parser which picks up values directly without performing tokenization in Rust
-  * [serde-rs/json](https://github.com/serde-rs/json) [[serde\_json](https://crates.io/crates/serde_json)] — JSON support for [Serde](https://github.com/serde-rs/serde) framework 
-  * [simd-lite/simd-json](https://github.com/simd-lite/simd-json) [[simd-json](https://crates.io/crates/simd-json)] — High performance JSON parser based on a port of simdjson
+  * [serde-rs/json](https://github.com/serde-rs/json) 快到上天的JSON库，也是Rust事实上的标准JSON库，你也可以使用它的大哥[serde](https://github.com/serde-rs/serde)，一个更通用的序列化/反序列化库
 * MsgPack
   * [3Hren/msgpack-rust](https://github.com/3Hren/msgpack-rust) — A pure Rust low/high level MessagePack implementation 
 * ProtocolBuffers
