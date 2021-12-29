@@ -40,10 +40,9 @@
   * [launchbadge/sqlx](https://github.com/launchbadge/sqlx) - 异步实现、高性能、纯Rust代码的SQL库，支持`PostgreSQL`, `MySQL`, `SQLite`,和 `MSSQL`.
 
 * ORM
-  * [diesel-rs/diesel](https://github.com/diesel-rs/diesel) — an ORM and Query builder for Rust
-  * [ivanceras/rustorm](https://github.com/ivanceras/rustorm) — an ORM for Rust 
-  * [rbatis/rbatis](https://github.com/rbatis/rbatis) — Rust ORM Framework High Performance(JSON based) 
-  * [SeaQL/sea-orm](https://github.com/SeaQL/sea-orm) — an async & dynamic ORM for Rust 
+  * [rbatis/rbatis](https://github.com/rbatis/rbatis) — 国内团队开发的ORM，异步、性能高、简单易上手
+  * [diesel-rs/diesel](https://github.com/diesel-rs/diesel) — 安全、扩展性强的Rust ORM库，支持Mysql、Postgre、SqlLite
+
 
 * Mysql
   * [blackbeam/mysql_async](https://github.com/blackbeam/mysql_async) — asyncronous Rust Mysql driver based on Tokio.
