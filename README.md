@@ -125,6 +125,13 @@
   * [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) — A LLDB extension for [Visual Studio Code](https://code.visualstudio.com/).
 
 ### 性能优化
+* [bheisler/criterion.rs](https://github.com/bheisler/criterion.rs) — Statistics-driven benchmarking library for Rust
+* [Bytehound](https://github.com/koute/bytehound) — A memory profiler for Linux
+* [ellisonch/rust-stopwatch](https://github.com/ellisonch/rust-stopwatch) — A stopwatch library 
+* FlameGraphs
+  * [llogiq/flame](https://github.com/llogiq/flame) 
+  * [mrhooray/torch](https://github.com/mrhooray/torch) — generates FlameGraphs based on DWARF Debug Info
+* [sharkdp/hyperfine](https://github.com/sharkdp/hyperfine) — A command-line benchmarking tool 
 
 
 ### 编解码
