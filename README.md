@@ -16,37 +16,37 @@
 ## 日常开发常用Rust库
 ### Web/HTTP
 * HTTP客户端
-  * [reqwest](https://github.com/seanmonstar/reqwest) — 一个简单又强大的HTTP客户端，`reqwest`是目前使用最多的HTTP库 
+  * [reqwest](https://github.com/seanmonstar/reqwest)  一个简单又强大的HTTP客户端，`reqwest`是目前使用最多的HTTP库 
 
 * Web框架
-  * [axum](https://github.com/tokio-rs/axum) - 基于Tokio和Hyper打造，模块化设计较好，目前口碑很好，值得使用Ergonomic and modular web framework built with Tokio, Tower, and Hyper
-  * [Rocket](https://github.com/SergioBenitez/Rocket) — 功能强大，API简单的Web框架，但是主要开发者目前因为个人原因无法进行后续开发，未来存在不确定性
-  * [actix-web](https://github.com/actix/actix-web) — 性能极高的Web框架，就是团队内部有些问题，未来存在一定的不确定性
+  * [axum](https://github.com/tokio-rs/axum)  基于Tokio和Hyper打造，模块化设计较好，目前口碑很好，值得使用Ergonomic and modular web framework built with Tokio, Tower, and Hyper
+  * [Rocket](https://github.com/SergioBenitez/Rocket)  功能强大，API简单的Web框架，但是主要开发者目前因为个人原因无法进行后续开发，未来存在不确定性
+  * [actix-web](https://github.com/actix/actix-web)  性能极高的Web框架，就是团队内部有些问题，未来存在一定的不确定性
   * 总体来说，上述三个web框架都有很深的用户基础，其实都可以选用，如果让我推荐，顺序如下: `axum` > `Rocket` > `actix-web`。 不过如果你不需要多么完善的web功能，只需要一个性能极高的http库，那么`actix-web`是非常好的选择，它的性能非常非常非常高！
 
 ### 日志监控
 * 日志
 [[crates.io](https://crates.io/keywords/log)] [[github](https://github.com/search?q=rust+log)]
-  * [tokio-rs/tracing](https://github.com/tokio-rs/tracing) — 强大的日志框架，同时还支持OpenTelemetry格式，无缝打通未来的监控
-  * [rust-lang/log](https://github.com/rust-lang/log) — 官方日志库，事实上的API标准, 但是三方库未必遵循
-  * [estk/log4rs](https://github.com/estk/log4rs) — 模仿JAVA `logback`和`log4j`实现的日志库, 可配置性较强
+  * [tokio-rs/tracing](https://github.com/tokio-rs/tracing)  强大的日志框架，同时还支持OpenTelemetry格式，无缝打通未来的监控
+  * [rust-lang/log](https://github.com/rust-lang/log)  官方日志库，事实上的API标准, 但是三方库未必遵循
+  * [estk/log4rs](https://github.com/estk/log4rs)  模仿JAVA `logback`和`log4j`实现的日志库, 可配置性较强
   * 在其它文章中，也许会推荐slog，但是我们不推荐，一个是因为近半年未更新，一个是`slog`自己也推荐使用`tracing`。
 * 监控
-  * [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-rust) — `OpenTelemetry`是现在非常火的可观测性解决方案，提供了协议、API、SDK等核心工具，用于收集监控数据，最后将这些metrics/logs/traces数据写入到`prometheus`, `jaeger`等监控平台中。最主要是，它后台很硬，后面有各大公司作为背书，未来非常看好！
-  * [vectordotdev/vector](https://github.com/vectordotdev/vector) — 一个性能很高的数据采集agent，采集本地的日志、监控等数据，发送到远程的kafka、jaeger等数据下沉端，它最大的优点就是能从多种数据源(包括Opentelemetry)收集数据，然后推送到多个数据处理或者存储等下沉端。
+  * [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-rust)  `OpenTelemetry`是现在非常火的可观测性解决方案，提供了协议、API、SDK等核心工具，用于收集监控数据，最后将这些metrics/logs/traces数据写入到`prometheus`, `jaeger`等监控平台中。最主要是，它后台很硬，后面有各大公司作为背书，未来非常看好！
+  * [vectordotdev/vector](https://github.com/vectordotdev/vector)  一个性能很高的数据采集agent，采集本地的日志、监控等数据，发送到远程的kafka、jaeger等数据下沉端，它最大的优点就是能从多种数据源(包括Opentelemetry)收集数据，然后推送到多个数据处理或者存储等下沉端。
 
 ### SQL客户端
 * 通用
-  * [launchbadge/sqlx](https://github.com/launchbadge/sqlx) - 异步实现、高性能、纯Rust代码的SQL库，支持`PostgreSQL`, `MySQL`, `SQLite`,和 `MSSQL`.
+  * [launchbadge/sqlx](https://github.com/launchbadge/sqlx) 异步实现、高性能、纯Rust代码的SQL库，支持`PostgreSQL`, `MySQL`, `SQLite`,和 `MSSQL`.
 
 * ORM
-  * [rbatis/rbatis](https://github.com/rbatis/rbatis) — 国内团队开发的ORM，异步、性能高、简单易上手
-  * [diesel-rs/diesel](https://github.com/diesel-rs/diesel) — 安全、扩展性强的Rust ORM库，支持`Mysql`、`Postgre`、`SqlLite`
+  * [rbatis/rbatis](https://github.com/rbatis/rbatis)  国内团队开发的ORM，异步、性能高、简单易上手
+  * [diesel-rs/diesel](https://github.com/diesel-rs/diesel)  安全、扩展性强的Rust ORM库，支持`Mysql`、`Postgre`、`SqlLite`
 
 
 * Mysql
-  * [blackbeam/rust-mysql-simple](https://github.com/blackbeam/rust-mysql-simple) — 纯Rust实现的Mysql驱动,提供连接池
-  * [blackbeam/mysql_async](https://github.com/blackbeam/mysql_async) — 基于Tokio实现的异步Mysql驱动
+  * [blackbeam/rust-mysql-simple](https://github.com/blackbeam/rust-mysql-simple)  纯Rust实现的Mysql驱动,提供连接池
+  * [blackbeam/mysql_async](https://github.com/blackbeam/mysql_async)  基于Tokio实现的异步Mysql驱动
   * 上面两个都是一个团队出品，前者文档更全、star更多，建议使用前者
 
 
@@ -54,16 +54,16 @@
   * [sfackler/rust-postgres](https://github.com/sfackler/rust-postgres) 纯Rust实现的Postgre客户端
 
 * Sqlite
-  * [rusqlite](https://github.com/rusqlite/rusqlite) — 用于[Sqlite3](https://www.sqlite.org/index.html)的Rust客户端
+  * [rusqlite](https://github.com/rusqlite/rusqlite) 用于[Sqlite3](https://www.sqlite.org/index.html)的Rust客户端
 
 ### NoSql客户端
 
 * Redis
-  * [mitsuhiko/redis-rs](https://github.com/mitsuhiko/redis-rs) — 虽然最近更新不太活跃，但是它依然是最好的redis客户端，说实话，我期待更好的，可能这也是Rust生态的未来可期之处吧
+  * [mitsuhiko/redis-rs](https://github.com/mitsuhiko/redis-rs) 虽然最近更新不太活跃，但是它依然是最好的redis客户端，说实话，我期待更好的，可能这也是Rust生态的未来可期之处吧
 
 * Canssandra
   * [krojew/cdrs-tokio](https://github.com/krojew/cdrs-tokio) [[cdrs-tokio](https://crates.io/crates/cdrs-tokio)] 生产可用的Cassandra客户端，异步、纯Rust实现，就是个人项目 + star较少，未来不确定会不会不维护
-  * [scylla-rust-driver](https://github.com/scylladb/scylla-rust-driver)  - ScyllaDB提供的官方库，都支持cql协议，由于背靠大山，未来非常可期
+  * [scylla-rust-driver](https://github.com/scylladb/scylla-rust-driver)  ScyllaDB提供的官方库，支持cql协议，由于背靠大山，未来非常可期
 
 
 * MongoDB
@@ -71,14 +71,14 @@
 
 ### 分布式
 #### 服务发现
-- [luncj/etcd-rs](https://github.com/luncj/etcd-rs) — 异步实现的Rust etcd客户端，优点是有一定的文档、作者较为活跃,意味着你提问题他可能会回答，不过，如果你不放心，还是考虑使用HTTP的方式访问ETCD
+- [luncj/etcd-rs](https://github.com/luncj/etcd-rs) 异步实现的Rust etcd客户端，优点是有一定的文档、作者较为活跃,意味着你提问题他可能会回答，不过，如果你不放心，还是考虑使用HTTP的方式访问ETCD
 
 #### 消息队列
 * Kafka
-  * [fede1024/rust-rdkafka](https://github.com/fede1024/rust-rdkafka) - Rust Kafka客户端，基于C版本的Kafka库[librdkafka]实现，文档较全、功能较为全面
-  * [kafka-rust/kafka-rust](https://github.com/kafka-rust/kafka-rust) - 相比上一个库，它算是纯Rust实现，文档还行，支持Kafka0.8.2及以后的版本，但是对于部分0.9版本的特性还不支持。同时有一个问题：最初的作者不维护了，转给了现在的作者，但是感觉好像也不是很活跃
+  * [fede1024/rust-rdkafka](https://github.com/fede1024/rust-rdkafka)  Rust Kafka客户端，基于C版本的Kafka库[librdkafka]实现，文档较全、功能较为全面
+  * [kafka-rust/kafka-rust](https://github.com/kafka-rust/kafka-rust)  相比上一个库，它算是纯Rust实现，文档还行，支持Kafka0.8.2及以后的版本，但是对于部分0.9版本的特性还不支持。同时有一个问题：最初的作者不维护了，转给了现在的作者，但是感觉好像也不是很活跃
 * Nats
-  * [nats-io/nats.rs](https://github.com/nats-io/nats.rs) — Nats官方提供的客户端
+  * [nats-io/nats.rs](https://github.com/nats-io/nats.rs) Nats官方提供的客户端
 
 ### 网络、通信协议
 * Websocket
