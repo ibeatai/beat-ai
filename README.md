@@ -71,12 +71,18 @@
   * [nats-io/nats.rs](https://github.com/nats-io/nats.rs) — Rust client for NATS, the cloud native messaging system. 
 
 ## 网络、通信协议
+* Websocket
+  * [rust-websocket](https://github.com/websockets-rs/rust-websocket) — A framework for dealing with WebSocket connections (both clients and servers) 
+  * [snapview/tungstenite-rs](https://github.com/snapview/tungstenite-rs) — Lightweight stream-based WebSocket implementation for Rust.
 * Grpc
   * [tikv/grpc-rs](https://github.com/tikv/grpc-rs) — The gRPC library for Rust built on C Core library and futures
 * QUIC
   * [cloudflare/quiche](https://github.com/cloudflare/quiche) — cloudflare implementation of the QUIC transport protocol and HTTP/3 
 * MQTT
-  * [](https://github.com/bytebeamio/rumqtt) - MQTT3.1.1/5
+  * [bytebeamio/rumqtt](https://github.com/bytebeamio/rumqtt) - MQTT3.1.1/5协议库，同时实现了客户端与服务器端broker
+  * [ntex-rs/ntex-mqtt](https://github.com/ntex-rs/ntex-mqtt) - 客户端与服务端框架，支持MQTT3.1.1与5协议
+  * [eclipse/paho.mqtt.rust](https://github.com/eclipse/paho.mqtt.rust) - 老牌MQTT框架，对MQTT支持较全, 其它各语言的实现也有
+
 ## 内容搜索
 
 * ElasticSearch
@@ -127,4 +133,7 @@
 
 ## Email
 * [lettre/lettre](https://github.com/lettre/lettre) — an SMTP-library for Rust 
-# 精选Rust开源项目(值得学习)
+
+# 精选中文学习资料
+
+# 精选Rust开源项目
