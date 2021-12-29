@@ -16,24 +16,24 @@
 ## 日常开发常用Rust库
 ### Web/HTTP
 * HTTP客户端
-  * [seanmonstar/reqwest](https://github.com/seanmonstar/reqwest) — An easy and powerful Rust HTTP Client一个简单又强大的HTTP客户端，`reqwest`是目前使用最多的HTTP库 
+  * [reqwest](https://github.com/seanmonstar/reqwest) — 一个简单又强大的HTTP客户端，`reqwest`是目前使用最多的HTTP库 
 
 * Web框架
   * [axum](https://github.com/tokio-rs/axum) - 基于Tokio和Hyper打造，模块化设计较好，目前口碑很好，值得使用Ergonomic and modular web framework built with Tokio, Tower, and Hyper
   * [Rocket](https://github.com/SergioBenitez/Rocket) — 功能强大，API简单的Web框架，但是主要开发者目前因为个人原因无法进行后续开发，未来存在不确定性
-  * [actix/actix-web](https://github.com/actix/actix-web) — 性能极高的Web框架，就是团队内部有些问题，未来存在一定的不确定性
+  * [actix-web](https://github.com/actix/actix-web) — 性能极高的Web框架，就是团队内部有些问题，未来存在一定的不确定性
   * 总体来说，上述三个web框架都有很深的用户基础，其实都可以选用，如果让我推荐，顺序如下: `axum` > `Rocket` > `actix-web`。 不过如果你不需要多么完善的web功能，只需要一个性能极高的http库，那么`actix-web`是非常好的选择，它的性能非常非常非常高！
 
 ### 日志监控
 * 日志
 [[crates.io](https://crates.io/keywords/log)] [[github](https://github.com/search?q=rust+log)]
-  * [tokio-rs/tracing](https://github.com/tokio-rs/tracing) — An application level tracing framework for async-aware structured logging, error handling, metrics, and more 
+  * [tokio-rs/tracing](https://github.com/tokio-rs/tracing) — 强大的日志框架，同时还支持OpenTelemetry格式，无缝打通未来的监控
   * [rust-lang/log](https://github.com/rust-lang/log) — 官方日志库，事实上的API标准, 但是三方库未必遵循
   * [estk/log4rs](https://github.com/estk/log4rs) — 模仿JAVA `logback`和`log4j`实现的日志库, 可配置性较强
   * 在其它文章中，也许会推荐slog，但是我们不推荐，一个是因为近半年未更新，一个是`slog`自己也推荐使用`tracing`。
 * 监控
   * [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-rust) — `OpenTelemetry`是现在非常火的可观测性解决方案，提供了协议、API、SDK等核心工具，用于收集监控数据，最后将这些metrics/logs/traces数据写入到`prometheus`, `jaeger`等监控平台中。最主要是，它后台很硬，后面有各大公司作为背书，未来非常看好！
-  * [vectordotdev/vector](https://github.com/vectordotdev/vector) — A High-Performance, Logs, Metrics, & Events Router.
+  * [vectordotdev/vector](https://github.com/vectordotdev/vector) — 一个性能很高的数据采集agent，采集本地的日志、监控等数据，发送到远程的kafka、jaeger等数据下沉端，它最大的优点就是能从多种数据源(包括Opentelemetry)收集数据，然后推送到多个数据处理或者存储等下沉端。
 
 ### SQL客户端
 * 通用
