@@ -7,7 +7,7 @@
 ## 目录
 - 日常开发常用的Rust库: 
   - [Web/HTTP](#webhttp),  [SQL客户端](#SQL客户端), [NoSql客户端](#NoSql客户端)， [网络通信协议](#网络通信协议), [异步网络编程](#异步网络编程)
-  - [服务发现](#服务发现), [消息队列](#消息队列), [搜索平台](#搜索平台)
+  - [服务发现](#服务发现), [消息队列](#消息队列), [搜索引擎](#搜索引擎)
   - [编解码](#编解码), [Email](#Email), [常用正则模版](#常用正则模版)
   - [日志监控](#日志监控), [代码Debug](#代码Debug), [性能优化](#性能优化)
 - [精选中文学习资料](#精选中文学习资料)
@@ -106,18 +106,17 @@
 * 如果你要开发生产级别的项目，我推荐使用`tokio`，稳定可靠，功能丰富，控制粒度细；自己的学习项目或者没有那么严肃的开源项目，我推荐`async-std`，简单好用，值得学习；当你确切知道需要Actor网络模型时，就用`actix`
 
 
-### 搜索平台
+### 搜索引擎
 
-* ElasticSearch
-  * [elastic/elasticsearch](https://github.com/elastic/elasticsearch-rs) 
-  * [benashford/rs-es](https://github.com/benashford/rs-es) [[rs-es](https://crates.io/crates/rs-es)] — A Rust client for the [Elastic](https://www.elastic.co/) REST API 
+* ElasticSearch客户端
+  * [elastic/elasticsearch](https://github.com/elastic/elasticsearch-rs) 官方es客户端，目前第三方的基本都处于停滞状态，所以不管好坏，用呗
 
-* tantivy
-  * [Tantivy](https://github.com/quickwit-inc/tantivy) - Tantivy is a full-text search engine library inspired by Apache Lucene and written in Rust
+* Rust搜索引擎
+  * [Tantivy](https://github.com/quickwit-inc/tantivy) Tantivy是Rust实现的本地搜索库，功能对标`lucene`，如果你不需要分布式，那么引入tantivy作为自己本地Rust服务的一个搜索，是相当不错的选择，该库作者一直很活跃，而且最近还创立了搜索引擎公司，感觉大有作为. 该库的优点在于纯Rust实现，性能高(lucene的2-3倍)，资源占用低(对比java自然不是一个数量级)，社区活跃。
 
-* MeiliSearch
-  * [MeiliSearch](https://github.com/meilisearch/MeiliSearch) - Powerful, fast, and an easy to use search engine
- 
+* Rust搜索平台
+  * [quickwit](https://github.com/quickwit-inc/quickwit) 对标ElasticSearch，一个通用目的的分布式搜索平台，目前还在起步阶段(0.2版本)，未来非常可期，目前还不建议使用
+  * [MeiliSearch](https://github.com/meilisearch/MeiliSearch) 虽然也是一个搜索平台，但是并不是通用目的的，`MeiliSearch`目标是为终端用户提供边输入边提示的即刻搜索功能，因此是一个轻量级搜索平台，不适用于数据量大时的搜索目的。总之，如果你需要在网页端或者APP为用户提供一个搜索条，然后支持输入容错、前缀搜索时，就可以使用它。
 ### 代码Debug
 
 * GDB
