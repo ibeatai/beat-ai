@@ -8,7 +8,7 @@
   - [Web/HTTP](#webhttp),  [SQL客户端](#SQL客户端), [NoSql客户端](#NoSql客户端)，[搜索平台](#搜索平台)
   - [服务发现](#服务发现), [消息队列](#消息队列), [网络通信协议](#网络通信协议)
   - [编解码](#编解码), [Email](#Email), [常用正则模版](#常用正则模版)
-  - [日志监控](#日志监控), [代码Debug和性能优化](#代码Debug性能优化) 
+  - [日志监控](#日志监控), [代码Debug](#代码Debug), [性能优化](#性能优化)
 - [精选中文学习资料](#精选中文学习资料)
 - [精选Rust开源项目](#精选Rust开源项目)
 
@@ -106,12 +106,14 @@
 * MeiliSearch
   * [MeiliSearch](https://github.com/meilisearch/MeiliSearch) - Powerful, fast, and an easy to use search engine
  
-### 代码Debug,性能优化
+### 代码Debug
 
 * GDB
   * [gdbgui](https://github.com/cs01/gdbgui) — Browser based frontend for gdb to debug C, C++, Rust, and go. [![build badge](https://api.travis-ci.org/cs01/gdbgui.svg?branch=master)](https://travis-ci.org/cs01/gdbgui)
 * LLDB
   * [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) — A LLDB extension for [Visual Studio Code](https://code.visualstudio.com/).
+
+### 性能优化
 
 
 ### 编解码
