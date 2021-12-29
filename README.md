@@ -62,12 +62,12 @@
   * [mitsuhiko/redis-rs](https://github.com/mitsuhiko/redis-rs) — 虽然最近更新不太活跃，但是它依然是最好的redis客户端，说实话，我期待更好的，可能这也是Rust生态的未来可期之处吧
 
 * Canssandra
-  * [AlexPikalov/cdrs](https://github.com/AlexPikalov/cdrs) [[cdrs](https://crates.io/crates/cdrs)] — native client written in Rust 
-  * [krojew/cdrs-tokio](https://github.com/krojew/cdrs-tokio) [[cdrs-tokio](https://crates.io/crates/cdrs-tokio)] - production-ready async Apache Cassandra driver written in pure Rust 
-  * [Metaswitch/cassandra-rs](https://github.com/Metaswitch/cassandra-rs) —  bindings to the DataStax C/C++ client 
+  * [krojew/cdrs-tokio](https://github.com/krojew/cdrs-tokio) [[cdrs-tokio](https://crates.io/crates/cdrs-tokio)] 生产可用的Cassandra客户端，异步、纯Rust实现，就是个人项目 + star较少，未来不确定会不会不维护
+  * [scylla-rust-driver](https://github.com/scylladb/scylla-rust-driver)  - ScyllaDB提供的官方库，都支持cql协议，由于背靠大山，未来非常可期
+
 
 * MongoDB
-  * [mongodb/mongo-rust-driver](https://github.com/mongodb/mongo-rust-driver) 
+  * [mongodb/mongo-rust-driver](https://github.com/mongodb/mongo-rust-driver) 官方MongoDB客户端，闭着眼睛选就对了
 
 ### 分布式
 #### 服务发现
