@@ -32,7 +32,7 @@
   * [estk/log4rs](https://github.com/estk/log4rs) — 模仿JAVA `logback`和`log4j`实现的日志库, 可配置性较强
   * 在其它文章中，也许会推荐slog，但是我们不推荐，一个是因为近半年未更新，一个是`slog`自己也推荐使用`tracing`。
 * 监控
-  * [OpenTelemetry](https://crates.io/crates/opentelemetry) — OpenTelemetry provides a single set of APIs, libraries, agents, and collector services to capture distributed traces and metrics from your application. You can analyze them using Prometheus, Jaeger, and other observability tools.
+  * [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-rust) — `OpenTelemetry`是现在非常火的可观测性解决方案，提供了协议、API、SDK等核心工具，用于收集监控数据，最后将这些metrics/logs/traces数据写入到`prometheus`, `jaeger`等监控平台中。最主要是，它后台很硬，后面有各大公司作为背书，未来非常看好！
   * [vectordotdev/vector](https://github.com/vectordotdev/vector) — A High-Performance, Logs, Metrics, & Events Router.
 
 ### SQL客户端
