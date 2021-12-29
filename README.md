@@ -75,11 +75,10 @@
 
 #### 消息队列
 * Kafka
-  * [fede1024/rust-rdkafka](https://github.com/fede1024/rust-rdkafka) [[rdkafka](https://crates.io/crates/rdkafka)] — [librdkafka](https://github.com/edenhill/librdkafka) bindings 
-  * [gklijs/schema_registry_converter](https://github.com/gklijs/schema_registry_converter) [[schema_registry_converter](https://crates.io/crates/schema_registry_converter)] — to integrate with [confluent schema registry](https://www.confluent.io/product/confluent-platform/data-compatibility/) 
-  * [kafka-rust/kafka-rust](https://github.com/kafka-rust/kafka-rust) 
+  * [fede1024/rust-rdkafka](https://github.com/fede1024/rust-rdkafka) - Rust Kafka客户端，基于C版本的Kafka库[librdkafka]实现，文档较全、功能较为全面
+  * [kafka-rust/kafka-rust](https://github.com/kafka-rust/kafka-rust) - 相比上一个库，它算是纯Rust实现，文档还行，支持Kafka0.8.2及以后的版本，但是对于部分0.9版本的特性还不支持。同时有一个问题：最初的作者不维护了，转给了现在的作者，但是感觉好像也不是很活跃
 * Nats
-  * [nats-io/nats.rs](https://github.com/nats-io/nats.rs) — Rust client for NATS, the cloud native messaging system. 
+  * [nats-io/nats.rs](https://github.com/nats-io/nats.rs) — Nats官方提供的客户端
 
 ### 网络、通信协议
 * Websocket
