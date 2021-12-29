@@ -103,14 +103,14 @@
 * [async-std](https://async.rs/) 跟标准库API很像的异步网络库，相对简单易用，但是貌似开发有些停滞，还有就是功能上不够完善。但是对于普通用户来说，这个库非常值得一试，它在功能和简单易用上取得了很好的平衡
 * [actix](https://github.com/actix/actix) 基于Actor模型的异步网络库，但这个库的开发貌似已经停滞，他们团队一直在专注于`actix-web`的开发
 * [mio](https://github.com/tokio-rs/mio) 严格来说，MIO与之前三个不是同一个用途的，MIO = Meta IO，是一个底层IO库，往往用于构建其它网络库，当然如果你对应用网络性能有非常极限的要求， 可以考虑它，因为它的层次比较低，所带来的抽象负担小，所以性能损耗小
-* 如果你要开发生产级别的项目，我推荐使用tokio，稳定可靠，功能丰富，控制粒度细；自己的学习项目或者没有那么严肃的开源项目，我推荐`async-std`，简单好用，值得学习；当你确切知道需要Actor网络模型时，就用`actix`
+* 如果你要开发生产级别的项目，我推荐使用`tokio`，稳定可靠，功能丰富，控制粒度细；自己的学习项目或者没有那么严肃的开源项目，我推荐`async-std`，简单好用，值得学习；当你确切知道需要Actor网络模型时，就用`actix`
 
 
 ### 搜索平台
 
 * ElasticSearch
+  * [elastic/elasticsearch](https://github.com/elastic/elasticsearch-rs) 
   * [benashford/rs-es](https://github.com/benashford/rs-es) [[rs-es](https://crates.io/crates/rs-es)] — A Rust client for the [Elastic](https://www.elastic.co/) REST API 
-  * [elastic-rs/elastic](https://github.com/elastic-rs/elastic) [[elastic](https://crates.io/crates/elastic)] — elastic is an efficient, modular API client for Elasticsearch written in Rust 
 
 * tantivy
   * [Tantivy](https://github.com/quickwit-inc/tantivy) - Tantivy is a full-text search engine library inspired by Apache Lucene and written in Rust
