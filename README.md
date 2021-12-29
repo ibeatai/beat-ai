@@ -54,12 +54,12 @@
   * [sfackler/rust-postgres](https://github.com/sfackler/rust-postgres) 纯Rust实现的Postgre客户端
 
 * Sqlite
-  * [rusqlite](https://github.com/rusqlite/rusqlite) — [Sqlite3](https://www.sqlite.org/index.html) bindings
+  * [rusqlite](https://github.com/rusqlite/rusqlite) — 用于[Sqlite3](https://www.sqlite.org/index.html)的Rust客户端
 
 ### NoSql客户端
 
 * Redis
-  * [mitsuhiko/redis-rs](https://github.com/mitsuhiko/redis-rs) — [Redis](https://redis.io/) library in Rust 
+  * [mitsuhiko/redis-rs](https://github.com/mitsuhiko/redis-rs) — 虽然最近更新不太活跃，但是它依然是最好的redis客户端，说实话，我期待更好的，可能这也是Rust生态的未来可期之处吧
 
 * Canssandra
   * [AlexPikalov/cdrs](https://github.com/AlexPikalov/cdrs) [[cdrs](https://crates.io/crates/cdrs)] — native client written in Rust 
