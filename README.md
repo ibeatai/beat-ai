@@ -1,8 +1,10 @@
-# fancy-rust
-使用我们精心挑选的开源代码，让你的Rust项目fancy起来!
+# Fancy Rust
+在设计上，我们并没有参考其它awesome-XXX常用的方式：在首页放非常非常长的列表，什么都囊括在内。而是选择了一个**用户友好的方式**来呈现内容:
+- 主页Readme.md放置日常开发常用的Rust库、Rust精品学习资料、优秀开源库精选推荐, 其中Rust库只推荐最优秀且持续更新的，那些几年不更新的统统剔除掉，少数精品的呈现才不会让用户过于纠结，甚至不知道如何选择
+- 其它各种库，统统使用单独的.md文件存放，例如图像处理.md，游戏开发.md等等
 
-# 工具类Rust项目
-## Web
+## 日常开发常用Rust库
+### Web
 * HTTP客户端
   * [seanmonstar/reqwest](https://github.com/seanmonstar/reqwest) — an ergonomic HTTP Client for Rust. 
 
@@ -11,7 +13,7 @@
   * [Rocket](https://github.com/SergioBenitez/Rocket) — Rocket is web framework for Rust (nightly) with a focus on ease-of-use, expressability, and speed 
   * [axum](https://github.com/tokio-rs/axum) - Ergonomic and modular web framework built with Tokio, Tower, and Hyper
 
-## 日志监控
+### 日志监控
 * 日志
 [[crates.io](https://crates.io/keywords/log)] [[github](https://github.com/search?q=rust+log)]
   * [slog-rs/slog](https://github.com/slog-rs/slog) — Structured, composable logging for Rust 
@@ -25,7 +27,7 @@
   * [OpenTelemetry](https://crates.io/crates/opentelemetry) — OpenTelemetry provides a single set of APIs, libraries, agents, and collector services to capture distributed traces and metrics from your application. You can analyze them using Prometheus, Jaeger, and other observability tools.
   * [vectordotdev/vector](https://github.com/vectordotdev/vector) — A High-Performance, Logs, Metrics, & Events Router.
 
-## SQL客户端
+### SQL客户端
 * 通用
   * [launchbadge/sqlx](https://github.com/launchbadge/sqlx) - async PostgreSQL/MySQL/SQLite connection pool with strong typing support
 
@@ -45,7 +47,7 @@
 * Sqlite
   * [rusqlite](https://github.com/rusqlite/rusqlite) — [Sqlite3](https://www.sqlite.org/index.html) bindings
 
-## NoSql客户端
+### NoSql客户端
 
 * Redis
   * [mitsuhiko/redis-rs](https://github.com/mitsuhiko/redis-rs) — [Redis](https://redis.io/) library in Rust 
@@ -58,7 +60,7 @@
 * MongoDB
   * [mongodb/mongo-rust-driver](https://github.com/mongodb/mongo-rust-driver) 
 
-## 分布式
+### 分布式
 #### 服务发现
 - [jimmycuadra/rust-etcd](https://github.com/jimmycuadra/rust-etcd) [[etcd](https://crates.io/crates/etcd)] — A client library for CoreOS's etcd.
 - [luncj/etcd-rs](https://github.com/luncj/etcd-rs) — An asynchronous etcd client for rust 
@@ -70,7 +72,7 @@
 * Nats
   * [nats-io/nats.rs](https://github.com/nats-io/nats.rs) — Rust client for NATS, the cloud native messaging system. 
 
-## 网络、通信协议
+### 网络、通信协议
 * Websocket
   * [rust-websocket](https://github.com/websockets-rs/rust-websocket) — A framework for dealing with WebSocket connections (both clients and servers) 
   * [snapview/tungstenite-rs](https://github.com/snapview/tungstenite-rs) — Lightweight stream-based WebSocket implementation for Rust.
@@ -83,7 +85,7 @@
   * [ntex-rs/ntex-mqtt](https://github.com/ntex-rs/ntex-mqtt) - 客户端与服务端框架，支持MQTT3.1.1与5协议
   * [eclipse/paho.mqtt.rust](https://github.com/eclipse/paho.mqtt.rust) - 老牌MQTT框架，对MQTT支持较全, 其它各语言的实现也有
 
-## 内容搜索
+### 内容搜索
 
 * ElasticSearch
   * [benashford/rs-es](https://github.com/benashford/rs-es) [[rs-es](https://crates.io/crates/rs-es)] — A Rust client for the [Elastic](https://www.elastic.co/) REST API 
@@ -95,7 +97,7 @@
 * MeiliSearch
   * [MeiliSearch](https://github.com/meilisearch/MeiliSearch) - Powerful, fast, and an easy to use search engine
  
-## Rust代码Debug
+### Rust代码Debug
 
 * GDB
   * [gdbgui](https://github.com/cs01/gdbgui) — Browser based frontend for gdb to debug C, C++, Rust, and go. [![build badge](https://api.travis-ci.org/cs01/gdbgui.svg?branch=master)](https://travis-ci.org/cs01/gdbgui)
@@ -103,7 +105,7 @@
   * [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) — A LLDB extension for [Visual Studio Code](https://code.visualstudio.com/).
 
 
-## 编解码
+### 编解码
 * CSV
   * [BurntSushi/rust-csv](https://github.com/BurntSushi/rust-csv) — A fast and flexible CSV reader and writer, with support for Serde 
 * JSON
@@ -131,9 +133,11 @@
   * [dtolnay/serde-yaml](https://github.com/dtolnay/serde-yaml) [[serde\_yaml](https://crates.io/crates/serde_yaml)] — YAML support for [Serde](https://github.com/serde-rs/serde) framework 
   * [vitiral/stfu8](https://github.com/vitiral/stfu8) [[stfu8](https://crates.io/crates/stfu8)] — Sorta Text Format in UTF-8 
 
-## Email
+### Email
 * [lettre/lettre](https://github.com/lettre/lettre) — an SMTP-library for Rust 
 
-# 精选中文学习资料
+### 常用正则模版
 
-# 精选Rust开源项目
+## 精选中文学习资料
+
+## 精选Rust开源项目
