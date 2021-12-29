@@ -3,12 +3,15 @@
 - 主页Readme.md放置日常开发常用的Rust库、Rust精品学习资料、优秀开源库精选推荐, 其中Rust库只推荐最优秀且持续更新的，那些几年不更新的统统剔除掉，少数精品的呈现才不会让用户过于纠结，甚至不知道如何选择
 - 其它各种库，统统使用单独的.md文件存放，例如图像处理.md，游戏开发.md等等
 
+## 目录
+- [日常开发常用的Rust库](#日常开发常用Rust库)
+
 ## 日常开发常用Rust库
-### Web
+### Web/HTTP
 * HTTP客户端
   * [seanmonstar/reqwest](https://github.com/seanmonstar/reqwest) — an ergonomic HTTP Client for Rust. 
 
-* Web服务器框架
+* Web框架
   * [actix/actix-web](https://github.com/actix/actix-web) — A lightweight async web framework for Rust with websocket support 
   * [Rocket](https://github.com/SergioBenitez/Rocket) — Rocket is web framework for Rust (nightly) with a focus on ease-of-use, expressability, and speed 
   * [axum](https://github.com/tokio-rs/axum) - Ergonomic and modular web framework built with Tokio, Tower, and Hyper
