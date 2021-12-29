@@ -144,12 +144,8 @@
 * TOML
   * [alexcrichton/toml-rs](https://github.com/alexcrichton/toml-rs) TOML编码/解码，可以配合`serde`使用
 * XML
-  * [Florob/RustyXML](https://github.com/Florob/RustyXML) — an XML parser written in Rust
   * [media-io/yaserde](https://github.com/media-io/yaserde) — Yet Another Serializer/Deserializer specialized for XML 
-  * [netvl/xml-rs](https://github.com/netvl/xml-rs) — A streaming XML library 
-  * [shepmaster/sxd-document](https://github.com/shepmaster/sxd-document) — An XML library in Rust 
-  * [shepmaster/sxd-xpath](https://github.com/shepmaster/sxd-xpath) — An XPath library in Rust 
-  * [tafia/quick-xml](https://github.com/tafia/quick-xml) — High performance XML pull reader/writer 
+  * [tafia/quick-xml](https://github.com/tafia/quick-xml) 高性能XMLHigh performance XML pull reader/writer 
 * YAML
   * [chyh1990/yaml-rust](https://github.com/chyh1990/yaml-rust) — The missing YAML 1.2 implementation for Rust. 
   * [dtolnay/serde-yaml](https://github.com/dtolnay/serde-yaml) [[serde\_yaml](https://crates.io/crates/serde_yaml)] — YAML support for [Serde](https://github.com/serde-rs/serde) framework 
