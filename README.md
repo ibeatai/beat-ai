@@ -94,6 +94,16 @@
   * [ntex-rs/ntex-mqtt](https://github.com/ntex-rs/ntex-mqtt) - 客户端与服务端框架，支持MQTT3.1.1与5协议
   * [eclipse/paho.mqtt.rust](https://github.com/eclipse/paho.mqtt.rust) - 老牌MQTT框架，对MQTT支持较全, 其它各语言的实现也有
 
+### Asynchronous
+
+* [async-std](https://async.rs/) [[async-std]](https://crates.io/crates/async-std) - Async version of the Rust standard library 
+* [dpc/mioco](https://github.com/dpc/mioco) — Scalable, coroutine-based, asynchronous IO handling library 
+* [mio](https://github.com/tokio-rs/mio) — MIO is a lightweight IO library for Rust with a focus on adding as little overhead as possible over the OS abstractions 
+* [rust-lang/futures-rs](https://github.com/rust-lang/futures-rs) — Zero-cost futures in Rust 
+* [TeaEntityLab/fpRust](https://github.com/TeaEntityLab/fpRust) — Monad/MonadIO, Handler, Coroutine/doNotation, Functional Programming features for Rust
+* [Xudong-Huang/may](https://github.com/Xudong-Huang/may) — rust stackful coroutine library 
+* [zonyitoo/coio-rs](https://github.com/zonyitoo/coio-rs) — A coroutine I/O library with a working-stealing scheduler 
+
 ### 搜索平台
 
 * ElasticSearch
