@@ -4,7 +4,9 @@
 - 其它各种库，统统使用单独的.md文件存放，例如图像处理.md，游戏开发.md等等
 
 ## 目录
-- [日常开发常用的Rust库](#日常开发常用Rust库)
+- [日常开发常用的Rust库](#日常开发常用Rust库): [Web/HTTP](#Web/HTTP), [日志监控](#日志监控), [SQL客户端](#SQL客户端), [NoSql客户端](#NoSql客户端), [服务发现](#服务发现), [消息队列](消息队列), [网络通信协议](#网络、通信协议), [搜索平台](#搜索平台), [Rust代码Debug](#Rust代码Debug), [编解码](#编解码), [Email](#Email), [常用正则模版](#常用正则模版)
+- [精选中文学习资料](#精选中文学习资料)
+- [精选Rust开源项目](#精选Rust开源项目)
 
 ## 日常开发常用Rust库
 ### Web/HTTP
@@ -88,7 +90,7 @@
   * [ntex-rs/ntex-mqtt](https://github.com/ntex-rs/ntex-mqtt) - 客户端与服务端框架，支持MQTT3.1.1与5协议
   * [eclipse/paho.mqtt.rust](https://github.com/eclipse/paho.mqtt.rust) - 老牌MQTT框架，对MQTT支持较全, 其它各语言的实现也有
 
-### 内容搜索
+### 搜索平台
 
 * ElasticSearch
   * [benashford/rs-es](https://github.com/benashford/rs-es) [[rs-es](https://crates.io/crates/rs-es)] — A Rust client for the [Elastic](https://www.elastic.co/) REST API 
