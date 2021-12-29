@@ -139,10 +139,10 @@
 * MsgPack
   * [3Hren/msgpack-rust](https://github.com/3Hren/msgpack-rust) 纯Rust实现的MessagePack编解码协议
 * ProtocolBuffers
-  * [tokio-rs/prost](https://github.com/tokio-rs/prost)
-  * [stepancheg/rust-protobuf](https://github.com/stepancheg/rust-protobuf) 
+  * [tokio-rs/prost](https://github.com/tokio-rs/prost) tokio出品，基本都属精品，此库也不例外，简单易用，文档详细
+  * [stepancheg/rust-protobuf](https://github.com/stepancheg/rust-protobuf) 纯Rust实现
 * TOML
-  * [alexcrichton/toml-rs](https://github.com/alexcrichton/toml-rs)
+  * [alexcrichton/toml-rs](https://github.com/alexcrichton/toml-rs) TOML编码/解码，可以配合`serde`使用
 * XML
   * [Florob/RustyXML](https://github.com/Florob/RustyXML) — an XML parser written in Rust
   * [media-io/yaserde](https://github.com/media-io/yaserde) — Yet Another Serializer/Deserializer specialized for XML 
