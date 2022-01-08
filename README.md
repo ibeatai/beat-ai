@@ -69,6 +69,11 @@
 * MongoDB
   * [mongodb/mongo-rust-driver](https://github.com/mongodb/mongo-rust-driver) 官方MongoDB客户端，闭着眼睛选就对了
 
+### 缓存
+* [caches-rs](https://github.com/al8n/caches-rs) 流行缓存的Rust实现(`LRUCache`, `SegmentedCache`, `TwoQueueCache`, `AdaptiveCache`, `WTinyLFUCache`) (支持no_std).
+* [moka](https://github.com/moka-rs/moka) 高性能，并发安全缓存，受启发于 [Java's Caffeine](https://github.com/ben-manes/caffeine)
+* [stretto](https://github.com/al8n/stretto) 高性能，并发安全缓存, 分布式图形数据库Dgraph的内置缓存 [ristretto](https://github.com/dgraph-io/ristretto) 的Rust实现
+
 ### 分布式
 #### 服务发现
 - [luncj/etcd-rs](https://github.com/luncj/etcd-rs) 异步实现的Rust etcd客户端，优点是有一定的文档、作者较为活跃,意味着你提问题他可能会回答，不过，如果你不放心，还是考虑使用HTTP的方式访问ETCD
