@@ -69,10 +69,6 @@
 * MongoDB
   * [mongodb/mongo-rust-driver](https://github.com/mongodb/mongo-rust-driver) 官方MongoDB客户端，闭着眼睛选就对了
 
-### 缓存
-* [caches-rs](https://github.com/al8n/caches-rs) 流行缓存的Rust实现(`LRUCache`, `SegmentedCache`, `TwoQueueCache`, `AdaptiveCache`, `WTinyLFUCache`) (支持no_std).
-* [moka](https://github.com/moka-rs/moka) 高性能，并发安全缓存，受启发于 [Java's Caffeine](https://github.com/ben-manes/caffeine)
-* [stretto](https://github.com/al8n/stretto) 高性能，并发安全缓存, 分布式图形数据库Dgraph的内置缓存 [ristretto](https://github.com/dgraph-io/ristretto) 的Rust实现
 
 ### 分布式
 #### 服务发现
@@ -136,6 +132,15 @@
 * [sharkdp/hyperfine](https://github.com/sharkdp/hyperfine) 一个命令行benchmark工具，支持任意shell命令，支持缓存清除、预热、多次运行统计分析等，尽量保证结果的准确性
 
 
+### 多线程
+* 消息通道channel
+  * [**crossbeam-channel**](https://github.com/crossbeam-rs/crossbeam/tree/master/crossbeam-channel), 老牌强库，功能较全，性能较强，之前是独立的库，但是后面合并到了`crossbeam`主仓库中
+  * [**flume**](https://github.com/zesterer/flume), 官方给出的性能数据要比crossbeam更好些，但是貌似最近没怎么更新
+* 并发原语(锁)
+  * [parking_lot](https://crates.io/crates/parking_lot), 社区较为活跃，star较多，更新较为活跃
+  * [spin](https://crates.io/crates/spin), 在多数场景中性能比`parking_lot`高一点，最近没怎么更新
+  * 如果不是追求特别极致的性能，建议选择前者
+
 ### 编解码
 * [Serde](https://github.com/serde-rs/serde) 一个超高性能的通用序列化/反序列化框架，可以跟多种协议的库联合使用，实现统一编解码格式
 * CSV
@@ -153,6 +158,7 @@
   * [tafia/quick-xml](https://github.com/tafia/quick-xml) 高性能XML库，可以配合`serde`使用，文档较为详细
 * YAML
   * [dtolnay/serde-yaml](https://github.com/dtolnay/serde-yaml) 使用`serde`编解码`YAML`格式的数据
+
 
 ### Email
 * [lettre/lettre](https://github.com/lettre/lettre) — Rust SMTP库
