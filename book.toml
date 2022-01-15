@@ -1,0 +1,12 @@
+[book]
+authors = []
+language = "en"
+multilingual = false
+src = "src"
+title ="Fancy Rust"
+
+[output.html]
+git-repository-url = "https://github.com/sunface/fancy-rust"
+edit-url-template = "https://github.com/sunface/lowcode-rust/blob/main/{path}"
+additional-css = ["assets/ferris.css", "assets/theme/2018-edition.css"]
+additional-js = ["assets/ferris.js"]
