@@ -15,7 +15,7 @@
 - [精选Rust开源项目](#精选Rust开源项目)
 
 ## 全部推荐
-全部推荐位于`fancy-rust/src`目录下
+全部推荐位于[`fancy-rust/src`](./src)目录下
 
 ## 日常开发常用Rust库
 ### Web/HTTP
