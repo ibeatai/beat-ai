@@ -1,6 +1,6 @@
 # Summary
 - [日常开发Rust库推荐](./index.md)
-- [非常有趣的项目](./intresting/intro.md)
+- [有趣搞怪的项目](./有趣搞怪/intro.md)
   - [turn_off_the_borrow_checker](./intresting/turn_off_the_borrow_checker.md)
 - [明星项目](./明星项目.md)
 - [命令行工具](./命令行工具.md)
