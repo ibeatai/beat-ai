@@ -34,6 +34,9 @@
   * [vectordotdev/vector](https://github.com/vectordotdev/vector)  一个性能很高的数据采集agent，采集本地的日志、监控等数据，发送到远程的kafka、jaeger等数据下沉端，它最大的优点就是能从多种数据源(包括Opentelemetry)收集数据，然后推送到多个数据处理或者存储等下沉端。
 
 ### SQL客户端
+* 性能对比
+  * [metrics](https://github.com/diesel-rs/metrics) 该库对Rust现存的数据库连接服务进行性能测试，若大家有性能上的需求，值得一看
+  
 * 通用
   * [launchbadge/sqlx](https://github.com/launchbadge/sqlx) 异步实现、高性能、纯Rust代码的SQL库，支持`PostgreSQL`, `MySQL`, `SQLite`,和 `MSSQL`.
 
