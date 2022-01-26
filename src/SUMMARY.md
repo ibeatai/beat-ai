@@ -1,7 +1,8 @@
 # Summary
 - [日常开发Rust库推荐](./index.md)
-- [有趣搞怪的项目](./有趣搞怪/intro.md)
-  - [turn_off_the_borrow_checker](./intresting/turn_off_the_borrow_checker.md)
+- [有趣搞怪的项目](./趣味Rust/intro.md)
+  - [关闭你的借用检查](./趣味Rust/turn_off_the_borrow_checker.md)
+  - [使用WASM对森林火灾进行建模](./趣味Rust/forest-fire-model.md)
 - [明星项目](./明星项目.md)
 - [命令行工具](./命令行工具.md)
 - [操作系统](./操作系统.md)
