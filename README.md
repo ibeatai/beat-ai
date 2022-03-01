@@ -1,17 +1,27 @@
 # Fancy Rust
-在设计上，我们并没有借鉴`awesome-xxx`常用的方式：在首页放非常长的列表,囊括一切。而是选择**用户友好的方式**来呈现内容:
-- **主页**放置用户最常用的库和资料, **这里所有的库都是精心挑选和描述的**
-- 其它优秀的库，都按照场景分类，放入[`src`](https://github.com/sunface/fancy-rust)目录下的对应`.md`文件中，例如**区块链.md**，**游戏开发.md**等
-- 一般来说，同一个类别中的库按照**推荐度优先级排序**，越靠前，推荐度越高
+拒绝过时，拒绝敷衍，拒绝低质量！Fancy Rust 精心收集了 Rust 各个场景常用的优秀开源项目，我们的目标是：**让你的 Rust 项目 Fancy 起来**。
 
-## 主页目录
+## 快速索引
+- [日常开发必备的库](#日常开发必备的库)
+- [常用开发工具 todo](./常用开发工具.md)
+- [有趣搞怪的项目](./趣味Rust/intro.md)
+  - [关闭你的借用检查](./趣味Rust/turn_off_the_borrow_checker.md)
+  - [使用WASM对森林火灾进行建模](./趣味Rust/forest-fire-model.md)
+- [明星项目](./明星项目.md)
+- [命令行工具](./命令行工具.md)
+- [操作系统](./操作系统.md)
+- [游戏和模拟器](./游戏.md)
+- [游戏开发和图形渲染(GPU)](./游戏开发.md)
+- [Javascript和WASM](./Javascript基础设施.md)
+- [GUI todo](./gui.md)
+
+## 日常开发必备的库
 - [多线程](#多线程) 
 - [Web/HTTP](#webhttp),  [SQL客户端](#SQL客户端), [NoSql客户端](#NoSql客户端)， [网络通信协议](#网络通信协议), [异步网络编程](#异步网络编程)
 - [服务发现](#服务发现), [消息队列](#消息队列), [搜索引擎](#搜索引擎)
 - [编解码](#编解码), [Email](#Email), [常用正则模版](#常用正则模版)
 - [日志监控](#日志监控), [代码Debug](#代码Debug), [性能优化](#性能优化)
 
-## 日常开发常用Rust库
 ### Web/HTTP
 * HTTP客户端
   * [reqwest](https://github.com/seanmonstar/reqwest)  一个简单又强大的HTTP客户端，`reqwest`是目前使用最多的HTTP库 
@@ -34,6 +44,9 @@
   * [vectordotdev/vector](https://github.com/vectordotdev/vector)  一个性能很高的数据采集agent，采集本地的日志、监控等数据，发送到远程的kafka、jaeger等数据下沉端，它最大的优点就是能从多种数据源(包括Opentelemetry)收集数据，然后推送到多个数据处理或者存储等下沉端。
 
 ### SQL客户端
+* 性能对比
+  * [metrics](https://github.com/diesel-rs/metrics) 该库对Rust现存的数据库连接服务进行性能测试，若大家有性能上的需求，值得一看
+  
 * 通用
   * [launchbadge/sqlx](https://github.com/launchbadge/sqlx) 异步实现、高性能、纯Rust代码的SQL库，支持`PostgreSQL`, `MySQL`, `SQLite`,和 `MSSQL`.
 

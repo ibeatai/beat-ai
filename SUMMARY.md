@@ -1,7 +1,6 @@
 # Summary
 - [日常开发Rust库推荐](./index.md)
-- [Rust开发实用工具 todo](rust-utils/index.md)
-  - [宏 todo](rust-utils/macro.md)
+- [Rust开发工具链 todo](rust-utils/index.md)
 - [有趣搞怪的项目](./趣味Rust/intro.md)
   - [关闭你的借用检查](./趣味Rust/turn_off_the_borrow_checker.md)
   - [使用WASM对森林火灾进行建模](./趣味Rust/forest-fire-model.md)
