@@ -3,17 +3,17 @@
 
 ## 快速索引
 - [日常开发必备的库](#日常开发必备的库)
-- [常用开发工具 todo](./常用开发工具.md)
-- [有趣搞怪的项目](./趣味Rust/intro.md)
-  - [关闭你的借用检查](./趣味Rust/turn_off_the_borrow_checker.md)
-  - [使用WASM对森林火灾进行建模](./趣味Rust/forest-fire-model.md)
-- [明星项目](./明星项目.md)
-- [命令行工具](./命令行工具.md)
-- [操作系统](./操作系统.md)
-- [游戏和模拟器](./游戏.md)
-- [游戏开发和图形渲染(GPU)](./游戏开发.md)
-- [Javascript和WASM](./Javascript基础设施.md)
-- [GUI todo](./gui.md)
+- [常用开发工具 todo](./docs/常用开发工具.md)
+- [有趣搞怪的项目](./docs/趣味Rust/intro.md)
+  - [关闭你的借用检查](./docs/趣味Rust/turn_off_the_borrow_checker.md)
+  - [使用WASM对森林火灾进行建模](./docs/趣味Rust/forest-fire-model.md)
+- [明星项目](./docs/明星项目.md)
+- [命令行工具](./docs/命令行工具.md)
+- [操作系统](./docs/操作系统.md)
+- [游戏和模拟器](./docs/游戏.md)
+- [游戏开发和图形渲染(GPU)](./docs/游戏开发.md)
+- [Javascript和WASM](./docs/Javascript基础设施.md)
+- [GUI todo](./docs/GUI.md)
 
 ## 日常开发必备的库
 - [多线程](#多线程) 
