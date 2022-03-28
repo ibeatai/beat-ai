@@ -99,6 +99,7 @@
   * [snapview/tungstenite-rs](https://github.com/snapview/tungstenite-rs) 轻量级的Websocket流实现，该库更偏底层，例如，你可以用来构建其它网络库
 * gRPC
   * [hyperium/tonic](https://github.com/hyperium/tonic) 纯Rust实现的gRPC客户端和服务器端，支持async/await异步调用，文档和示例较为清晰
+  * [tokio-rs/prost](https://github.com/tokio-rs/prost) 纯Rust实现的[Protocol Buffers](https://developers.google.com/protocol-buffers/)类库，Prost 支持从   proto2 和 proto3 文件生成简单、实用的代码。
   * [tikv/grpc-rs](https://github.com/tikv/grpc-rs) 国产开源之光Tidb团队出品的gRPC框架, 基于C的代码实现, 就是最近好像不是很活跃
   * 其实这两个实现都很优秀，把`tonic`放在第一位，主要是因为它是纯Rust实现，同时社区也更为活跃，但是并不代表它比`tikv`的更好！
 * QUIC
