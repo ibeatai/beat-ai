@@ -171,6 +171,9 @@
 * YAML
   * [dtolnay/serde-yaml](https://github.com/dtolnay/serde-yaml) 使用`serde`编解码`YAML`格式的数据
 
+### UI 开发框架
+* 跨平台
+  * [DioxusLabs/Dioxus](https://github.com/DioxusLabs/dioxus) 跨平台 UI 开发框架，支持 `WASM`、`Desktop`、`TUI` 等应用开发，文档较为详细
 
 ### Email
 * [lettre/lettre](https://github.com/lettre/lettre) — Rust SMTP库
