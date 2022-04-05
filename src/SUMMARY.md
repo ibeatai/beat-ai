@@ -1,6 +1,6 @@
 # Summary
 
-[Rust Cookbook](about.md)
+[Cook Rust](about.md)
 
 
 
