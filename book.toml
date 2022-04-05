@@ -8,8 +8,8 @@ src = "src"
 no-section-label = true
 additional-css = ["theme/style.css"]
 additional-js = ["assets/custom.js", "assets/bigPicture.js"]
-git-repository-url = "https://github.com/sunface/rust-cookbook"
-edit-url-template = "https://github.com/sunface/rust-cookbook/edit/main/{path}"
+git-repository-url = "https://github.com/studyrs/cook-rust"
+edit-url-template = "https://github.com/studyrs/cook-rust/edit/main/{path}"
 
 [output.html.playground]
 editable = true
