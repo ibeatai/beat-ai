@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>使用 Rust 增强 JS - Cook Rust</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/style.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="about.html">Rust Cookbook</a></li><li class="chapter-item expanded affix "><li class="part-title">Awewome Rust</li><li class="spacer"></li><li class="chapter-item expanded "><a href="daily-dev.html">日常开发常用库</a></li><li class="chapter-item expanded "><a href="superstar.html">明星项目</a></li><li class="chapter-item expanded "><a href="empowering-js.html" class="active">使用 Rust 增强 JS</a></li><li class="chapter-item expanded "><a href="cmd.html">常用命令行工具</a></li><li class="chapter-item expanded "><a href="games.html">游戏</a></li><li class="chapter-item expanded "><a href="gamedev.html">游戏开发</a></li><li class="chapter-item expanded "><a href="os.html">操作系统</a></li><li class="chapter-item expanded "><div>趣味项目</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intresting/forest-fire-model.html">使用 WSAM 对森林火灾进行建模</a></li><li class="chapter-item expanded "><a href="intresting/turn-off-borrow-checker.html">关掉你的编译检查</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Cookbook</li><li class="spacer"></li><li class="chapter-item expanded "><a href="algos/intro.html">实用算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="algos/randomness.html">生成随机值</a></li><li class="chapter-item expanded "><a href="algos/sorting.html">Vec 排序</a></li></ol></li><li class="chapter-item expanded "><div>命令行</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cmd/parsing.html">参数解析</a></li><li class="chapter-item expanded "><a href="cmd/ansi.html">终端输出格式化</a></li></ol></li><li class="chapter-item expanded "><div>压缩</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="compression/tar.html">使用.tar包</a></li></ol></li><li class="chapter-item expanded "><div>并发</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cocurrency/threads.html">线程</a></li><li class="chapter-item expanded "><a href="cocurrency/parallel.html">使用rayon并行处理数据</a></li></ol></li><li class="chapter-item expanded "><div>密码学</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cryptography/hashing.html">哈希</a></li><li class="chapter-item expanded "><a href="cryptography/encryption.html">加密</a></li></ol></li><li class="chapter-item expanded "><div>数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="datastructures/bitfield.html">位字段</a></li></ol></li><li class="chapter-item expanded "><div>数据库</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="database/sqlite.html">SQLite</a></li><li class="chapter-item expanded "><a href="database/postgres.html">Postgres</a></li></ol></li><li class="chapter-item expanded "><div>日期和时间</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="datetime/duration.html">时间计算和转换</a></li><li class="chapter-item expanded "><a href="datetime/parsing.html">解析和显示</a></li></ol></li><li class="chapter-item expanded "><div>开发者工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="devtools/log.html">日志</a></li><li class="chapter-item expanded "><a href="devtools/config-log.html">配置日志</a></li><li class="chapter-item expanded "><a href="devtools/version.html">版本号</a></li><li class="chapter-item expanded "><a href="devtools/build-tools.html">构建时工具</a></li></ol></li><li class="chapter-item expanded "><div>编解码</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="encoding/strings.html">字符编码</a></li><li class="chapter-item expanded "><a href="encoding/csv.html">CSV</a></li><li class="chapter-item expanded "><a href="encoding/structured.html">结构化数据</a></li></ol></li><li class="chapter-item expanded "><div>错误处理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="errors/error-chain.html">error-chain</a></li></ol></li><li class="chapter-item expanded "><div>文件操作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="files/read-write.html">读写</a></li><li class="chapter-item expanded "><a href="files/dir.html">目录</a></li></ol></li><li class="chapter-item expanded "><div>硬件信息</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hardware/processor.html">处理器</a></li></ol></li><li class="chapter-item expanded "><div>内存管理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory/global-vars.html">全局变量</a></li></ol></li><li class="chapter-item expanded "><div>网络协议</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="protocols/tcpip.html">TCP/IP</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Cook Rust</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/sunface/rust-cookbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/sunface/rust-cookbook/edit/main/src/empowering-js.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h1 id="使用rust增强javascript"><a class="header" href="#使用rust增强javascript">使用Rust增强Javascript</a></h1>
+<p><code>Javascript</code>是目前全世界使用最广的语言(TIOBE排行榜比较迷，JS并没有排在第一位，我个人并不认同它的排名)。在过去这么多年中，围绕着<code>Javascript</code>已经建立了庞大的基础设施生态：例如使用<code>webpack</code>来将多个<code>js</code>文件打包成一个；使用<code>Babel</code>允许你用现代化的<code>js</code>语法编写兼容旧浏览器的代码；使用<code>Eslint</code>帮助开发找出代码中潜在的问题，类似<code>cargo clippy</code>。</p>
+<p>以上的种种都在帮助<code>js</code>成为更好的语言和工具，它们是<code>Web</code>应用程序得以顺利、高效的开发和运行的基石。这些工具往往使用<code>Javascript</code>语言编写，一般来说，是没有问题的，但是在某些时候，可能会存在性能上的瓶颈或者安全隐患，因此阴差阳错、机缘巧合下，<code>Rust</code>成为了一个搅局者。</p>
+<h2 id="javascript基建库"><a class="header" href="#javascript基建库">Javascript基建库</a></h2>
+<h3 id="deno"><a class="header" href="#deno">deno</a></h3>
+<p>首先出场的自然是咖位最重的之一，可以说正是因为<code>deno</code>和<code>swc</code>的横空出世，才让一堆观望的大神对于Rust实现<code>Javascript</code>基建有了更强的信心。</p>
+<p><code>deno</code>是<code>node</code>半逆转后的字序，从此可以看出<code>deno</code>是<code>Node.js</code>的替代，它的目标是为<code>Typescript/Javascript</code>提供一个更现代化、更安全、更强大    的运行时，同时内置了很多强大的工具，可以用于打包、编译成可执行文件、文档、测试、lint等。</p>
+<p>值得一提的是，<code>deno</code>的不少工具都使用了<code>swc</code>进行建造，包括代码审查、格式化、文档生成等。</p>
+<p>通过包引入的方式来对比下<code>deno</code>和<code>node</code>，大家可以自己品味下。</p>
+<pre><code class="language-js">// node
+const koa = require(&quot;koa&quot; );
+cost logger = require(&quot;@adesso/logger&quot;)
+
+// deno
+import { Application } from &quot;https://deno.land/x/oak/mod.ts&quot;;
+import { Logger } from &quot;https://adesso.de/lib/logger.ts&quot;
+</code></pre>
+<h3 id="swc"><a class="header" href="#swc">swc</a></h3>
+<p><a href="https://github.com/swc-project/swc"><code>swc</code></a>是<code>Typescript/Javascript</code>编译器，它可以用来编译、压缩和打包JS，同时支持使用插件进行扩展，例如做代码变换等。</p>
+<p><code>swc</code>目前正在被一些知名项目所使用，包括<code>Next.js</code>,<code>Parcel</code>和<code>Deno</code>，还有些著名的公司也在使用它，例如<code>Vercel</code>、字节跳动、腾讯等。</p>
+<p>它的性能非常非常高，官方号称，在单线程下比<code>Babel</code>快20倍，在4核心下比<code>Babel</code>快70倍！</p>
+<p>几个使用案例：</p>
+<ul>
+<li><a href="http://nextjs.org/12">nextjs 12</a>, 通过使用<code>swc</code>获得了更好的扩展性、性能以及wasm的支持，其中性能方面提升了3倍刷新速度、5倍打包速度</li>
+<li><a href="https://parceljs.org/">Parcel</a>，通过使用<code>swc</code>改善了10倍的性能</li>
+</ul>
+<img alt="parcel screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/parcel.png?raw=true" class="center"  />
+<p>官方还提供了一个在线运行的<a href="https://swc.rs/playground">demo</a>，功能齐全，可以试试。</p>
+<img alt="swc screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/swc.jpg?raw=true" class="center"  />
+<h3 id="rome"><a class="header" href="#rome">Rome</a></h3>
+<p><a href="https://github.com/rome/tools"><code>Rome</code></a>可以用来对<code>JavaScript</code>、<code>TypeScript</code>、<code>HTML</code>、<code>JSON</code>、<code>Markdown</code> 和 <code>CSS</code> 进行lint、编译、打包等功能，它的目标是替代<code>Babel</code>、<code>ESLint</code>、<code>webpack</code>、<code>Prettier</code>、<code>Jest</code>等。</p>
+<p>一开始<code>Rome</code>是使用<code>Typescript</code>开发，目前正在用<code>Rust</code>进行重写。有趣的是: <code>Rome</code>的作者也是<code>Babel</code>的作者, 后者还是他在学习编译原理时做的。</p>
+<h3 id="fnm"><a class="header" href="#fnm">fnm</a></h3>
+<p><a href="https://github.com/Schniz/fnm"><code>fnm</code></a>是一个简单易用、高性能的<code>Node</code>版本管理工具，还支持<code>.nvmrc</code>文件(<code>nvm</code>的<code>node</code>版本描述文件)</p>
+<img alt="fnm screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/fnm.svg?raw=true" class="center"  />
+<h3 id="boa"><a class="header" href="#boa">boa</a></h3>
+<p><a href="https://github.com/boa-dev/boa"><code>boa</code></a>是一个高性能的<code>javascript</code>词法分析器，解析器和解释器，目前还是实验性质的。</p>
+<img alt="boa screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/boa.gif?raw=true" class="center"  />
+<h3 id="napi"><a class="header" href="#napi">napi</a></h3>
+<p><a href="https://github.com/napi-rs/napi-rs"><code>napi</code></a>可以用于构建基于<code>Node API</code>的<code>Nodejs</code>插件，目前由<code>nextjs</code>主导开发。</p>
+<h3 id="volt"><a class="header" href="#volt">volt</a></h3>
+<p><a href="https://github.com/voltpkg/volt"><code>volt</code></a>是一个现代化的、高性能、安全可靠的<code>Javascript</code>包管理工具。目前该库正处于活跃开发阶段，只供学习使用。</p>
+<img alt="volt screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/volt.png?raw=true" class="center"  />
+<h3 id="neon"><a class="header" href="#neon">neon</a></h3>
+<p><a href="https://github.com/neon-bindings/neon"><code>neon</code></a>可以用于写安全、高性能的原生<code>Nodejs</code>模块。</p>
+<pre><pre class="playground"><code class="language-rust edition2021">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn make_an_array(mut cx: FunctionContext) -&gt; JsResult&lt;JsArray&gt; {
+    // 创建一些值:
+    let n = cx.number(9000);
+    let s = cx.string(&quot;hello&quot;);
+    let b = cx.boolean(true);
+
+    // 创建一个新数组:
+    let array: Handle&lt;JsArray&gt; = cx.empty_array();
+
+    // 将值推入数组中
+    array.set(&amp;mut cx, 0, n)?;
+    array.set(&amp;mut cx, 1, s)?;
+    array.set(&amp;mut cx, 2, b)?;
+
+    // 返回数组
+    Ok(array)
+}
+
+register_module!(mut cx, {
+    cx.export_function(&quot;makeAnArray&quot;, make_an_array)
+})
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="resvg-js"><a class="header" href="#resvg-js">resvg-js</a></h3>
+<p><a href="https://github.com/yisibl/resvg-js">resvg-js</a>是一个高性能<code>svg</code>渲染库，使用Rust + Typescript实现。下面的图片通过<code>svg</code>实现(羞～～～): </p>
+<img alt="resvg screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/resvg.svg?raw=true" class="center"  />
+<h3 id="deno_lint"><a class="header" href="#deno_lint">deno_lint</a></h3>
+<p><a href="https://github.com/denoland/deno_lint">deno_lint</a>, 由<code>deno</code>团队出品的<code>lint</code>工具，支持<code>Javascript/Typescript</code>，支持<code>Deno</code>也支持<code>Node</code>。</p>
+<p>优点之一就是极致的快:</p>
+<pre><code class="language-shell">[
+  {
+    &quot;name&quot;: &quot;deno_lint&quot;,
+    &quot;totalMs&quot;: 105.3750100000002,
+    &quot;runsCount&quot;: 5,
+    &quot;measuredRunsAvgMs&quot;: 21.07500200000004,
+    &quot;measuredRunsMs&quot;: [
+      24.79783199999997,
+      19.563640000000078,
+      20.759051999999883,
+    ]
+  },
+  {
+    &quot;name&quot;: &quot;eslint&quot;,
+    &quot;totalMs&quot;: 11845.073306000002,
+    &quot;runsCount&quot;: 5,
+    &quot;measuredRunsAvgMs&quot;: 2369.0146612000003,
+    &quot;measuredRunsMs&quot;: [
+      2686.1039550000005,
+      2281.501061,
+      2298.6185210000003,
+    ]
+  }
+]
+</code></pre>
+<h3 id="rslint"><a class="header" href="#rslint">rslint</a></h3>
+<p><a href="https://github.com/rslint/rslint">rslint</a>是一个高性能、可定制性强、简单易用的<code>Javascript/Typescript</code> lint分析工具。</p>
+<pre><code class="language-shell">$ echo &quot;let a = foo.hasOwnProperty('bar');&quot; &gt; foo.js
+$ rslint ./foo.js
+error[no-prototype-builtins]: do not access the object property `hasOwnProperty` directly from `foo`
+  ┌─ ./foo.js:1:9
+  │
+1 │ let a = foo.hasOwnProperty('bar');
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  │
+help: get the function from the prototype of `Object` and call it
+  │
+1 │ let a = Object.prototype.hasOwnProperty.call(foo, 'bar');
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │
+  ╧ note: the method may be shadowed and cause random bugs and denial of service vulnerabilities
+
+Outcome: 1 fail, 0 warn, 0 success
+
+help: for more information about the errors try the explain command: `rslint explain &lt;rules&gt;`
+</code></pre>
+<h3 id="rusty_v8"><a class="header" href="#rusty_v8">rusty_v8</a></h3>
+<p><a href="https://github.com/denoland/rusty_v8">rusty_v8</a>是<code>v8</code>的Rust语言绑定，底层封装了<code>c++ API</code>。</p>
+<h2 id="用wasm增强js"><a class="header" href="#用wasm增强js">用WASM增强JS</a></h2>
+<h3 id="wasm"><a class="header" href="#wasm">wasm</a></h3>
+<p><a href="https://webassembly.org/docs/use-cases/">wasm(web assembly)</a>是一种低级语言，它运行在浏览器中，可以和<code>javascript</code>相互调用，几乎所有浏览器都支持， 而且目前有多种高级语言都可以直接编译成<code>wasm</code>，更是大大增强了它的地位。</p>
+<p>目前来说Rust可以编译成<code>wasm</code>，虽然还不够完美，但是它正在以肉眼可见的速度快速发展中。因此同时使用<code>Rust</code>和<code>Javascript</code>成为了一种可能：将<code>Rust</code>编译成<code>wasm</code>，再跟<code>js</code>进行交互，两者共生共存，各自解决擅长的场景(<code>wasm</code>性能高，<code>js</code>开发速度快)。</p>
+<h3 id="yew"><a class="header" href="#yew">yew</a></h3>
+<p><a href="https://github.com/yewstack/yew"><code>yew</code></a>是一个正在活跃开发的<code>Rust/Wasm</code>框架，用于构建<code>Web</code>客户端应用。</p>
+<img alt="yew screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/yew.jpg?raw=true" class="center"  />
+<h3 id="gloo"><a class="header" href="#gloo">gloo</a></h3>
+<p>[gloo]是一个模块化的工具，使用<code>Rust/WASM</code>构建快速、可靠的<code>Web</code>应用。</p>
+<pre><pre class="playground"><code class="language-rust edition2021">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use gloo::{events::EventListener, timers::callback::Timeout};
+use wasm_bindgen::prelude::*;
+
+pub struct DelayedHelloButton {
+    button: web_sys::Element,
+    on_click: events::EventListener,
+}
+
+impl DelayedHelloButton {
+    pub fn new(document: &amp;web_sys::Document) -&gt; Result&lt;DelayedHelloButton, JsValue&gt; {
+        // 创建 `&lt;button&gt;` 元素.
+        let button = document.create_element(&quot;button&quot;)?;
+
+        // 监听button上的`click`事件
+        let button2 = button.clone();
+        let on_click = EventListener::new(&amp;button, &quot;click&quot;, move |_event| {
+            // 一秒后，更新button中的文本
+            let button3 = button2.clone();
+            Timeout::new(1_000, move || {
+                button3.set_text_content(Some(&quot;Hello from one second ago!&quot;));
+            })
+            .forget();
+        });
+
+        Ok(DelayedHelloButton { button, on_click })
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="wasm-bindgen"><a class="header" href="#wasm-bindgen">wasm-bindgen</a></h3>
+<p><a href="https://github.com/rustwasm/wasm-bindgen">wasm-bindgen</a>可以让<code>WASM</code>模块和<code>Javascript</code>模块进行更好的交互。</p>
+<pre><pre class="playground"><code class="language-rust edition2021">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use wasm_bindgen::prelude::*;
+
+// 从Web导入 `window.alert` 函数
+#[wasm_bindgen]
+extern &quot;C&quot; {
+    fn alert(s: &amp;str);
+}
+
+// 从Rust导出一个`greet`函数到Javascript，该函数会`alert`一条欢迎信息
+#[wasm_bindgen]
+pub fn greet(name: &amp;str) {
+    alert(&amp;format!(&quot;Hello, {}!&quot;, name));
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="wasm-pack"><a class="header" href="#wasm-pack">wasm-pack</a></h3>
+<p><a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>是一站式的解决方案，用于构建和使用Rust生成的WASM，支持在浏览器中或后台的<code>Node.js</code>中与<code>Javascript</code>进行交互。</p>
+<img alt="wasm-pack screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/wasm-pack.gif?raw=true" class="center"  />
+<h3 id="wasmer"><a class="header" href="#wasmer">wasmer</a></h3>
+<p><a href="https://github.com/wasmerio/wasmer">wasmer</a>是业界领先的<code>WASM</code>运行时，支持<code>WASI</code>和<code>Emscripten</code>。</p>
+<pre><code class="language-shell">$ wasmer qjs.wasm
+QuickJS - Type &quot;\h&quot; for help
+qjs &gt; const i = 1 + 2;
+qjs &gt; console.log(&quot;hello &quot; + i);
+hello 3
+</code></pre>
+<h3 id="wasmtime"><a class="header" href="#wasmtime">wasmtime</a></h3>
+<p><a href="https://github.com/bytecodealliance/wasmtime">wasmtime</a>是一个为<code>WASM</code>设计的<code>JIT</code>风格的独立运行时。</p>
+<pre><pre class="playground"><code class="language-rust edition2021">fn main() {
+    println!(&quot;Hello, world!&quot;);
+}
+</code></pre></pre>
+<pre><code class="language-shell">$ rustup target add wasm32-wasi
+$ rustc hello.rs --target wasm32-wasi
+$ wasmtime hello.wasm
+Hello, world!
+</code></pre>
+<h3 id="trunk"><a class="header" href="#trunk">trunk</a></h3>
+<p><a href="https://github.com/thedodd/trunk">trunk</a>是一个<code>WASM</code>构建、打包、Web发布工具。</p>
+<h3 id="photon"><a class="header" href="#photon">photon</a></h3>
+<p><a href="">photon</a>是高性能的、跨平台的图片处理库，使用<code>Rust</code>开发，编译成<code>WASM</code>运行，为你的Web应用和<code>Node.js</code>应用提供无与伦比的图片处理速度，当然，它既然使用<code>Rust</code>开发，也可以作为一个库被你的后台程序所使用。</p>
+<img alt="photon screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/photon.jpg?raw=true" class="center"  />
+<h3 id="tinysearch"><a class="header" href="#tinysearch">tinysearch</a></h3>
+<p><a href="https://github.com/tinysearch/tinysearch">tinysearch</a>是一个搜索工具，用于静态网站中的内容搜索，使用<code>Rust</code>和<code>WASM</code>构建。优点是体积小(适用于浏览器)、性能高、全文索引。</p>
+<img alt="tinysearch screenshot" width="80%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/tinysearch.gif?raw=true" class="center"  />
+<h3 id="wasm-pdf"><a class="header" href="#wasm-pdf">wasm-pdf</a></h3>
+<p><a href="https://github.com/jussiniinikoski/wasm-pdf">wasm-pdf</a>通过<code>Javascript</code>和<code>WASM</code>来生成<code>PDF</code>，可以直接在浏览器中使用。</p>
+<h3 id="makepad"><a class="header" href="#makepad">makepad</a></h3>
+<p><a href="https://github.com/makepad/makepad">makepad</a>是一个充满创意的Rust开发平台，支持编译成<code>wasm</code>，并使用<code>webGL</code>进行渲染。</p>
+<img alt="makepad screenshot" width="80%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/makepad.jpg?raw=true" class="center"  />
+<h2 id="rust--javascript学习教程"><a class="header" href="#rust--javascript学习教程">Rust + Javascript学习教程</a></h2>
+<h3 id="wasm-book"><a class="header" href="#wasm-book">wasm-book</a></h3>
+<p><a href="https://github.com/rustwasm/book">wasm-book</a>是一本讲述<code>Rust</code>和<code>wasm</code>的书，篇幅不算长，但是值得学习，还包含了几个很酷的例子。</p>
+<h3 id="wasm-learning"><a class="header" href="#wasm-learning">wasm-learning</a></h3>
+<p><a href="https://github.com/second-state/wasm-learning"><code>wasm-learning</code></a>是一个英文教程，用于学习<code>Rust</code>, <code>wasm</code>和<code>Node.js</code>，你可以学会如何使用<code>Rust</code>来为<code>Nodejs</code>构建函数，可以同时利用<code>Rust</code>的性能、<code>wasm</code>的安全性和可移植性、<code>js</code>的易用性。</p>
+<h3 id="rust-js-snake-game"><a class="header" href="#rust-js-snake-game">rust-js-snake-game</a></h3>
+<p><a href="https://github.com/RodionChachura/rust-js-snake-game"><code>rust-js-snake-game</code></a>是一个用<code>rust + js + wasm</code>构建的贪食蛇游戏。</p>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="superstar.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="cmd.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="superstar.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="cmd.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "empowering-js.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="assets/custom.js"></script>
+        <script type="text/javascript" src="assets/bigPicture.js"></script>
+    </body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>版本号 - Cook Rust</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../about.html">Rust Cookbook</a></li><li class="chapter-item expanded affix "><li class="part-title">Awewome Rust</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../daily-dev.html">日常开发常用库</a></li><li class="chapter-item expanded "><a href="../superstar.html">明星项目</a></li><li class="chapter-item expanded "><a href="../empowering-js.html">使用 Rust 增强 JS</a></li><li class="chapter-item expanded "><a href="../cmd.html">常用命令行工具</a></li><li class="chapter-item expanded "><a href="../games.html">游戏</a></li><li class="chapter-item expanded "><a href="../gamedev.html">游戏开发</a></li><li class="chapter-item expanded "><a href="../os.html">操作系统</a></li><li class="chapter-item expanded "><div>趣味项目</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../intresting/forest-fire-model.html">使用 WSAM 对森林火灾进行建模</a></li><li class="chapter-item expanded "><a href="../intresting/turn-off-borrow-checker.html">关掉你的编译检查</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Cookbook</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../algos/intro.html">实用算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../algos/randomness.html">生成随机值</a></li><li class="chapter-item expanded "><a href="../algos/sorting.html">Vec 排序</a></li></ol></li><li class="chapter-item expanded "><div>命令行</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cmd/parsing.html">参数解析</a></li><li class="chapter-item expanded "><a href="../cmd/ansi.html">终端输出格式化</a></li></ol></li><li class="chapter-item expanded "><div>压缩</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../compression/tar.html">使用.tar包</a></li></ol></li><li class="chapter-item expanded "><div>并发</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cocurrency/threads.html">线程</a></li><li class="chapter-item expanded "><a href="../cocurrency/parallel.html">使用rayon并行处理数据</a></li></ol></li><li class="chapter-item expanded "><div>密码学</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cryptography/hashing.html">哈希</a></li><li class="chapter-item expanded "><a href="../cryptography/encryption.html">加密</a></li></ol></li><li class="chapter-item expanded "><div>数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datastructures/bitfield.html">位字段</a></li></ol></li><li class="chapter-item expanded "><div>数据库</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../database/sqlite.html">SQLite</a></li><li class="chapter-item expanded "><a href="../database/postgres.html">Postgres</a></li></ol></li><li class="chapter-item expanded "><div>日期和时间</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datetime/duration.html">时间计算和转换</a></li><li class="chapter-item expanded "><a href="../datetime/parsing.html">解析和显示</a></li></ol></li><li class="chapter-item expanded "><div>开发者工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../devtools/log.html">日志</a></li><li class="chapter-item expanded "><a href="../devtools/config-log.html">配置日志</a></li><li class="chapter-item expanded "><a href="../devtools/version.html" class="active">版本号</a></li><li class="chapter-item expanded "><a href="../devtools/build-tools.html">构建时工具</a></li></ol></li><li class="chapter-item expanded "><div>编解码</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../encoding/strings.html">字符编码</a></li><li class="chapter-item expanded "><a href="../encoding/csv.html">CSV</a></li><li class="chapter-item expanded "><a href="../encoding/structured.html">结构化数据</a></li></ol></li><li class="chapter-item expanded "><div>错误处理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../errors/error-chain.html">error-chain</a></li></ol></li><li class="chapter-item expanded "><div>文件操作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../files/read-write.html">读写</a></li><li class="chapter-item expanded "><a href="../files/dir.html">目录</a></li></ol></li><li class="chapter-item expanded "><div>硬件信息</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hardware/processor.html">处理器</a></li></ol></li><li class="chapter-item expanded "><div>内存管理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../memory/global-vars.html">全局变量</a></li></ol></li><li class="chapter-item expanded "><div>网络协议</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../protocols/tcpip.html">TCP/IP</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Cook Rust</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/sunface/rust-cookbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/sunface/rust-cookbook/edit/main/src/devtools/version.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h1 id="版本号"><a class="header" href="#版本号">版本号</a></h1>
+<h3 id="解析并增加版本号"><a class="header" href="#解析并增加版本号">解析并增加版本号</a></h3>
+<p>下面例子使用 <a href="https://docs.rs/semver/*/semver/struct.Version.html#method.parse">Version::parse</a> 将一个字符串转换成 <a href="https://docs.rs/semver/*/semver/struct.Version.html">semver::Version</a> 版本号，然后将它的 patch, minor, major 版本号都增加 1。</p>
+<p>注意，为了符合<a href="http://semver.org">语义化版本的说明</a>，增加 <code>minor</code> 版本时，<code>patch</code> 版本会被重设为 <code>0</code>，当增加 <code>major</code> 版本时，<code>minor</code> 和 <code>patch</code> 都将被重设为 <code>0</code>。</p>
+<pre><pre class="playground"><code class="language-rust editable edition2021">use semver::{Version, SemVerError};
+
+fn main() -&gt; Result&lt;(), SemVerError&gt; {
+    let mut parsed_version = Version::parse(&quot;0.2.6&quot;)?;
+
+    assert_eq!(
+        parsed_version,
+        Version {
+            major: 0,
+            minor: 2,
+            patch: 6,
+            pre: vec![],
+            build: vec![],
+        }
+    );
+
+    parsed_version.increment_patch();
+    assert_eq!(parsed_version.to_string(), &quot;0.2.7&quot;);
+    println!(&quot;New patch release: v{}&quot;, parsed_version);
+
+    parsed_version.increment_minor();
+    assert_eq!(parsed_version.to_string(), &quot;0.3.0&quot;);
+    println!(&quot;New minor release: v{}&quot;, parsed_version);
+
+    parsed_version.increment_major();
+    assert_eq!(parsed_version.to_string(), &quot;1.0.0&quot;);
+    println!(&quot;New major release: v{}&quot;, parsed_version);
+
+    Ok(())
+}
+</code></pre></pre>
+<h3 id="解析一个复杂的版本号字符串"><a class="header" href="#解析一个复杂的版本号字符串">解析一个复杂的版本号字符串</a></h3>
+<p>这里的版本号字符串还将包含 <code>SemVer</code> 中定义的预发布和构建元信息。</p>
+<p>值得注意的是，为了符合 <code>SemVer</code> 的规则，构建元信息虽然会被解析，但是在做版本号比较时，该信息会被忽略。换而言之，即使两个版本号的构建字符串不同，它们的版本号依然可能相同。</p>
+<pre><pre class="playground"><code class="language-rust editable edition2021">use semver::{Identifier, Version, SemVerError};
+
+fn main() -&gt; Result&lt;(), SemVerError&gt; {
+    let version_str = &quot;1.0.49-125+g72ee7853&quot;;
+    let parsed_version = Version::parse(version_str)?;
+
+    assert_eq!(
+        parsed_version,
+        Version {
+            major: 1,
+            minor: 0,
+            patch: 49,
+            pre: vec![Identifier::Numeric(125)],
+            build: vec![],
+        }
+    );
+    assert_eq!(
+        parsed_version.build,
+        vec![Identifier::AlphaNumeric(String::from(&quot;g72ee7853&quot;))]
+    );
+
+    let serialized_version = parsed_version.to_string();
+    assert_eq!(&amp;serialized_version, version_str);
+
+    Ok(())
+}
+</code></pre></pre>
+<h3 id="检查给定的版本号是否是预发布"><a class="header" href="#检查给定的版本号是否是预发布">检查给定的版本号是否是预发布</a></h3>
+<p>下面例子给出两个版本号，然后通过 <a href="https://docs.rs/semver/1.0.7/semver/struct.Version.html#method.is_prerelease">is_prerelease</a> 判断哪个是预发布的版本号。</p>
+<pre><pre class="playground"><code class="language-rust editable edition2021">use semver::{Version, SemVerError};
+
+fn main() -&gt; Result&lt;(), SemVerError&gt; {
+    let version_1 = Version::parse(&quot;1.0.0-alpha&quot;)?;
+    let version_2 = Version::parse(&quot;1.0.0&quot;)?;
+
+    assert!(version_1.is_prerelease());
+    assert!(!version_2.is_prerelease());
+
+    Ok(())
+}
+</code></pre></pre>
+<h3 id="找出给定范围内的最新版本"><a class="header" href="#找出给定范围内的最新版本">找出给定范围内的最新版本</a></h3>
+<p>下面例子给出了一个版本号列表，我们需要找到其中最新的版本。</p>
+<pre><pre class="playground"><code class="language-rust editable edition2021"><span class="boring">use error_chain::error_chain;
+</span>
+use semver::{Version, VersionReq};
+
+<span class="boring">error_chain! {
+</span><span class="boring">   foreign_links {
+</span><span class="boring">       SemVer(semver::SemVerError);
+</span><span class="boring">       SemVerReq(semver::ReqParseError);
+</span><span class="boring">   }
+</span>3}
+
+fn find_max_matching_version&lt;'a, I&gt;(version_req_str: &amp;str, iterable: I) -&gt; Result&lt;Option&lt;Version&gt;&gt;
+where
+    I: IntoIterator&lt;Item = &amp;'a str&gt;,
+{
+    let vreq = VersionReq::parse(version_req_str)?;
+
+    Ok(
+        iterable
+            .into_iter()
+            .filter_map(|s| Version::parse(s).ok())
+            .filter(|s| vreq.matches(s))
+            .max(),
+    )
+}
+
+fn main() -&gt; Result&lt;()&gt; {
+    assert_eq!(
+        find_max_matching_version(&quot;&lt;= 1.0.0&quot;, vec![&quot;0.9.0&quot;, &quot;1.0.0&quot;, &quot;1.0.1&quot;])?,
+        Some(Version::parse(&quot;1.0.0&quot;)?)
+    );
+
+    assert_eq!(
+        find_max_matching_version(
+            &quot;&gt;1.2.3-alpha.3&quot;,
+            vec![
+                &quot;1.2.3-alpha.3&quot;,
+                &quot;1.2.3-alpha.4&quot;,
+                &quot;1.2.3-alpha.10&quot;,
+                &quot;1.2.3-beta.4&quot;,
+                &quot;3.4.5-alpha.9&quot;,
+            ]
+        )?,
+        Some(Version::parse(&quot;1.2.3-beta.4&quot;)?)
+    );
+
+    Ok(())
+}
+</code></pre></pre>
+<h3 id="检查外部命令的版本号兼容性"><a class="header" href="#检查外部命令的版本号兼容性">检查外部命令的版本号兼容性</a></h3>
+<p>下面将通过 <a href="https://doc.rust-lang.org/std/process/struct.Command.html">Command</a> 来执行系统命令 <code>git --version</code>，并对该系统命令返回的 <code>git</code> 版本号进行解析。</p>
+<pre><pre class="playground"><code class="language-rust editable edition2021"><span class="boring">use error_chain::error_chain;
+</span>
+use std::process::Command;
+use semver::{Version, VersionReq};
+
+<span class="boring">error_chain! {
+</span><span class="boring">   foreign_links {
+</span><span class="boring">       Io(std::io::Error);
+</span><span class="boring">       Utf8(std::string::FromUtf8Error);
+</span><span class="boring">       SemVer(semver::SemVerError);
+</span><span class="boring">       SemVerReq(semver::ReqParseError);
+</span><span class="boring">   }
+</span><span class="boring">}
+</span>
+fn main() -&gt; Result&lt;()&gt; {
+    let version_constraint = &quot;&gt; 1.12.0&quot;;
+    let version_test = VersionReq::parse(version_constraint)?;
+    let output = Command::new(&quot;git&quot;).arg(&quot;--version&quot;).output()?;
+
+    if !output.status.success() {
+        error_chain::bail!(&quot;Command executed with failing error code&quot;);
+    }
+
+    let stdout = String::from_utf8(output.stdout)?;
+    let version = stdout.split(&quot; &quot;).last().ok_or_else(|| {
+        &quot;Invalid command output&quot;
+    })?;
+    let parsed_version = Version::parse(version)?;
+
+    if !version_test.matches(&amp;parsed_version) {
+        error_chain::bail!(&quot;Command version lower than minimum supported version (found {}, need {})&quot;,
+            parsed_version, version_constraint);
+    }
+
+    Ok(())
+}
+</code></pre></pre>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../devtools/config-log.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../devtools/build-tools.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../devtools/config-log.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../devtools/build-tools.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "devtools/version.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+[book]
+authors = ["sunface"]
+language = "zh-CN"
+title = "Cook Rust"
+src = "src"
+
+[output.html]
+no-section-label = true
+additional-css = ["theme/style.css"]
+additional-js = ["assets/custom.js", "assets/bigPicture.js"]
+git-repository-url = "https://github.com/sunface/rust-cookbook"
+edit-url-template = "https://github.com/sunface/rust-cookbook/edit/main/{path}"
+
+[output.html.playground]
+editable = true
+copy-js = true
+# line-numbers = true
+
+[output.html.fold]
+enable = true
+level = 2
+
+[rust]
+edition = "2021"   #在线运行用2021版本的

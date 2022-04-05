@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>游戏开发 - Cook Rust</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/style.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="about.html">Rust Cookbook</a></li><li class="chapter-item expanded affix "><li class="part-title">Awewome Rust</li><li class="spacer"></li><li class="chapter-item expanded "><a href="daily-dev.html">日常开发常用库</a></li><li class="chapter-item expanded "><a href="superstar.html">明星项目</a></li><li class="chapter-item expanded "><a href="empowering-js.html">使用 Rust 增强 JS</a></li><li class="chapter-item expanded "><a href="cmd.html">常用命令行工具</a></li><li class="chapter-item expanded "><a href="games.html">游戏</a></li><li class="chapter-item expanded "><a href="gamedev.html" class="active">游戏开发</a></li><li class="chapter-item expanded "><a href="os.html">操作系统</a></li><li class="chapter-item expanded "><div>趣味项目</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intresting/forest-fire-model.html">使用 WSAM 对森林火灾进行建模</a></li><li class="chapter-item expanded "><a href="intresting/turn-off-borrow-checker.html">关掉你的编译检查</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Cookbook</li><li class="spacer"></li><li class="chapter-item expanded "><a href="algos/intro.html">实用算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="algos/randomness.html">生成随机值</a></li><li class="chapter-item expanded "><a href="algos/sorting.html">Vec 排序</a></li></ol></li><li class="chapter-item expanded "><div>命令行</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cmd/parsing.html">参数解析</a></li><li class="chapter-item expanded "><a href="cmd/ansi.html">终端输出格式化</a></li></ol></li><li class="chapter-item expanded "><div>压缩</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="compression/tar.html">使用.tar包</a></li></ol></li><li class="chapter-item expanded "><div>并发</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cocurrency/threads.html">线程</a></li><li class="chapter-item expanded "><a href="cocurrency/parallel.html">使用rayon并行处理数据</a></li></ol></li><li class="chapter-item expanded "><div>密码学</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cryptography/hashing.html">哈希</a></li><li class="chapter-item expanded "><a href="cryptography/encryption.html">加密</a></li></ol></li><li class="chapter-item expanded "><div>数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="datastructures/bitfield.html">位字段</a></li></ol></li><li class="chapter-item expanded "><div>数据库</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="database/sqlite.html">SQLite</a></li><li class="chapter-item expanded "><a href="database/postgres.html">Postgres</a></li></ol></li><li class="chapter-item expanded "><div>日期和时间</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="datetime/duration.html">时间计算和转换</a></li><li class="chapter-item expanded "><a href="datetime/parsing.html">解析和显示</a></li></ol></li><li class="chapter-item expanded "><div>开发者工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="devtools/log.html">日志</a></li><li class="chapter-item expanded "><a href="devtools/config-log.html">配置日志</a></li><li class="chapter-item expanded "><a href="devtools/version.html">版本号</a></li><li class="chapter-item expanded "><a href="devtools/build-tools.html">构建时工具</a></li></ol></li><li class="chapter-item expanded "><div>编解码</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="encoding/strings.html">字符编码</a></li><li class="chapter-item expanded "><a href="encoding/csv.html">CSV</a></li><li class="chapter-item expanded "><a href="encoding/structured.html">结构化数据</a></li></ol></li><li class="chapter-item expanded "><div>错误处理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="errors/error-chain.html">error-chain</a></li></ol></li><li class="chapter-item expanded "><div>文件操作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="files/read-write.html">读写</a></li><li class="chapter-item expanded "><a href="files/dir.html">目录</a></li></ol></li><li class="chapter-item expanded "><div>硬件信息</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hardware/processor.html">处理器</a></li></ol></li><li class="chapter-item expanded "><div>内存管理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory/global-vars.html">全局变量</a></li></ol></li><li class="chapter-item expanded "><div>网络协议</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="protocols/tcpip.html">TCP/IP</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Cook Rust</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/sunface/rust-cookbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/sunface/rust-cookbook/edit/main/src/gamedev.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h1 id="游戏开发"><a class="header" href="#游戏开发">游戏开发</a></h1>
+<p>我在这里大胆预言：Rust未来会成为和<code>C++</code>同级别的游戏开发语言，特别是在游戏引擎方面，会大放异彩。</p>
+<h2 id="索引"><a class="header" href="#索引">索引</a></h2>
+<ul>
+<li><a href="#%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><strong>游戏引擎</strong></a>： <a href="#bevy">bevy</a>， <a href="#fyrox%E5%89%8Drg3d">fyrox</a>， <a href="#ggez">ggez</a>， <a href="#oxygengine">oxygengine</a>， <a href="#macroquad">macroquad</a>， <a href="#godot-rust">godot-rust</a>， <a href="#piston">piston</a>， <a href="#amethyst">amethyst</a></li>
+<li><a href="#gpu%E5%92%8C%E5%9B%BE%E5%BD%A2%E6%B8%B2%E6%9F%93"><strong>GPU和图形渲染</strong></a>： <a href="#wgpu">wgpu</a>， <a href="#rust-gpu">rust-gpu</a>，<a href="#kajiya">kajiya</a>， <a href="#lyon">lyon</a>， <a href="#ash">ash</a>， <a href="#vulkano">vulkano</a>， <a href="#rend3">rend3</a>， <a href="#rafx">rafx</a>， <a href="#gfx">gfx</a>， <a href="#luminance">luminance</a>， <a href="#miniquad">miniquad</a>， <a href="#glow">glow</a></li>
+<li><a href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99"><strong>学习资料和新闻</strong></a></li>
+</ul>
+<h2 id="游戏引擎"><a class="header" href="#游戏引擎">游戏引擎</a></h2>
+<h3 id="bevy"><a class="header" href="#bevy">Bevy</a></h3>
+<p><a href="https://github.com/bevyengine/bevy">bevy</a>是一个数据驱动的游戏引擎，支持2D和3D图形开发，优点是社区活跃、更新快、模块化设计优秀、性能高，缺点是还处于快速开发中，并不适合生产使用。</p>
+<p>同时<code>bevy</code>的文档齐全，官方示例很多，非常适合学习和使用。</p>
+<img alt="fyrox screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/bevy.jpg?raw=true" class="center"  />
+<h3 id="fyrox前rg3d"><a class="header" href="#fyrox前rg3d">Fyrox(前rg3d)</a></h3>
+<p><a href="https://github.com/FyroxEngine/Fyrox">fyrox</a>是一个<code>2D</code>和<code>3D</code>游戏图形化引擎，功能丰富，生产可用(官方宣称)。</p>
+<p>该项目前身是<code>rg3d</code>，但是被收购后，更名为<code>fyrox</code>，潜力应该是相当好的，下面截图来源于基于该引擎开发的游戏<a href="https://github.com/mrDIMAS/StationIapetus"><code>StationIapetus</code></a>。</p>
+<img alt="fyrox screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/fyrox.jpg?raw=true" class="center"  />
+<h3 id="ggez"><a class="header" href="#ggez">ggez</a></h3>
+<p><a href="https://github.com/ggez/ggez">ggez</a>是一个轻量级的<code>2D</code>游戏图形引擎，它的目标是让游戏开发尽量的简单，因此它的功能并不是很强大，例如如果你想要强大且真实的物理引擎，它可能无能为力，但你可以选择在它的基础上构建自己的更高级的引擎。</p>
+<img alt="ggez screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/ggez.png?raw=true" class="center"  />
+<h3 id="oxygengine"><a class="header" href="#oxygengine">oxygengine</a></h3>
+<p><a href="https://github.com/PsichiX/oxygengine">oxygengine</a>是一个<code>2D</code> HTML5游戏引擎，支持编译成WASM在浏览器中运行。</p>
+<img alt="oxygengine screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/oxygengine.gif?raw=true" class="center"  />
+<h3 id="macroquad"><a class="header" href="#macroquad">macroquad</a></h3>
+<p><a href="https://github.com/not-fl3/macroquad">macroquad</a>是一个<code>2D</code>游戏引擎，特点是简单易用，例如它试图让使用者不会遇到Rust生命周期的难题。</p>
+<h3 id="godot-rust"><a class="header" href="#godot-rust">godot-rust</a></h3>
+<p><a href="https://github.com/godot-rust/godot-rust">godot-rust</a>是大名鼎鼎的<code>godot</code>引擎的<code>Rust</code>绑定，<a href="https://github.com/godotengine/godot"><code>godot</code></a>是<code>c++</code>开发的游戏<code>2D/3D</code>引擎，但是对Rust语言提供了很好的支持。</p>
+<img alt="godot screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/godot.jpg?raw=true" class="center"  />
+<h3 id="piston"><a class="header" href="#piston">piston</a></h3>
+<p><a href="https://github.com/PistonDevelopers/piston">piston</a>是前两年较火的模块化的游戏引擎，但是最近半年开发速度缓慢，我调查了一番，但不清楚发生了什么。</p>
+<h3 id="amethyst"><a class="header" href="#amethyst">Amethyst</a></h3>
+<p><a href="https://github.com/amethyst/amethyst">Amethyst</a>, 前几年较火的Rust游戏引擎，但是最近开发已经停滞，经过我调查，是因为作者团队转型Rust游戏开发知识分享，因此项目被<a href="https://amethyst.rs/posts/amethyst--starting-fresh">放弃</a>。</p>
+<h2 id="gpu和图形渲染"><a class="header" href="#gpu和图形渲染">GPU和图形渲染</a></h2>
+<h3 id="wgpu"><a class="header" href="#wgpu">wgpu</a></h3>
+<p><a href="https://github.com/gfx-rs/wgpu">wgpu</a>是一个纯Rust实现的图形化API库，具有安全、可移植等优点，如果你使用基于<code>wgpu</code>构建的库，那该库可以很多平台上运行：Linux, windows, MacOS, Android和IOS。</p>
+<p>它可以原生的运行在<code>Vulkan</code>, <code>Metal</code>等主流平台上，且可以使用<code>wasm</code>的方式运行在<code>WebGPU</code>上，同时API兼容<code>WebGPU</code>标准。</p>
+<p>总之，如果你要使用<code>WebGPU</code>, 选它就对了。</p>
+<h3 id="rust-gpu"><a class="header" href="#rust-gpu">rust-gpu</a></h3>
+<p><a href="https://github.com/EmbarkStudios/rust-gpu">rust-gpu</a>的目标是让Rust成为GPU编程的第一梯队语言，由大名鼎鼎的<code>Embark</code>公司开发，后台较硬。</p>
+<p>如果需要通用的<code>GPU</code>编程，选它就对了。</p>
+<h3 id="kajiya"><a class="header" href="#kajiya">kajiya</a></h3>
+<p><a href="https://github.com/EmbarkStudios/kajiya">kajiya</a>是一个实时的、全局光照渲染系统，由<code>Embark</code>公司开发，该公司在秘密研究急于Rust的游戏引擎，据说准备应用在新游戏上，有朝一日它可能会是推动Rust游戏引擎爆发式发展的功臣。</p>
+<p><code>kajiya</code>应用了非常先进的论文和设计理念，因此非常值得有志于游戏引擎开发的同学学习。但目前还不适用于生产级使用，具体见<a href="https://medium.com/embarkstudios/homegrown-rendering-with-rust-1e39068e56a7">这里</a>。</p>
+<img alt="kajiya screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/kajiya.jpg?raw=true" class="center"  />
+<h3 id="lyon"><a class="header" href="#lyon">lyon</a></h3>
+<p><a href="https://github.com/nical/lyon">lyon</a>可以使用GPU进行向量路径渲染，例如高效渲染复杂的<code>svg</code>等。</p>
+<h3 id="ash"><a class="header" href="#ash">ash</a></h3>
+<p><a href="https://github.com/MaikKlein/ash">ash</a>是一个轻量级的<code>Vulkan</code>绑定。</p>
+<img alt="ash screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/ash.png?raw=true" class="center"  />
+<h3 id="vulkano"><a class="header" href="#vulkano">vulkano</a></h3>
+<p><a href="https://github.com/vulkano-rs/vulkano">vulkano</a>是一个安全、特性丰富的<code>Vulkan</code>绑定。</p>
+<h3 id="rend3"><a class="header" href="#rend3">rend3</a></h3>
+<p><a href="https://github.com/BVE-Reborn/rend3">rend3</a>是一个简单易用、可定制性强、高效的3D渲染库，基于<code>wgpu</code>开发。</p>
+<img alt="rend3 screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/rend3.jpg?raw=true" class="center"  />
+<h3 id="rafx"><a class="header" href="#rafx">rafx</a></h3>
+<p><a href="https://github.com/aclysma/rafx">rafx</a>是一个多后端渲染器，目标是性能、扩展性和生产力。</p>
+<img alt="rafx screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/rafx.jpg?raw=true" class="center"  />
+<h3 id="gfx"><a class="header" href="#gfx">gfx</a></h3>
+<p><a href="https://github.com/gfx-rs/gfx">gfx</a>是一个底层的图形库，目前已经不怎么活跃，主要原因是：它的核心组件<code>gfx-hal</code>最开始的目标是为<code>wgpu</code>提供功能，但是后面<code>wgpu</code>实现了自己的<code>wgpu-hal</code>，因此<code>gfx-hal</code>目前仅处于维护状态。</p>
+<h3 id="luminance"><a class="header" href="#luminance">luminance</a></h3>
+<p><a href="https://github.com/phaazon/luminance-rs">luminance</a>是一个类型安全、无状态的图形框架，目标是让图形渲染变得简单和优雅，最开始是通过<code>Haskell</code>语言实现，然后在<code>2016</code>年移植到<code>Rust</code>上。</p>
+<p>它很简单，功能也不够强大，如果你没有<code>OpenGL</code>、<code>Vulkan</code>的经验，可以使用它做一些简单的图形渲染项目试试。</p>
+<h3 id="miniquad"><a class="header" href="#miniquad">miniquad</a></h3>
+<p><a href="https://github.com/not-fl3/miniquad">miniquad</a>是一个安全和跨平台的图形渲染库，它提供了较为底层的API，如果需要抽象层次更高的API，可以使用之前提到的<a href="https://github.com/not-fl3/macroquad">macroquad</a>,后者是基于<code>miniquad</code>封装实现。</p>
+<img alt="miniquad screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/gamedev/miniquad.gif?raw=true" class="center"  />
+<h3 id="glow"><a class="header" href="#glow">glow</a></h3>
+<p><a href="https://github.com/grovesNL/glow">glow</a>提供了各种<code>GL</code>绑定(OpenGL, WebGL), 提供了一定的抽象，避免你写平台相关的特定代码实现。</p>
+<h2 id="学习资料"><a class="header" href="#学习资料">学习资料</a></h2>
+<h3 id="游戏开发最新新闻"><a class="header" href="#游戏开发最新新闻">游戏开发最新新闻</a></h3>
+<ul>
+<li><a href="https://gamedev.rs">gamedev</a></li>
+</ul>
+<h3 id="一些学习资料英文"><a class="header" href="#一些学习资料英文">一些学习资料(英文)</a></h3>
+<ul>
+<li><a href="https://pragprog.com/titles/hwrust/hands-on-rust/">Hands-on Rust</a></li>
+<li>使用<a href="https://github.com/amethyst/bracket-lib">bracket-lib</a>和其<a href="https://bfnightly.bracketproductions.com/rustbook/">配套书籍</a>进行学习</li>
+<li>想要没有困难的开发一个跨平台的2D游戏？使用<a href="https://macroquad.rs"><code>macroquad</code></a>，并且可以参考用它开发的两个游戏: <a href="https://github.com/fishfight/FishFight">fish fight</a>和<a href="https://github.com/ozkriff/zemeroth">zemeroth</a></li>
+<li>想要开发一个简单的3D游戏并且需要一个编辑器？可以试试<a href="https://github.com/rg3dengine/rg3d"><code>fyrox(rg3d)</code></a></li>
+<li>想要开发一个复杂的游戏或者想要做一个demo，未来可以基于该demo继续开发，最终完成一个复杂游戏？可以试试<code>godot</code>引擎提供的<code>Rust</code>绑定：<a href="https://godot-rust.github.io">godot-rust</a></li>
+<li>喜欢钻研前沿技术？试试<a href="https://bevyengine.org"><code>bevy</code></a>，它拥有最好的<code>ECS</code>实现和最先进的设计理念(可能)</li>
+</ul>
+<h3 id="ecsentity-component-system和dod面向数据设计资料"><a class="header" href="#ecsentity-component-system和dod面向数据设计资料">ECS(Entity Component System)和DOD(面向数据设计)资料</a></h3>
+<p>我们在上面提到的很多系统都使用了<code>ECS</code>和<code>DOD</code>，因此这两者对于游戏开发是极其重要的，下面是一些相关的英文资料(部分需要翻墙)，可以帮助大家理解相关概念。</p>
+<ul>
+<li><a href="https://github.com/Ralith/hecs">hecs</a>, 一个用Rust实现的ECS世界</li>
+<li><a href="https://www.youtube.com/watch?v=0_Byw9UMn9g">Understanding data-oriented design for entity component systems - Unity at GDC 2019</a></li>
+<li><a href="https://www.youtube.com/watch?v=yy8jQgmhbAU">CppCon 2018: Stoyan Nikolov “OOP Is Dead, Long Live Data-oriented Design”</a></li>
+<li><a href="https://www.youtube.com/watch?v=aKLntZcp27M">RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West</a></li>
+<li><a href="https://dataorienteddesign.com/dodbook/">&quot;Data-Oriented Design&quot; web book by Richard Fabian</a></li>
+</ul>
+<h3 id="一些游戏开发的生产力工具"><a class="header" href="#一些游戏开发的生产力工具">一些游戏开发的生产力工具</a></h3>
+<ul>
+<li><a href="https://www.blender.org">Blender</a>用于3D建模</li>
+<li><a href="https://krita.org/en">Krita</a>用于创建2D图片</li>
+</ul>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="games.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="os.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="games.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="os.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "gamedev.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="assets/custom.js"></script>
+        <script type="text/javascript" src="assets/bigPicture.js"></script>
+    </body>
+</html>

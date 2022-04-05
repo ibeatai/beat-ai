@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rust Cookbook - Cook Rust</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/style.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="about.html">Rust Cookbook</a></li><li class="chapter-item expanded affix "><li class="part-title">Awewome Rust</li><li class="spacer"></li><li class="chapter-item expanded "><a href="daily-dev.html">日常开发常用库</a></li><li class="chapter-item expanded "><a href="superstar.html">明星项目</a></li><li class="chapter-item expanded "><a href="empowering-js.html">使用 Rust 增强 JS</a></li><li class="chapter-item expanded "><a href="cmd.html">常用命令行工具</a></li><li class="chapter-item expanded "><a href="games.html">游戏</a></li><li class="chapter-item expanded "><a href="gamedev.html">游戏开发</a></li><li class="chapter-item expanded "><a href="os.html">操作系统</a></li><li class="chapter-item expanded "><div>趣味项目</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intresting/forest-fire-model.html">使用 WSAM 对森林火灾进行建模</a></li><li class="chapter-item expanded "><a href="intresting/turn-off-borrow-checker.html">关掉你的编译检查</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Cookbook</li><li class="spacer"></li><li class="chapter-item expanded "><a href="algos/intro.html">实用算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="algos/randomness.html">生成随机值</a></li><li class="chapter-item expanded "><a href="algos/sorting.html">Vec 排序</a></li></ol></li><li class="chapter-item expanded "><div>命令行</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cmd/parsing.html">参数解析</a></li><li class="chapter-item expanded "><a href="cmd/ansi.html">终端输出格式化</a></li></ol></li><li class="chapter-item expanded "><div>压缩</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="compression/tar.html">使用.tar包</a></li></ol></li><li class="chapter-item expanded "><div>并发</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cocurrency/threads.html">线程</a></li><li class="chapter-item expanded "><a href="cocurrency/parallel.html">使用rayon并行处理数据</a></li></ol></li><li class="chapter-item expanded "><div>密码学</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cryptography/hashing.html">哈希</a></li><li class="chapter-item expanded "><a href="cryptography/encryption.html">加密</a></li></ol></li><li class="chapter-item expanded "><div>数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="datastructures/bitfield.html">位字段</a></li></ol></li><li class="chapter-item expanded "><div>数据库</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="database/sqlite.html">SQLite</a></li><li class="chapter-item expanded "><a href="database/postgres.html">Postgres</a></li></ol></li><li class="chapter-item expanded "><div>日期和时间</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="datetime/duration.html">时间计算和转换</a></li><li class="chapter-item expanded "><a href="datetime/parsing.html">解析和显示</a></li></ol></li><li class="chapter-item expanded "><div>开发者工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="devtools/log.html">日志</a></li><li class="chapter-item expanded "><a href="devtools/config-log.html">配置日志</a></li><li class="chapter-item expanded "><a href="devtools/version.html">版本号</a></li><li class="chapter-item expanded "><a href="devtools/build-tools.html">构建时工具</a></li></ol></li><li class="chapter-item expanded "><div>编解码</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="encoding/strings.html">字符编码</a></li><li class="chapter-item expanded "><a href="encoding/csv.html">CSV</a></li><li class="chapter-item expanded "><a href="encoding/structured.html">结构化数据</a></li></ol></li><li class="chapter-item expanded "><div>错误处理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="errors/error-chain.html">error-chain</a></li></ol></li><li class="chapter-item expanded "><div>文件操作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="files/read-write.html">读写</a></li><li class="chapter-item expanded "><a href="files/dir.html">目录</a></li></ol></li><li class="chapter-item expanded "><div>硬件信息</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hardware/processor.html">处理器</a></li></ol></li><li class="chapter-item expanded "><div>内存管理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memory/global-vars.html">全局变量</a></li></ol></li><li class="chapter-item expanded "><div>网络协议</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="protocols/tcpip.html">TCP/IP</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Cook Rust</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/sunface/rust-cookbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/sunface/rust-cookbook/edit/main/src/about.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h1 id="rust-cookbook"><a class="header" href="#rust-cookbook">Rust Cookbook</a></h1>
+<img src="https://github.com/sunface/rust-cookbook/blob/main/assets/banner1.png?raw=true" />
+<p>每个同学可能都遇到过以下疑惑:</p>
+<ul>
+<li>学完 Rust 后，还做了些题，接下可以做些什么？</li>
+<li>要访问一个文件，哎，但记不住代码，要不百度或谷歌一下吧，最后发现结果往往不尽如人意</li>
+</ul>
+<p>而 Cookbook 就是帮助大家解决这些问题的，我们按照常用的使用场景来组织章节，并为每一个实用操作给出可直接运行的代码。</p>
+<p>但本书不能帮助大家学习 Rust 语言本身，如果有这个需求，请阅读 <a href="https://course.rs">Rust语言圣经</a>，目前最好的Rust 开源中文教程。</p>
+<blockquote>
+<p>CookBook 的部分内容翻译自 <a href="https://rust-lang-nursery.github.io/rust-cookbook/intro.html">Rust CookBook</a>，但由于这本英文书更新不太活跃，导致了内容存在较多的遗漏或过期，因此我们并没有完全照搬翻译这本书的内容，而是在此基础上增加了大量新的实用库和代码片段，希望大家喜欢</p>
+</blockquote>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="next" href="daily-dev.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="next" href="daily-dev.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "index.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="assets/custom.js"></script>
+        <script type="text/javascript" src="assets/bigPicture.js"></script>
+    </body>
+</html>
