@@ -1,4 +1,4 @@
-<h1 align="center">Rusty Book</h1>
+<h1 align="center">Rusty Book( 锈书 )</h1>
 
 <div align="center">
     <img height="200px" src="https://github.com/sunface/rust-cookbook/blob/main/assets/banner1.png?raw=true">
