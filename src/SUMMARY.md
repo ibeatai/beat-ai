@@ -64,12 +64,10 @@
 
 
 - [错误处理]()
-  - [error-chain](errors/error-chain.md)
-
 
 - [文件操作]()
-  - [读写](files/read-write.md)
-  - [目录](files/dir.md)
+  - [文件读写](files/read-write.md)
+  - [目录访问](files/dir.md)
 
 
 - [操作系统](os/awesome.md)
