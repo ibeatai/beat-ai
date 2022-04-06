@@ -85,3 +85,7 @@
 - [网络协议]()
   - [TCP/IP](protocols/tcpip.md)
 
+- [文本处理]()
+  - [正则表达式](text/regex.md)
+  - [字符串解析](text/string.md)
+

@@ -136,8 +136,8 @@ var initAll = function () {
     script.src = "https://giscus.app/client.js";
     script.async = true;
     script.crossOrigin = "anonymous";
-    script.setAttribute("data-repo", "sunface/rust-cookbook");
-    script.setAttribute("data-repo-id", "R_kgDOHH0skA=");
+    script.setAttribute("data-repo", "studyrs/rusty-book");
+    script.setAttribute("data-repo-id", "R_kgDOGmKA_Q");
     script.setAttribute("data-category", "giscus");
     script.setAttribute("data-category-id", "DIC_kwDOHH0skM4COa8c");
     script.setAttribute("data-mapping", "specific");
