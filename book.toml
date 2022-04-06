@@ -6,7 +6,7 @@ src = "src"
 
 [output.html]
 no-section-label = true
-additional-css = ["theme/style.css"]
+additional-css = ["theme/style1.css"]
 additional-js = ["assets/custom.js", "assets/bigPicture.js"]
 git-repository-url = "https://github.com/studyrs/rusty-book"
 edit-url-template = "https://github.com/studyrs/rusty-book/edit/main/{path}"
