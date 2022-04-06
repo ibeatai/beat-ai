@@ -1,15 +1,15 @@
 [book]
 authors = ["sunface"]
 language = "zh-CN"
-title = "Rusty Book"
+title = "Rusty Book(锈书)"
 src = "src"
 
 [output.html]
 no-section-label = true
 additional-css = ["theme/style.css"]
 additional-js = ["assets/custom.js", "assets/bigPicture.js"]
-git-repository-url = "https://github.com/studyrs/cook-rust"
-edit-url-template = "https://github.com/studyrs/cook-rust/edit/main/{path}"
+git-repository-url = "https://github.com/studyrs/rusty-book"
+edit-url-template = "https://github.com/studyrs/rusty-book/edit/main/{path}"
 
 [output.html.playground]
 editable = true
