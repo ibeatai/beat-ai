@@ -1,4 +1,4 @@
-<h1 align="center">Cook Rust</h1>
+<h1 align="center">Rusty Book</h1>
 
 <div align="center">
     <img height="200px" src="https://github.com/sunface/rust-cookbook/blob/main/assets/banner1.png?raw=true">
@@ -7,17 +7,17 @@
 <div align="center">
 
     
-在线阅读: https://cook.rs
+在线阅读: https://rusty.rs
 </div>
 
-学习一门语言、做一个项目就像烹饪一顿美食一样，你需要往项目中添加许多调味料，而 Cook Rust 就是教大家如何烹饪一个优秀的 Rust 项目。
+学习一门语言、做一个项目就像烹饪一顿美食一样，你需要往项目中添加许多调味料，而 Rusty Book 就是教大家如何烹饪一个优秀的 Rust 项目。
 
-| 烹饪美食 | Cook Rust |
+| 烹饪美食 | Rusty Book |
 | --- | --- |
 | 找到合适的厨具、调料、食材 | 为项目挑选 Awesome 依赖库 |
 | 按照食谱做好一道道菜，最终呈现一桌大餐 | 在 Cookbook 中查询实用的代码片段，直接复制到项目中，最终快速搭建好一个项目 | 
 
-可以看出 `Cook Rust` = `Awesome Rust` + `Rust Cookbook`，在这里你可以找到各种优秀的依赖库和代码片段，无论是学习还是快速搭建项目，本书都可以助你一臂之力！
+可以看出 `Rusty Book` = `Awesome Rust` + `Rust Cookbook`，在这里你可以找到各种优秀的依赖库和代码片段，无论是学习还是快速搭建项目，本书都可以助你一臂之力！
 
 关于 Awesome，相信大家已经非常熟悉。但目前最火的 awesome-rust 项目有一个非常大的问题：里面的项目鱼龙混杂，因为它的目的是列出所有项目，但对于用户而言，更想看到的是可以在生产中使用的、稳定更新的优秀项目。
 

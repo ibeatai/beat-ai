@@ -1,6 +1,6 @@
 # Summary
 
-[Cook Rust](about.md)
+[Rusty Book](about.md)
 
 # Awesome
 ---

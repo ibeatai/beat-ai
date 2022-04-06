@@ -1,7 +1,7 @@
 [book]
 authors = ["sunface"]
 language = "zh-CN"
-title = "Cook Rust"
+title = "Rusty Book"
 src = "src"
 
 [output.html]
