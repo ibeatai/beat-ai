@@ -7,8 +7,8 @@
 - [日常开发常用库](daily-dev.md)
 - [Rust 明星项目](superstar.md)
 - [使用 Rust 增强 JS](empowering-js.md)
-- [游戏](games.md)
-- [游戏开发](gamedev.md)
+- [Rust开发的游戏](games.md)
+- [游戏引擎](gamedev.md)
 
   
 # Awesome + Cookbook
@@ -16,6 +16,11 @@
 - [实用算法](algos/awesome.md)
   - [生成随机值](algos/randomness.md)
   - [Vec 排序](algos/sorting.md)
+  - [压缩算法]()
+    - [使用.tar包](algos/compression/tar.md)
+  - [密码学]()
+    - [哈希](algos/cryptography/hashing.md)
+    - [加密](algos/cryptography/encryption.md)
   - [数学计算]()
     - [线性代数](algos/math/linear-algebra.md)
     - [三角函数](algos/math/trigonometry.md)
@@ -23,6 +28,9 @@
     - [统计学](algos/math/statistics.md)
     - [杂项](algos/math/misc.md)
 
+- [数据结构](datastructures/awesome.md)
+  - [位字段](datastructures/bitfield.md)
+  
 - [命令行](cmd/awesome.md)
   - [参数解析](cmd/parsing.md)
   - [终端输出格式化](cmd/ansi.md)
@@ -31,23 +39,9 @@
   - [处理器](os/processor.md)
   - [调用系统命令](os/command.md)
 
-- [压缩]()
-  - [使用.tar包](compression/tar.md)
-
-
 - [并发]()
   - [线程](cocurrency/threads.md)
   - [使用rayon并行处理数据](cocurrency/parallel.md)
-
-
-- [密码学]()
-  - [哈希](cryptography/hashing.md)
-  - [加密](cryptography/encryption.md)
-
-
-- [数据结构]()
-  - [位字段](datastructures/bitfield.md)
-
 
 - [数据库]()
   - [SQLite](database/sqlite.md)
