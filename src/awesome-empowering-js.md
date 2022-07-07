@@ -16,7 +16,7 @@
 ```js
 // node
 const koa = require("koa" );
-cost logger = require("@adesso/logger")
+const logger = require("@adesso/logger")
 
 // deno
 import { Application } from "https://deno.land/x/oak/mod.ts";
