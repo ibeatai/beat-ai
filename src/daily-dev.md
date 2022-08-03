@@ -115,7 +115,7 @@
 * Rust搜索平台
   * [quickwit](https://github.com/quickwit-inc/quickwit) 对标ElasticSearch，一个通用目的的分布式搜索平台，目前还在起步阶段(0.2版本)，未来非常可期，目前还不建议使用
   * [MeiliSearch](https://github.com/meilisearch/MeiliSearch) 虽然也是一个搜索平台，但是并不是通用目的的，`MeiliSearch`目标是为终端用户提供边输入边提示的即刻搜索功能，因此是一个轻量级搜索平台，不适用于数据量大时的搜索目的。总之，如果你需要在网页端或者APP为用户提供一个搜索条，然后支持输入容错、前缀搜索时，就可以使用它。
-  * 
+
 ### 代码Debug
 * GDB
   * [gdbgui](https://github.com/cs01/gdbgui)  提供浏览器支持的gdb debug工具，支持C，C++，Rust和Go.
