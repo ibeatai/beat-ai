@@ -7,7 +7,7 @@
 <div align="center">
 
     
-在线阅读: https://rusty.rs
+在线阅读: https://rusty.course.rs
 </div>
 
 在 Rust 元宇宙，夸奖别人的最高境界就是 `rusty`: 今天你"锈"了吗? 你的 Rust 代码好锈啊！而本书，就是精选了各种开源库和代码片段，帮助大家打造优"锈"的 Rust 项目。
