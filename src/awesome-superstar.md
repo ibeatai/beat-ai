@@ -230,8 +230,10 @@ tree.flush()?;
 [`youki`](https://github.com/containers/youki)是一个容器运行时，实现了`OCI`标准，性能非常好的同时具备非常高的安全性, 目前来说，它的性能跟`crun`差不多，比`runc`快50%以上。
 
 
-### sixtyfps
-[`sixtyfps`](https://github.com/sixtyfpsui/sixtyfps)是一个GUI工具集，同时适用于嵌入式系统、桌面系统、移动端、浏览器(WASM)，支持使用多种语言进行开发，背后有商业公司的支持，未来前景看好。
+### slint
+[`slint`](https://github.com/slint-ui/slint)是一个GUI工具集，原名sixtyfps, 同时适用于嵌入式系统、桌面系统、移动端、浏览器(WASM)，支持使用多种语言进行开发，背后有商业公司的支持，未来前景看好。
+
+slint已于2023年4月发布1.0版本，标志着结束开发模式并已准备好在生产环境中使用。
 
 <img alt="sixtyfps screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/superstar/sixtyfps.png?raw=true" class="center"  />
 
