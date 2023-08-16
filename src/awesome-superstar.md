@@ -18,7 +18,7 @@
 <img alt="alacritty screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/superstar/alacritty.png?raw=true" class="center"  />
 
 ## starship
-[starship](https://github.com/starship/starship)是一个命令行提示，支持任何`shell`，包括`zsh`，简单易用、非常快且拥有极高的可配置性, 同时支持智能提示。
+[starship](https://github.com/starship/starship)是一个命令行提示，支持任何`shell`，包括`zsh`，简单易用、非常快且拥有极高的可配置性。
 
 <img alt="starship screenshot" width="100%"  src="https://raw.githubusercontent.com/starship/starship/master/media/demo.gif" class="center"  />
 
