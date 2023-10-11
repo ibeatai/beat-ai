@@ -52,7 +52,7 @@ use std::path::PathBuf;
 use flate2::read::GzDecoder;
 use tar::Archive;
 
-fn main() -> Result<()> {
+fn main() -> Result<(), Box<dyn std::error::Error>> {
     let file = File::open("archive.tar.gz")?;
     let mut archive = Archive::new(GzDecoder::new(file));
     let prefix = "bundle/logs";
@@ -62,7 +62,7 @@ fn main() -> Result<()> {
         .entries()? // 获取压缩档案中的文件条目列表
         .filter_map(|e| e.ok())
         // 对每个文件条目进行 map 处理
-        .map(|mut entry| -> Result<PathBuf> {
+        .map(|mut entry| -> Result<PathBuf, Box<dyn std::error::Error>> {
             // 将文件路径名中的前缀移除，获取一个新的路径名
             let path = entry.path()?.strip_prefix(prefix)?.to_owned();
             // 将内容解压到新的路径名中
