@@ -62,7 +62,7 @@
 如果需要通用的`GPU`编程，选它就对了。
 
 ### kajiya
-[kajiya](https://github.com/EmbarkStudios/kajiya)是一个实时的、全局光照渲染系统，由`Embark`公司开发，该公司在秘密研究急于Rust的游戏引擎，据说准备应用在新游戏上，有朝一日它可能会是推动Rust游戏引擎爆发式发展的功臣。
+[kajiya](https://github.com/EmbarkStudios/kajiya)是一个实时的、全局光照渲染系统，由`Embark`公司开发，该公司在秘密研究基于Rust的游戏引擎，据说准备应用在新游戏上，有朝一日它可能会是推动Rust游戏引擎爆发式发展的功臣。
 
 `kajiya`应用了非常先进的论文和设计理念，因此非常值得有志于游戏引擎开发的同学学习。但目前还不适用于生产级使用，具体见[这里](https://medium.com/embarkstudios/homegrown-rendering-with-rust-1e39068e56a7)。
 
