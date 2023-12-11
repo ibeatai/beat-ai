@@ -33,7 +33,7 @@ fn main() -> Result<(), Unspecified> {
     println!("PBKDF2 hash: {}", HEXUPPER.encode(&pbkdf2_hash));
 
     // `verify` 检查哈希是否正确
-    let should_`succeed = pbkdf2::verify(
+    let should_succeed = pbkdf2::verify(
         pbkdf2::PBKDF2_HMAC_SHA512,
         n_iter,
         &salt,
