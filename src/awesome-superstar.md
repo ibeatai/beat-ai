@@ -44,7 +44,7 @@
 <img alt="parcel screenshot" width="100%" src="https://github.com/studyrs/cookbook-images/blob/main/javascript/parcel.png?raw=true" class="center"  />
 
 ## tauri
-[tauri](https://tauri.studio)可以用来更小、更快、更安全的桌面应用，它想要替代的是`electro.js`。
+[tauri](https://tauri.studio)可以用来更小、更快、更安全的桌面应用，它想要替代的是`electron.js`。
 
 下面是援引自[官网](https://tauri.studio/benchmarks)的性能对比图:
 
