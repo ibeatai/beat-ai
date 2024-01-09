@@ -38,6 +38,7 @@
 * ORM
   * [rbatis/rbatis](https://github.com/rbatis/rbatis)  国内团队开发的ORM，异步、性能高、简单易上手
   * [diesel-rs/diesel](https://github.com/diesel-rs/diesel)  安全、扩展性强的Rust ORM库，支持`Mysql`、`Postgre`、`SqlLite`
+  * [SeaQL/sea-orm](https://github.com/SeaQL/sea-orm)  异步、高性能的Rust ORM库，基于sqlx实现，支持`MySQL`、`Postgre`、`SQLite`、`MSSQL`等多种数据库
 
 
 * Mysql
