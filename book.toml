@@ -1,15 +1,15 @@
 [book]
 authors = ["sunface"]
 language = "zh-CN"
-title = "Rusty Book(锈书)"
+title = "Beat AI"
 src = "src"
 
 [output.html]
 no-section-label = true
 additional-css = ["theme/style1.css"]
 additional-js = ["assets/custom1.js", "assets/bigPicture.js"]
-git-repository-url = "https://github.com/studyrs/rusty-book"
-edit-url-template = "https://github.com/studyrs/rusty-book/edit/main/{path}"
+git-repository-url = "https://github.com/sunface/BeatAI"
+edit-url-template = "https://github.com/sunface/BeatAI/edit/main/{path}"
 
 [output.html.playground]
 editable = true
@@ -21,4 +21,4 @@ enable = true
 level = 1
 
 [rust]
-edition = "2021"   #在线运行用2021版本的
+edition = "2021" #在线运行用2021版本的
