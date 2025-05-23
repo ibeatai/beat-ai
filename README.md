@@ -1,6 +1,7 @@
 #### 2025-05-23
 1. [为什么 AI Agent 需要自己的浏览器？](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247512241&idx=1&sn=a2a3fe33f7b0038afd75f4d948d42c5f&scene=21#wechat_redirect) 探讨了未来的浏览器该如何满足 AI Agent 自动化抓取、交互和实时数据处理的需求
 2. [Google智能体伴侣技术白皮书](https://github.com/user-attachments/files/20402524/Google.202505.pdf) 对未来多智能体和 AgentOps 的方向进行了描述
+3. [Claude 4 上线：Anthropic 不再教 AI 编程，而是让它自己写项目](https://mp.weixin.qq.com/s/gkVflc6yszhXyJ5c-AxGNQ) 通过自我约束让自己更可信，通过另辟蹊径让自己形成结果驱动的推理和工具调用闭环，并具备了更强大的连续任务执行能力和编程能力，基于智能化 workflow 的未来已来！
 
 
 #### 2025-05-22
