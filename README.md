@@ -1,3 +1,7 @@
+#### 2025--5-26
+1. [Deloitte: How to reimagine work with AI agents](https://www2.deloitte.com/content/dam/Deloitte/us/Documents/gen-ai-multi-agents-pov-2.pdf) 两大关注点：1. 基于业务领域、围绕角色来建设 Agent 2.通过流程来编排智能体，优化原先的业务流程
+2. [LLM多轮对话的迷失现象](https://arxiv.org/pdf/2505.06120v1) 微软最近发表了<<Lost in conversation>> 的研究，说当前最先进的 LLM 在多轮对话中表现会大幅下降，平均降幅达到 39%，本论文分析了各大模型的表现差异，并解析了迷失的根本原因和有效策略
+
 #### 2025-05-23
 1. [为什么 AI Agent 需要自己的浏览器？](https://mp.weixin.qq.com/s?__biz=Mzg2OTY0MDk0NQ==&mid=2247512241&idx=1&sn=a2a3fe33f7b0038afd75f4d948d42c5f&scene=21#wechat_redirect) 探讨了未来的浏览器该如何满足 AI Agent 自动化抓取、交互和实时数据处理的需求
 2. [Google智能体伴侣技术白皮书](https://github.com/user-attachments/files/20402524/Google.202505.pdf) 对未来多智能体和 AgentOps 的方向进行了描述
