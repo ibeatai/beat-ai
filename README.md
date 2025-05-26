@@ -1,4 +1,4 @@
-#### 2025--5-26
+#### 2025-05-26
 1. [Deloitte: How to reimagine work with AI agents](https://www2.deloitte.com/content/dam/Deloitte/us/Documents/gen-ai-multi-agents-pov-2.pdf) 两大关注点：1. 基于业务领域、围绕角色来建设 Agent 2.通过流程来编排智能体，优化原先的业务流程
 2. [LLM多轮对话的迷失现象](https://arxiv.org/pdf/2505.06120v1) 微软最近发表了<<Lost in conversation>> 的研究，说当前最先进的 LLM 在多轮对话中表现会大幅下降，平均降幅达到 39%，本论文分析了各大模型的表现差异，并解析了迷失的根本原因和有效策略
 
