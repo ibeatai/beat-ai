@@ -1,3 +1,7 @@
+#### 2025-05-28
+1. [大模型开源生态全景图](https://mp.weixin.qq.com/s/v8RRZS2I07UlpJhh7QTkGw) 
+![image](https://github.com/user-attachments/assets/15302bcd-70d4-4927-94d7-42390a562895)
+
 #### 2025-05-27
 1. [Windsurf 如何看 Agent?](https://mp.weixin.qq.com/s/0HHW0bouQ3ZAr5kFiNld4A) 这篇文章对 Agent 的认知解释非常不错，从 Agent 基本概念到运行系统都有涉及，推荐一看
 
