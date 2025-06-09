@@ -1,3 +1,6 @@
+#### 2025-06-09
+1. [快速改进 AI 产品的实用指南](https://hamel.dev/blog/posts/field-guide/) 文章提供了很实用的 AI 落地效果评估方式，特别是其中的方法论很值得学习！
+
 #### 2025-05-28
 1. [大模型开源生态全景图](https://mp.weixin.qq.com/s/v8RRZS2I07UlpJhh7QTkGw) 
 ![image](https://github.com/user-attachments/assets/15302bcd-70d4-4927-94d7-42390a562895)
