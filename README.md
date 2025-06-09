@@ -1,5 +1,6 @@
 #### 2025-06-09
 1. [快速改进 AI 产品的实用指南](https://hamel.dev/blog/posts/field-guide/) 文章提供了很实用的 AI 落地效果评估方式，特别是其中的方法论很值得学习！
+2. [Anthropic 如何通过 AI 增强编程效率？](https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf) 今天上午，Anthropic官方公开了一份手册，揭秘他们内部10个不同团队（涵盖技术、科研、产品、营销、法律等团队）是怎么使用Claude Code的，场景案例非常丰富，其中的大部分实践经验也可以迁移使用在Cursor、Cline等AI编程工具上。
 
 #### 2025-05-28
 1. [大模型开源生态全景图](https://mp.weixin.qq.com/s/v8RRZS2I07UlpJhh7QTkGw) 
