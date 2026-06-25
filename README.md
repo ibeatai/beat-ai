@@ -2,6 +2,13 @@
 
 > 最近 30 天发布 · 完整列表见 <https://beatai.org/ai-insights>
 
+### 2026-06-24
+
+- [关于 LLM 能力和局限性的 5 个思考](https://beatai.org/ai-insights/5-thoughts-on-llm-capabilities-and-limitations?mode=read)  
+  关于 LLM 的根本局限，存在不同的观点。
+- [“理解 Transformer（第四部分）：注意力不过是几个矩阵”](https://beatai.org/ai-insights/understanding-transformers-part-4-attention-is-just-a-few-matrices?mode=read)  
+  简单的矩阵运算如何揭示上下文、意义以及现代人工智能背后的奥秘。
+
 ### 2026-06-21
 
 - [国外大佬深度解密中国前沿模型](https://beatai.org/ai-insights/chinas-first-true-frontier-model?mode=read)
@@ -138,14 +145,3 @@
 
 - [Agent Harness 剖析](https://beatai.org/ai-insights/the-anatomy-of-an-agent-harness?mode=read)  
   一个 ReAct loop、几个工具、一段写得不错的 system prompt——demo 阶段往往能撑得出奇地远。
-
-### 2026-05-26
-
-- [用 250 行 Python 造一个本地的浏览网页 LLM agent](https://beatai.org/ai-insights/build-your-own-local-web-browsing-llm-agent-in-250-lines-of-python?mode=read)  
-  这篇文章里，我会演示如何给本地的 LLM agent 装上一个真正的网页浏览器。读完之后，agent 就能拿到一个问题、上网搜一篇相关页面、在隐身浏览器里打开它、读它的内容，并基于它真正看到的东西作答。
-- [DS-STAR：Google 是怎么造出一个真正能用的数据科学 agent 的](https://beatai.org/ai-insights/ds-star-how-google-built-a-data-science-agent-that-actually-works?mode=read)  
-  agentic coding 工具我已经用了大约两年（Claude Code 已经认真且持续地用了一年）。在通用工程任务上确实让人眼前一亮。但每当我把它推向真正的数据科学场景时，就总能撞上同一个摩擦点：Claude 的分析基本停留在算几个平均值——这些数字本身有用，但缺少一个数据科学家应有的纵深（分布对比、p 值、置信区间、数据质量等等）。
-- [假如 2026 年从头学机器学习，我会怎么做](https://beatai.org/ai-insights/how-id-learn-machine-learning-in-2026?mode=read)  
-  我现在是 Twitch 的资深 Applied Scientist，已经做了七年的生产级 ML 系统部署。如果让我在 2026 年的今天从零重来一次，我几乎不会按当初的任何方式去走。
-- [Prompt Engineering 的现代进展](https://beatai.org/ai-insights/modern-advances-in-prompt-engineering?mode=read)  
-  由于使用门槛极低，LLM 迎来了爆炸式的流行。哪怕完全不懂深度学习的人，只要写一段文本 prompt，就能调动起庞大的神经网络去快速解决各种复杂问题。随着指令跟随能力的改进和对齐技术的进步，这些模型变得越来越好用。然而，给 LLM 写出有效的 prompt，既是一门艺术，也是一门科学——仅仅是对 prompt 的实现方式或策略做一些细微调整，就能带来显著的性能提升。…
