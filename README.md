@@ -2,6 +2,15 @@
 
 > 最近 30 天发布 · 完整列表见 <https://beatai.org/ai-insights>
 
+### 2026-06-28
+
+- [理解 Transformer（第一部分）：为什么 RNN 几乎不可能训练](https://beatai.org/ai-insights/transformers-part-1-why-rnns-are-nearly-impossible-to-train?mode=read)  
+  本文将逐步讲解循环神经网络的工作原理以及导致其失效的数学原理。
+- [理解 Transformer（第二部分）：LSTM 如何（基本）修复循环神经网络](https://beatai.org/ai-insights/understanding-transformers-part-2-how-lstms-fixed-recurrent-networks-mostly?mode=read)  
+  逐步解析 LSTM 单元、其巧妙的门控系统，以及它最终如何使序列学习得以实现。
+- [理解 Transformer（第三部分）：位置编码和词嵌入](https://beatai.org/ai-insights/understanding-transformers-part-3-positional-encodings-and-word-embeddings?mode=read)  
+  为什么位置很重要？正弦波和余弦波如何拯救了 Transformer
+
 ### 2026-06-24
 
 - [关于 LLM 能力和局限性的 5 个思考](https://beatai.org/ai-insights/5-thoughts-on-llm-capabilities-and-limitations?mode=read)  
@@ -116,32 +125,3 @@
   LLM-as-a-Judge，以及在人工质量评分之外其他可扩展的补充手段……
 - [通往 Multi-Head Latent Attention 之路](https://beatai.org/ai-insights/the-journey-to-multi-head-latent-attention?mode=read)  
   人人都在谈 transformer 怎么扩展（scale），谈它怎么记忆的人却少得多。但实话说，对今天任何一个跑在生产里的 LLM 来说，KV cache 才是说了算的那个——它决定你的上下文长度、吞吐量、GPU 账单，以及你能部署在什么样的硬件上。Multi-Head Latent Attention（MLA）出自 DeepSeek-V2，是我见过对这个瓶颈最优雅的一次进攻。
-
-### 2026-05-29
-
-- [AI 把一个荒唐点子夸成"真有意思"，一位记者现在正在推广它](https://beatai.org/ai-insights/ai-called-an-absurd-idea-genuinely-interesting-a-reporter-is-now-promoting-it?mode=read)  
-  词语的魔法是怎么生效的——哪怕这些词压根没意义。
-- [Claude Opus 4.8 实战指南：四个让你重新规划工作流的新特性](https://beatai.org/ai-insights/claude-opus-4-8-4-features-that-change-our-daily-work-with-claude?mode=read)  
-  模型本身只是温和升级，但 effort control、动态工作流、Messages API 可在运行中改指令，加上一个肯承认"我没把握"的 Claude——这次发布真正的份量在外围。
-- [写给普通人的上下文窗口：AI 是怎么跟丢思路的](https://beatai.org/ai-insights/context-windows-for-humans-how-ai-loses-the-thread?mode=read)  
-  以及，为什么每一次 AI 对话都存在一个边界
-- [Distill：一位前同事的故事](https://beatai.org/ai-insights/distill-the-story-of-an-ex-colleague?mode=read)  
-  公司想在你离职前把你"萃取"下来。看看他们真正能拿到什么。
-- [怎样写出 coding agent 真正能落地的功能规格](https://beatai.org/ai-insights/how-to-write-feature-specs-that-coding-agents-can-actually-implement?mode=read)  
-  为什么 agentic coding 靠的是确定性契约，而不是模糊需求加 prompt 撞大运
-- [Claude Code Dynamic Workflows：把编排逻辑搬进代码的新原语](https://beatai.org/ai-insights/riba2534-2060102236676792711?mode=read)  
-  5 月 28 日，Anthropic 发布了 Claude Opus 4.8，随之而来还带来了一个新功能——Dynamic Workflows（动态工作流）。
-
-### 2026-05-28
-
-- [Demo 跑得通 ≠ 生产跑得通：构建 AI agent 时如何驾驭 LLM 的不确定性](https://beatai.org/ai-insights/demo-works-production-works-how-to-harness-llm-uncertainty-when-building-ai-agents?mode=read)  
-  距离我的 AI 产品 NomNow 上线还有几周——这是一款支持多模态记录的对话式 AI 卡路里追踪器——我给一位朋友做了一次快速演示。他说了一句话："I had a chicken sandwich for lunch"（午餐吃了个鸡肉三明治），看着 app 完成转录、识别食物、估算卡路里、记入日志，整个过程不到三秒。他抬起头说："this is magic.
-- [用百万分之一的成本训练 AI](https://beatai.org/ai-insights/training-ais-for-a-millionth-of-the-cost?mode=read)  
-  低成本训练 AI 的新路子？
-- [AI 原生工程团队的协作方式，第一部分：当交接链条崩塌时](https://beatai.org/ai-insights/ways-of-working-for-ai-native-engineering-teams-part-1-when-the-handoff-chain-collapses?mode=read)  
-  AI 原生工程团队的协作方式，第一部分：当交接链条崩塌时。在我作为工程负责人和顾问的大部分职业生涯中，一直围绕一条交接链条来组织工程团队……
-
-### 2026-05-27
-
-- [Agent Harness 剖析](https://beatai.org/ai-insights/the-anatomy-of-an-agent-harness?mode=read)  
-  一个 ReAct loop、几个工具、一段写得不错的 system prompt——demo 阶段往往能撑得出奇地远。
