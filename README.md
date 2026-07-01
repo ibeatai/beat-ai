@@ -2,6 +2,15 @@
 
 > 最近 30 天发布 · 完整列表见 <https://beatai.org/ai-insights>
 
+### 2026-06-30
+
+- [权限已解锁，但判断力尚未解锁。](https://beatai.org/ai-insights/access-was-unlocked-judgment-wasnt?mode=read)  
+  市场部的某位员工在分析工具中输入了一个问题：“上个季度，DACH 地区的企业收入为何下降？”
+- [模型蒸馏指南：压缩 LLM 以提高边缘效率](https://beatai.org/ai-insights/model-distillation-guide-compressing-llms-for-edge-efficiency?mode=read)  
+  掌握模型蒸馏的工作原理，并在 Llama 3 等 LLM 上动手实现。
+- [为什么人工智能擅长作弊](https://beatai.org/ai-insights/why-ai-is-great-at-cheating?mode=read)  
+  不要轻信人工智能的表面表现。
+
 ### 2026-06-28
 
 - [理解 Transformer（第一部分）：为什么 RNN 几乎不可能训练](https://beatai.org/ai-insights/transformers-part-1-why-rnns-are-nearly-impossible-to-train?mode=read)  
