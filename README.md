@@ -2,6 +2,13 @@
 
 > 最近 30 天发布 · 完整列表见 <https://beatai.org/ai-insights>
 
+### 2026-07-07
+
+- [知识泄露是 LLM 领域新的数据泄露。](https://beatai.org/ai-insights/knowledge-leakage-is-the-new-data-leakage-in-llms?mode=read)  
+  你的 LLM 可能比你的数据掌握更多信息。了解知识泄露如何悄无声息地影响你的结果。
+- [英伟达已经赢得了训练。真正的战斗在于推理。](https://beatai.org/ai-insights/nvidia-already-won-training-the-real-fight-is-inference?mode=read)  
+  过去几周，我一直在深入研究一个特定的问题，最终我确信，大多数关于人工智能硬件的讨论都跑题了：争论的焦点在于训练——谁能搭建最大的集群，谁能训练出下一个前沿模型。而从硬件角度来看，这个问题根本没什么好讨论的。如果你要训练一个大型模型，那就买英伟达。就这么简单。GPU 的原始性能加上 CUDA 软件生态系统，优势如此悬殊，以至于硬件选择根本就不是选择。…
+
 ### 2026-06-30
 
 - [权限已解锁，但判断力尚未解锁。](https://beatai.org/ai-insights/access-was-unlocked-judgment-wasnt?mode=read)  
@@ -93,44 +100,3 @@
   “改进”AI产品意味着什么？
 - [这款中国新 AI 会让你思考](https://beatai.org/ai-insights/this-new-chinese-ai-will-make-you-think?mode=read)  
   这就是中国与美国竞争的方式。
-
-### 2026-06-04
-
-- [Agentic AI：数据碎片化与 LLM 推理的双重挑战](https://beatai.org/ai-insights/agentic-ai-for-industrial-iot-use-cases?mode=read)  
-  面向工业物联网系统的 AI agent
-- [不要被动反应，要主动回应：我们为何重构了 SDLC 来守住专注](https://beatai.org/ai-insights/dont-react-respond-why-we-rebuilt-our-sdlc-for-focus?mode=read)  
-  创业文化建立在多任务并行之上，可人脑不是这么造的。本文讲讲我们怎样重新设计 Ewake 的 SDLC，不惜代价守住团队的专注力。
-- [用 LLM-as-a-Judge 评估 Netflix 剧集简介](https://beatai.org/ai-insights/evaluating-netflix-show-synopses-with-llm-as-a-judge?mode=read)  
-  会员登录 Netflix 后，最难的选择之一就是看什么。难点不在于选择太少——片库里有成千上万部作品——而在于，要从中找到最吸引人的那一部，既复杂又高度因人而异。为此，我们会向会员推送个性化推广素材，其中尤其重要的是剧集简介——一段简短的描述，点出关键剧情，并给出类型、主创等线索。
-- [AI 平台之争已经打响](https://beatai.org/ai-insights/the-ai-platform-wars-have-started?mode=read)  
-  Anthropic 本周发布 Claude Managed Agents，是迄今为止表明 AI 市场进入新阶段的最明确信号。这不只是又一次模型发布，而是 Anthropic 从卖智能转向卖执行基础设施：安全沙箱、长时运行会话、编排和治理，并把这些和 Claude Code 等现有产品串到一起。
-
-### 2026-06-03
-
-- [AI token 稀缺与街机经济学](https://beatai.org/ai-insights/ai-token-scarcity-and-arcade-economics?mode=read)  
-  算力成本节节攀升，逼着设计师重新掂量自己的预期。
-- [把 Claude Code 改造成多 agent 工程流水线：一套跑了几个月的生产级 agent harness 实录](https://beatai.org/ai-insights/building-a-production-agent-harness-turning-claude-code-into-a-multi-agent-engineering-pipeline?mode=read)  
-  一个孤立的编码 agent，本质上是泡在罐子里的大脑。它会思考、会生成代码、会调函数——但它没法在凌晨三点回你的 Slack 私信，没法重跑一个挂掉的 CI，没法处理刚冒出来的 merge 冲突，也记不住昨天某位 reviewer 提的问题至今还没人答。
-- [用强化学习控制机械臂为人体按摩](https://beatai.org/ai-insights/controlling-a-robotic-arm-for-massaging-human-body-with-rl?mode=read)  
-  用交互式强化学习实现最优行为
-- [游戏 AI 的关键不在于智能](https://beatai.org/ai-insights/game-ai-is-not-about-intelligence?mode=read)  
-  有那么一类反复出现的内容——游戏开发者大会的演讲、博客文章、Twitter 长帖——总有人哀叹游戏 AI 相比现代机器学习"落后了"。叙事方式几乎一模一样：AlphaGo 击败了世界冠军，GPT-4 能写代码，可我们的 NPC 还在往墙上撞、在空地上找掩体。为什么这道鸿沟一直没填上？游戏 AI 怎么会这么原始？
-- [体面地使用 AI 的若干准则](https://beatai.org/ai-insights/guidelines-for-respectful-use-of-ai?mode=read)  
-  随着公司纷纷采用 AI 工具，大量时间被花在从安全、合规乃至成本角度去思考 AI 政策上。但很多管理者都忽略了一件事：在团队这个整体的语境里，自己的成员到底应该如何与 AI 协作。这留下了许多悬而未决的张力，是时候让管理者站出来定一些准则了——不只是规定怎样使用 AI 才算"获批"，还要规定怎样使用 AI 才算体面。
-- [AI 螺旋：找到你与 AI 共同进化的阶段](https://beatai.org/ai-insights/the-ai-helix-identify-your-stage-of-ai-co-evolution?mode=read)  
-  如果你大量时间都花在写 prompt、检查每一条 AI 输出、修正错误上——那你是在对 AI 做微观管理。绝大多数人都是从这里起步的。
-- [科技行业自找的清算。又一次。](https://beatai.org/ai-insights/the-reckoning-the-tech-industry-had-coming-again?mode=read)  
-  2007 年，我在澳大利亚墨尔本做 IT 咨询。那段时间经手的项目很多，其中一次，是替一家美国大型金融公司替换他们的汽车金融应用，尤其是我跟他们那位支持工程师打交道的经历，给了我一个至今难忘的行业视角。
-- [你家的猫比 ChatGPT 更懂这个世界——一位 AI 教父刚刚为此离开了 Meta](https://beatai.org/ai-insights/your-cat-understands-the-world-better-than-chatgpt-and-one-of-ais-godfathers-just-quit-meta-over?mode=read)  
-  我叫 Deepak Kumar，是个软件工程师，老是在技术的各个角落里反复爱上又厌倦。我之所以写东西，是因为只有把一件事讲给陌生人听，才能真正搞清楚自己到底有没有弄懂。所以别把这篇当成讲座，就当是你坐到我对面，问了一句"等等，现在 AI 圈到底在吵什么？"，我们随便聊聊。
-
-### 2026-06-02
-
-- [上下文工程，才是新的护城河](https://beatai.org/ai-insights/context-engineering-is-the-new-moat?mode=read)  
-  几个月前我有了一个想分享的领悟。打造 NomNow（一款支持多模态记录的对话式 AI 卡路里追踪应用）以来，这是我撞见过的最有用的一套思考框架。
-- [我如何把相册变成一个自主 AI Agent——完整指南](https://beatai.org/ai-insights/how-i-turned-my-photo-gallery-into-an-autonomous-ai-agent-the-complete-guide?mode=read)  
-  读完这篇指南，你会拥有一个完全跑在自己机器上的端到端 agent。你可以丢给它一句话，比如"那张暖暖的黄金时刻照片，就是旅途中我们在路边小饭馆停下来那次拍的"，它能在 100 毫秒内从相册里把图找出来——整个过程内存占用不到 1 GB，花费精确地是零美元。
-- [LLM-as-a-Judge：用大模型来做评估](https://beatai.org/ai-insights/llm-as-a-judge-using-llms-for-evaluation?mode=read)  
-  LLM-as-a-Judge，以及在人工质量评分之外其他可扩展的补充手段……
-- [通往 Multi-Head Latent Attention 之路](https://beatai.org/ai-insights/the-journey-to-multi-head-latent-attention?mode=read)  
-  人人都在谈 transformer 怎么扩展（scale），谈它怎么记忆的人却少得多。但实话说，对今天任何一个跑在生产里的 LLM 来说，KV cache 才是说了算的那个——它决定你的上下文长度、吞吐量、GPU 账单，以及你能部署在什么样的硬件上。Multi-Head Latent Attention（MLA）出自 DeepSeek-V2，是我见过对这个瓶颈最优雅的一次进攻。
