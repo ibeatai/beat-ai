@@ -2,6 +2,15 @@
 
 > 最近 30 天发布 · 完整列表见 <https://beatai.org/ai-insights>
 
+### 2026-07-29
+
+- [Anthropic 指出，Agentic Analytics 不仅仅是 text-to-SQL](https://beatai.org/ai-insights/anthropic-is-telling-you-that-agentic-analytics-is-not-just-text-to-sql?mode=read)  
+  Anthropic 的 Agentic Analytics 套件使用 Claude 实现了 95% 的准确率，他们在最新文章中分享了其实现方法。值得信赖的分析关键在于语义层、技能、评估和数据工程。
+- [我在 MacBook 上从零开始构建了一个 GPT——第 1-5 天：从二元语法到可运行的自注意力头](https://beatai.org/ai-insights/i-built-a-gpt-from-scratch-on-a-macbook-days-1-5-from-a-bigram-to-a-working-self-attention-head?mode=read)  
+  本文将从第一性原理出发，一步步用 PyTorch 手动构建 Transformer 的核心机制——包含真实代码、真实训练数据，以及每个选择背后的实际逻辑。不使用 nn.Transformer，没有捷径，只有好奇心和大量的 print() 语句。
+- [为什么机器学习能在百万维度中发现秩序](https://beatai.org/ai-insights/why-machine-learning-finds-order-in-a-million-dimensions?mode=read)  
+  流形假设解释了为什么图像、语音和其他现实世界的数据不会随机填充巨大的空间，而是聚集在隐藏的低维形状附近。
+
 ### 2026-07-13
 
 - [以价值为导向：一个不存在的信号](https://beatai.org/ai-insights/steering-by-value-the-signal-that-isnt-there?mode=read)  
@@ -24,34 +33,3 @@
   掌握模型蒸馏的工作原理，并在 Llama 3 等 LLM 上动手实现。
 - [为什么人工智能擅长作弊](https://beatai.org/ai-insights/why-ai-is-great-at-cheating?mode=read)  
   不要轻信人工智能的表面表现。
-
-### 2026-06-28
-
-- [理解 Transformer（第一部分）：为什么 RNN 几乎不可能训练](https://beatai.org/ai-insights/transformers-part-1-why-rnns-are-nearly-impossible-to-train?mode=read)  
-  本文将逐步讲解循环神经网络的工作原理以及导致其失效的数学原理。
-- [理解 Transformer（第二部分）：LSTM 如何（基本）修复循环神经网络](https://beatai.org/ai-insights/understanding-transformers-part-2-how-lstms-fixed-recurrent-networks-mostly?mode=read)  
-  逐步解析 LSTM 单元、其巧妙的门控系统，以及它最终如何使序列学习得以实现。
-- [理解 Transformer（第三部分）：位置编码和词嵌入](https://beatai.org/ai-insights/understanding-transformers-part-3-positional-encodings-and-word-embeddings?mode=read)  
-  为什么位置很重要？正弦波和余弦波如何拯救了 Transformer
-
-### 2026-06-24
-
-- [关于 LLM 能力和局限性的 5 个思考](https://beatai.org/ai-insights/5-thoughts-on-llm-capabilities-and-limitations?mode=read)  
-  关于 LLM 的根本局限，存在不同的观点。
-- [“理解 Transformer（第四部分）：注意力不过是几个矩阵”](https://beatai.org/ai-insights/understanding-transformers-part-4-attention-is-just-a-few-matrices?mode=read)  
-  简单的矩阵运算如何揭示上下文、意义以及现代人工智能背后的奥秘。
-
-### 2026-06-21
-
-- [国外大佬深度解密中国前沿模型](https://beatai.org/ai-insights/chinas-first-true-frontier-model?mode=read)
-- [“Claude Cowork 101：从提示到交付成果和自动化工作流程”](https://beatai.org/ai-insights/claude-cowork-101-from-prompts-to-deliverables-automated-workflows?mode=read)  
-  大多数人将 Claude 用作聊天机器人：他们提出问题，上传几个文件，得到答案，然后继续进行其他操作。 这很有用，但这却使 Claude 桌面工作流程的很大一部分功能没有得到充分利用。
-- [Nemotron 3：NVIDIA 最新 LLM 简明解读](https://beatai.org/ai-insights/nemotron-3-nvidias-latest-llm-in-plain-english?mode=read)  
-  LatentMoE、1M 上下文、强化学习和 NVIDIA 开放模型策略的简要概述
-
-### 2026-06-17
-
-- [《驾驭工程：2026 年每位人工智能工程师都需要了解的知识》](https://beatai.org/ai-insights/harness-engineering-what-every-ai-engineer-needs-to-know-in-2026?mode=read)  
-  三个阵营，三种架构——而 Opus 4.7 刚刚证明了这一切。
-- [评估新技术并调整自身发展方向](https://beatai.org/ai-insights/sizing-up-new-technology-and-pivoting-yourself?mode=read)  
-  第一个问题是：“这是真的吗？”它会成为一种从根本上重塑社会和商业运作方式的范式，还是只是一时的风潮——远看气势磅礴，但很快就会悄然消退？
