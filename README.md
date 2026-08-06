@@ -2,6 +2,17 @@
 
 > 最近 30 天发布 · 完整列表见 <https://beatai.org/ai-insights>
 
+### 2026-08-06
+
+- [混合专家（MoE）LLM](https://beatai.org/ai-insights/mixture-of-experts-moe-llms?mode=read)  
+  从零开始理解 DeepSeek、Grok 和 Mixtral 等模型……
+- [Agentic Harness 的可观测性](https://beatai.org/ai-insights/observability-for-the-agentic-ai-harness?mode=read)  
+  OpenTelemetry 日志记录、Evals 与 FinOps（适用于 AI agent）
+- [自训练人工智能的兴起：当算法向算法学习](https://beatai.org/ai-insights/the-rise-of-self-training-ai-when-algorithms-learn-from-algorithms?mode=read)  
+  深入探究重塑现代人工智能的递归训练循环——以及那些无人足够重视的安全漏洞、对抗风险和四眼控制失效
+- [什么是编排者？为什么软件需要编排者？](https://beatai.org/ai-insights/whats-an-orchestrator-and-why-does-software-need-one?mode=read)  
+  一个新的职位名称，属于那些靠指挥系统、agent 和结果来交付系统的专家
+
 ### 2026-07-29
 
 - [Anthropic 指出，Agentic Analytics 不仅仅是 text-to-SQL](https://beatai.org/ai-insights/anthropic-is-telling-you-that-agentic-analytics-is-not-just-text-to-sql?mode=read)  
@@ -17,19 +28,3 @@
   单个功能很容易管理。一个人就能把它装进脑子，大致清楚它为何重要、是否值得做，无需任何机制就能决定。问题在于，工作不会一直保持这么小的规模。一项大型计划、一个项目组合、一整年里相互竞争的各种需求，最终都会越过某个临界点——没有人能够再一次性掌控全局；到那时，就需要某种东西来代替原本由一个人做出的判断。
 - [理解 Transformer（第五部分）：最后几层发挥着重要作用](https://beatai.org/ai-insights/understanding-transformers-part-5-the-final-layers-doing-some-heavy-lifting?mode=read)  
   LayerNorm、残差、前馈块和编码器-解码器管道
-
-### 2026-07-07
-
-- [知识泄露是 LLM 领域新的数据泄露。](https://beatai.org/ai-insights/knowledge-leakage-is-the-new-data-leakage-in-llms?mode=read)  
-  你的 LLM 可能比你的数据掌握更多信息。了解知识泄露如何悄无声息地影响你的结果。
-- [英伟达已经赢得了训练。真正的战斗在于推理。](https://beatai.org/ai-insights/nvidia-already-won-training-the-real-fight-is-inference?mode=read)  
-  过去几周，我一直在深入研究一个特定的问题，最终我确信，大多数关于人工智能硬件的讨论都跑题了：争论的焦点在于训练——谁能搭建最大的集群，谁能训练出下一个前沿模型。而从硬件角度来看，这个问题根本没什么好讨论的。如果你要训练一个大型模型，那就买英伟达。就这么简单。GPU 的原始性能加上 CUDA 软件生态系统，优势如此悬殊，以至于硬件选择根本就不是选择。…
-
-### 2026-06-30
-
-- [权限已解锁，但判断力尚未解锁。](https://beatai.org/ai-insights/access-was-unlocked-judgment-wasnt?mode=read)  
-  市场部的某位员工在分析工具中输入了一个问题：“上个季度，DACH 地区的企业收入为何下降？”
-- [模型蒸馏指南：压缩 LLM 以提高边缘效率](https://beatai.org/ai-insights/model-distillation-guide-compressing-llms-for-edge-efficiency?mode=read)  
-  掌握模型蒸馏的工作原理，并在 Llama 3 等 LLM 上动手实现。
-- [为什么人工智能擅长作弊](https://beatai.org/ai-insights/why-ai-is-great-at-cheating?mode=read)  
-  不要轻信人工智能的表面表现。
