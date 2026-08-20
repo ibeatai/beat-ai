@@ -2,6 +2,11 @@
 
 > 最近 30 天发布 · 完整列表见 <https://beatai.org/ai-insights>
 
+### 2026-08-20
+
+- [Agent 的经济学：token 计费、缓存和路由](https://beatai.org/ai-insights/the-economics-of-agents-token-accounting-caching-and-routing?mode=read)  
+  你的 agent 没有性能问题，而是有单位经济效益问题——解决之道在于工程设计，而非增加预算。
+
 ### 2026-08-06
 
 - [混合专家（MoE）LLM](https://beatai.org/ai-insights/mixture-of-experts-moe-llms?mode=read)  
