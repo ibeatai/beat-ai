@@ -35,6 +35,7 @@
     "remark-cjk-friendly": "^2.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
+    "shell-quote": "^1.9.0",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.9.3",
     "web-vitals": "^2.1.4",
@@ -76,5 +77,8 @@
     "chalk": "^5.6.2",
     "ora": "^8.2.0",
     "serve": "^14.2.6"
+  },
+  "overrides": {
+    "shell-quote": "1.9.0"
   }
 }
