@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#060a12" />
+    <title>404 | BeatAI Bulkhead Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #060a12;
+        --panel: rgba(9, 14, 24, 0.95);
+        --line: rgba(255, 255, 255, 0.1);
+        --text: #f3f8ff;
+        --muted: rgba(243, 248, 255, 0.68);
+        --cyan: #6ce8ff;
+        --pink: #ff628e;
+        --lime: #d4ff5b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        overflow: hidden;
+        color: var(--text);
+        font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
+        background:
+          radial-gradient(circle at 20% 16%, rgba(108, 232, 255, 0.14), transparent 24%),
+          radial-gradient(circle at 80% 18%, rgba(255, 98, 142, 0.1), transparent 20%),
+          linear-gradient(180deg, #05070d 0%, #0a1220 54%, #050811 100%);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: radial-gradient(circle at center, black 30%, transparent 78%);
+        opacity: 0.45;
+        pointer-events: none;
+      }
+
+      .scene {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 18px;
+      }
+
+      .frame {
+        position: relative;
+        width: min(1120px, 100%);
+        overflow: hidden;
+        border-radius: 34px;
+        border: 1px solid rgba(108, 232, 255, 0.12);
+        background: linear-gradient(180deg, rgba(9, 14, 24, 0.98), rgba(6, 9, 16, 0.97));
+        box-shadow:
+          0 28px 80px rgba(0, 0, 0, 0.42),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06),
+          inset 0 0 0 14px rgba(255, 255, 255, 0.02);
+      }
+
+      .frame::before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        pointer-events: none;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 26px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .eyebrow {
+        color: rgba(243, 248, 255, 0.55);
+        font-size: 0.78rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .lamps {
+        display: flex;
+        gap: 8px;
+      }
+
+      .lamps span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+
+      .lamps span:nth-child(1) {
+        background: var(--cyan);
+        box-shadow: 0 0 12px rgba(108, 232, 255, 0.76);
+      }
+
+      .lamps span:nth-child(2) {
+        background: var(--lime);
+        box-shadow: 0 0 12px rgba(212, 255, 91, 0.76);
+      }
+
+      .lamps span:nth-child(3) {
+        background: var(--pink);
+        box-shadow: 0 0 12px rgba(255, 98, 142, 0.76);
+      }
+
+      .bulkhead {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+        min-height: 720px;
+      }
+
+      .door {
+        position: relative;
+        padding: 26px;
+      }
+
+      .door::before,
+      .door::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .door::before {
+        inset: 18px;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .door::after {
+        inset: 34px;
+        border-radius: 16px;
+        border: 1px solid rgba(108, 232, 255, 0.05);
+      }
+
+      .door.left {
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        background:
+          linear-gradient(120deg, rgba(108, 232, 255, 0.05), transparent 24%),
+          linear-gradient(180deg, rgba(10, 16, 28, 0.98), rgba(7, 10, 18, 0.96));
+      }
+
+      .door.right {
+        background:
+          linear-gradient(225deg, rgba(255, 98, 142, 0.05), transparent 24%),
+          linear-gradient(180deg, rgba(9, 14, 24, 0.98), rgba(7, 10, 18, 0.96));
+      }
+
+      .door-inner {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        min-height: 38px;
+        padding: 0 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(108, 232, 255, 0.22);
+        background: rgba(108, 232, 255, 0.08);
+        color: #97efff;
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .tag::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        box-shadow: 0 0 14px currentColor;
+      }
+
+      .code {
+        position: relative;
+        margin: 24px 0 14px;
+      }
+
+      .code strong,
+      .code .ghost {
+        display: block;
+        font-size: clamp(6rem, 18vw, 10.5rem);
+        line-height: 0.86;
+        letter-spacing: -0.09em;
+        font-weight: 700;
+      }
+
+      .code .ghost {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        color: rgba(108, 232, 255, 0.14);
+      }
+
+      .code strong {
+        position: relative;
+        z-index: 1;
+        color: #f8fbff;
+        text-shadow:
+          0 0 18px rgba(108, 232, 255, 0.24),
+          0 0 30px rgba(255, 98, 142, 0.08);
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 620px;
+        font-size: clamp(2rem, 4vw, 4rem);
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+      }
+
+      .lead {
+        max-width: 620px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 1.04rem;
+        line-height: 1.8;
+      }
+
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 13px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .chip.warn {
+        background: rgba(255, 98, 142, 0.14);
+        color: #ff9ab5;
+      }
+
+      .chip.info {
+        background: rgba(108, 232, 255, 0.12);
+        color: #9cefff;
+      }
+
+      .chip.ok {
+        background: rgba(212, 255, 91, 0.14);
+        color: #e4ff9d;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 18px;
+        border-radius: 14px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.22s ease;
+      }
+
+      .button.primary {
+        color: #08101a;
+        background: linear-gradient(135deg, #f8fbff, #c7e9ff);
+      }
+
+      .button.secondary {
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .panel-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        color: rgba(243, 248, 255, 0.58);
+        font-size: 0.78rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .pulse {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--lime);
+        box-shadow: 0 0 0 rgba(212, 255, 91, 0.6);
+        animation: pulse 1.8s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(212, 255, 91, 0.6);
+        }
+        75% {
+          box-shadow: 0 0 0 16px rgba(212, 255, 91, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(212, 255, 91, 0);
+        }
+      }
+
+      .metric {
+        margin-top: 14px;
+        padding: 16px 18px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+      }
+
+      .metric .label {
+        display: block;
+        color: rgba(243, 248, 255, 0.45);
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .metric strong {
+        display: block;
+        margin-top: 10px;
+        line-height: 1.65;
+        word-break: break-word;
+      }
+
+      .metric strong.soft {
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .terminal {
+        margin-top: 16px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(5, 9, 17, 0.98);
+      }
+
+      .terminal-head {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .terminal-head span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+
+      .terminal-head span:nth-child(1) {
+        background: #ff7a88;
+      }
+
+      .terminal-head span:nth-child(2) {
+        background: #ffd36e;
+      }
+
+      .terminal-head span:nth-child(3) {
+        background: #6cffb8;
+      }
+
+      .terminal-head strong {
+        margin-left: 8px;
+        color: rgba(243, 248, 255, 0.54);
+        font-size: 0.76rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .terminal-body {
+        padding: 18px 16px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        color: #dfeaff;
+        font-size: 0.84rem;
+        line-height: 1.9;
+      }
+
+      .terminal-body div {
+        display: flex;
+        gap: 10px;
+      }
+
+      .terminal-body span {
+        color: var(--cyan);
+      }
+
+      .terminal-body em {
+        color: var(--lime);
+        font-style: normal;
+      }
+
+      .core {
+        position: absolute;
+        left: calc(100% - 28%);
+        top: 50%;
+        width: 184px;
+        height: 184px;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      .ring {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .ring.a {
+        box-shadow: inset 0 0 0 12px rgba(255, 255, 255, 0.04), 0 0 28px rgba(108, 232, 255, 0.1);
+        animation: spin 10s linear infinite;
+      }
+
+      .ring.b {
+        inset: 22px;
+        border-style: dashed;
+        border-color: rgba(108, 232, 255, 0.28);
+        animation: spin 7s linear infinite reverse;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .core-center {
+        position: absolute;
+        inset: 44px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.12), transparent 28%),
+          linear-gradient(180deg, rgba(17, 26, 44, 0.98), rgba(9, 13, 24, 0.98));
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.04), 0 0 22px rgba(108, 232, 255, 0.18);
+      }
+
+      .core-center span {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      @media (max-width: 1024px) {
+        .bulkhead {
+          grid-template-columns: 1fr;
+        }
+
+        .door.left {
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .core {
+          top: auto;
+          left: 50%;
+          bottom: 24px;
+          width: 150px;
+          height: 150px;
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .scene {
+          padding: 12px;
+        }
+
+        .topbar {
+          padding: 16px 18px;
+        }
+
+        .door {
+          padding: 16px;
+        }
+
+        .door-inner {
+          padding: 20px 18px;
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .core {
+          position: relative;
+          inset: auto;
+          transform: none;
+          width: 120px;
+          height: 120px;
+          margin: 0 auto 18px;
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        var payload = path + search + hash;
+        var shellEntry = window.location.origin + '/';
+
+        sessionStorage.setItem('githubPagesRedirect', payload);
+        window.__BEATAI_404__ = { payload: payload };
+
+        window.location.replace(shellEntry);
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="scene">
+      <section class="frame">
+        <div class="topbar">
+          <span class="eyebrow">BEATAI OS // BULKHEAD CONTROL</span>
+          <div class="lamps" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="bulkhead">
+          <section class="door left">
+            <div class="door-inner">
+              <span class="tag">AIRLOCK // 404</span>
+              <div class="code">
+                <span class="ghost">404</span>
+                <strong>404</strong>
+              </div>
+              <h1>目标舱段不存在，隔离门正在保持关闭。</h1>
+              <p class="lead">
+                首次直达 GitHub Pages 的未知路径时，会先进入这间舱门控制室。
+                系统已经缓存路径，并准备把你送回应用壳层再尝试恢复。
+              </p>
+              <div class="chip-row">
+                <span class="chip warn">ROUTE LOST</span>
+                <span class="chip info">SHELL RECOVERY</span>
+                <span class="chip ok">CORE ONLINE</span>
+              </div>
+              <div class="actions">
+                <a class="button primary" href="/">立即返回 BeatAI</a>
+                <a class="button secondary" href="https://github.com/genesislab-io/beatai" target="_blank" rel="noopener noreferrer">查看仓库</a>
+              </div>
+            </div>
+          </section>
+
+          <aside class="door right">
+            <div class="door-inner">
+              <div class="panel-head">
+                <span>ROUTE TELEMETRY</span>
+                <span class="pulse" aria-hidden="true"></span>
+              </div>
+
+              <div class="metric">
+                <span class="label">Requested Path</span>
+                <strong id="captured-path">/</strong>
+              </div>
+
+              <div class="metric">
+                <span class="label">Redirect Mode</span>
+                <strong>SPA RECOVERY // GH-PAGES</strong>
+              </div>
+
+              <div class="metric">
+                <span class="label">Recovery Status</span>
+                <strong class="soft">Shell handoff in progress. If auto-jump is blocked, use the button on the left.</strong>
+              </div>
+
+              <div class="terminal">
+                <div class="terminal-head">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <strong>bulkhead-log</strong>
+                </div>
+                <div class="terminal-body">
+                  <div><span>&gt;</span> edge route mismatch detected</div>
+                  <div><span>&gt;</span> path buffer: <em id="terminal-path">/</em></div>
+                  <div><span>&gt;</span> writing redirect token to sessionStorage</div>
+                  <div><span>&gt;</span> rerouting to shell entry...</div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="core" aria-hidden="true">
+            <div class="ring a"></div>
+            <div class="ring b"></div>
+            <div class="core-center"><span>404</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var state = window.__BEATAI_404__ || { payload: window.location.pathname + window.location.search + window.location.hash };
+        var path = state.payload || '/';
+        document.getElementById('captured-path').textContent = path;
+        document.getElementById('terminal-path').textContent = path;
+      })();
+    </script>
+  </body>
+</html>

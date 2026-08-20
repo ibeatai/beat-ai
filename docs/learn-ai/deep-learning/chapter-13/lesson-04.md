@@ -1,0 +1,65 @@
+## 13.3 GRU
+
+上一节我们讲了LSTM，它确实有些复杂，门控循环单元（Gated Recurrent Unit，GRU）是对LSTM的简化版，实验表明，GRU的性能基本和LSTM相当。
+
+### 13.3.1 GRU的网络结构
+
+GRU去掉了LSTM中的记忆细胞状态$c_t$，仅用隐状态$h_t$就解决了长期记忆和梯度消失的问题。我们来一步步看一下GRU循环层的设计逻辑。
+
+![1328.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1328.png)
+
+首先我们看如何从隐状态中读取信息，GRU里也通过一个遗忘门来决定从长期记忆里去掉一些信息。不过GRU里叫做重置门，$G_r$。重置门也是用`simgoid`函数，它的输入是上一时刻的记忆$h_{t-1}$和当前时刻的输入$x_t$进行拼接，然后经过一个线性层得到的。线性层的权重为$w_r$。
+
+$$
+G_r=sigmoid([h_{t-1}|x_t]w_r+b_r)
+$$
+
+于是$h_{t-1}\odot G_r$就是经过重置后的长期记忆。
+
+![1329.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1329.png)
+
+重置后的长期记忆和当前输入$x_t$合并，然后经过一个线性层（权重为$w_h$），加`tanh`激活，就得到当前层的备用输出$\tilde{h_t}$。
+
+此时，备用输出还是不能直接输出，因为GRU就只能靠隐状态来传递长期记忆，这里将需要长期保留的记忆加进来再作为当前时间步的隐状态作为输出。怎么决定哪些维度保留长期记忆，哪些维度更新为备用输出的隐状态呢？答案还是用一个门函数来控制。不过这个门函数同时决定保留多少长期记忆，更新多少当前步产生的记忆。
+
+![1330.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1330.png)
+
+首先用一个`sigmoid`更新门，生成一个更新向量，它和备用输出按位相乘，获得要更新到长期记忆里的信息。然后用1减去更新向量里的每一维，这样就得到了对长期记忆的保留向量。用保留向量与长期记忆按位点乘，就得到了保留的长期记忆，在和更新信息相加，就得到了这一步输出的长期记忆，$h_t$。
+
+![1331.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1331.png)
+
+我们将两个GRU相连，可以发现它也和LSTM类似，实现了隐状态的相连，可以长期保留记忆，也可以让梯度更容易传递到前边的时间步。
+
+![1332.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1332.png)
+
+### 13.3.2 公式化表示
+
+下边我们用公式来定义每个向量的计算：
+
+重置门：
+
+$$
+G_r=sigmoid([h_{t-1}|x_t]w_r+b_r]
+$$
+
+更新门：
+
+$$
+G_u=sigmoid([h_{t-1}|x_t]w_u+b_u]
+$$
+
+备用输出：
+
+$$
+\tilde{h_t}=tanh([h_{t-1} \odot G_r | x_t]w_h+b_h)
+$$
+
+隐状态：
+
+$$
+h_t=G_u \odot \tilde{h_t} + (1-G_u) \odot h_{t-1}
+$$
+
+### 13.3.3 用GRU和LSTM
+
+LSTM一般更常用，效果更好，用的人更多。但是LSTM因为更复杂，参数更多训练成本会更高一些。如果你更在意训练成本可以用GRU。

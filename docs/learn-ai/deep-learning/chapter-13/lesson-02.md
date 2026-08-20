@@ -1,0 +1,46 @@
+## 13.2 RNN的不同类型
+
+上一节我们看了RNN的基本结构，用的是NLP里NER这个任务作为例子。NER的输入序列是多个向量，输出序列也是多个向量。我们把它称为多对多的任务。而且是输入序列长度和输出序列长度完全一致的情况。但实际中还有很多其他情况，这一节我们就来详细介绍。
+
+### 13.2.1 多对一
+
+对于文本情感分类问题，输入序列长度有多个token，输出只是一个用来进行分类的向量。向量维度为分类个数。这就是一个多对一的序列问题。
+RNN处理流程为：
+
+![1308.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1308.png)
+
+可以看到RNN在处理序列数据时，除了最后一个时间步有输出外，其他时间步都只更新隐藏状态。
+
+### 13.2.2 一对多
+
+对于小说生成，我们希望输入一个向量，这个向量代表小说类型的各个维度，然后RNN就可以自动生成输出token序列，这就是一个一对多的序列问题。
+
+![1309.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1309.png)
+
+上图可以看到，第一个时间步，输入$x$，RNN输出第一个token:$y_1$，然后将$y_1$作为第二个时间步的输入token，继续生成$y_2$，以此类推，直到模型生成了结束符`<EOS>`。
+
+### 13.2.3 多对多
+
+多对多序列任务分为两种：一种是输入序列和输出序列长度一致，比如NER任务。一种是输入序列和输出序列长度不一致，比如翻译任务。
+
+**长度一致**
+
+![1306.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1306.png)
+
+长度一致情况，RNN在每个时间步的输入都是之前隐藏状态和当前时间步的输入，输出分为两个，分别是当前步的输出以及当前RNN的隐藏状态。
+
+**长度不一致**
+
+![1307.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1307.png)
+
+比如对于翻译问题，输入token长度为m，输出token长度为n。则RNN分为两个阶段，一个阶段是编码，在这个阶段RNN每个时间步不进行输出，只会更新隐藏状态。当读入了所有x后，RNN进入解码阶段，解码阶段每个时间步会输出一个目标token，同时将输出的目标token作为下一个时间步的输入token。这样直到RNN输出序列结束符`<EOS>`。
+
+### 13.2.4 一对一
+
+为了讨论的完整性，我们也看一下一对一的情况，因为一对一的情况就只有一个时间步，所以就退化为一个普通的全连接神经网络了。
+
+![1310.png](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/1310.png)
+
+### 13.2.4 总结
+
+可以看到上边不同类型的RNN，有的时间步是没有输出的，但是隐状态一直在传递。这正是我们上一节最后所说的，循环层和隐状态才是RNN的关键。普通层只是为了完成特定任务额外添加的。

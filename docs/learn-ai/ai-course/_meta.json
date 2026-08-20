@@ -1,0 +1,786 @@
+{
+  "id": "learn-ai/ai-course",
+  "title": "AI 入门圣经",
+  "description": "用最直观的方式拆解 AI：既有「趣解 transformer」系列，也收录完整《深度学习指南》——从线性代数、微积分一路讲到 CNN、RNN、Transformer、GPT、Llama 与 DeepSeek。",
+  "sections": [
+    {
+      "title": "趣解 transformer",
+      "path": "/learn-ai/ai-course/transformer/part-1",
+      "file": "/docs/learn-ai/ai-course/transformer/part-1.md",
+      "items": [
+        {
+          "title": "第一部分：为什么 RNN 几乎不可能训练",
+          "path": "/learn-ai/ai-course/transformer/part-1",
+          "file": "/docs/learn-ai/ai-course/transformer/part-1.md"
+        },
+        {
+          "title": "第二部分：LSTM 如何（基本）修复循环神经网络",
+          "path": "/learn-ai/ai-course/transformer/part-2",
+          "file": "/docs/learn-ai/ai-course/transformer/part-2.md"
+        },
+        {
+          "title": "第三部分：位置编码与词嵌入",
+          "path": "/learn-ai/ai-course/transformer/part-3",
+          "file": "/docs/learn-ai/ai-course/transformer/part-3.md"
+        },
+        {
+          "title": "第四部分：注意力不过是几个矩阵",
+          "path": "/learn-ai/ai-course/transformer/part-4",
+          "file": "/docs/learn-ai/ai-course/transformer/part-4.md"
+        }
+      ]
+    },
+    {
+      "title": "深度学习指南",
+      "path": "/learn-ai/ai-course/deep-learning/chapter-01/lesson-01",
+      "file": "/docs/learn-ai/deep-learning/chapter-01/lesson-01.md",
+      "items": [
+        {
+          "title": "初识深度学习",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-01/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-01/lesson-01.md",
+          "children": [
+            {
+              "title": "什么是深度学习",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-01/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-01/lesson-01.md"
+            },
+            {
+              "title": "如何学习深度学习",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-01/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-01/lesson-02.md"
+            }
+          ]
+        },
+        {
+          "title": "深度学习里的线性代数",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-02/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-02/lesson-01.md",
+          "children": [
+            {
+              "title": "什么是向量",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-02/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-02/lesson-01.md"
+            },
+            {
+              "title": "向量的基",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-02/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-02/lesson-02.md"
+            },
+            {
+              "title": "线性变换和矩阵",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-02/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-02/lesson-03.md"
+            },
+            {
+              "title": "向量的点乘",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-02/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-02/lesson-04.md"
+            },
+            {
+              "title": "向量的叉乘",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-02/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-02/lesson-05.md"
+            }
+          ]
+        },
+        {
+          "title": "深度学习里的微积分",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-01.md",
+          "children": [
+            {
+              "title": "函数的极限",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-01.md"
+            },
+            {
+              "title": "导数的定义",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-02.md"
+            },
+            {
+              "title": "常用求导公式",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-03.md"
+            },
+            {
+              "title": "导数运算法则",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-04.md"
+            },
+            {
+              "title": "一元函数微分",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-05.md"
+            },
+            {
+              "title": "偏导数",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-06.md"
+            },
+            {
+              "title": "全微分",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-07.md"
+            },
+            {
+              "title": "方向导数与梯度",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-08",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-08.md"
+            },
+            {
+              "title": "定积分",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-03/lesson-09",
+              "file": "/docs/learn-ai/deep-learning/chapter-03/lesson-09.md"
+            }
+          ]
+        },
+        {
+          "title": "深度学习里的概率与统计",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-01.md",
+          "children": [
+            {
+              "title": "概率论里的基本概念",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-01.md"
+            },
+            {
+              "title": "概率里的基本运算",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-02.md"
+            },
+            {
+              "title": "随机变量及其分布",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-03.md"
+            },
+            {
+              "title": "数学期望和方差",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-04.md"
+            },
+            {
+              "title": "大数定律",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-05.md"
+            },
+            {
+              "title": "条件概率与全概率",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-06.md"
+            },
+            {
+              "title": "中心极限定理和正态分布",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-07.md"
+            },
+            {
+              "title": "极大似然估计",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-04/lesson-08",
+              "file": "/docs/learn-ai/deep-learning/chapter-04/lesson-08.md"
+            }
+          ]
+        },
+        {
+          "title": "线性回归",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-05/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-05/lesson-01.md",
+          "children": [
+            {
+              "title": "一元线性回归",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-05/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-05/lesson-01.md"
+            },
+            {
+              "title": "给线性回归加上偏置",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-05/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-05/lesson-02.md"
+            },
+            {
+              "title": "梯度下降算法",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-05/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-05/lesson-03.md"
+            },
+            {
+              "title": "多元线性回归",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-05/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-05/lesson-04.md"
+            },
+            {
+              "title": "动手实现多元线性回归",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-05/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-05/lesson-05.md"
+            },
+            {
+              "title": "线性回归只能拟合直线吗",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-05/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-05/lesson-06.md"
+            }
+          ]
+        },
+        {
+          "title": "初识PyTorch",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-01.md",
+          "children": [
+            {
+              "title": "PyTorch简介",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-01.md"
+            },
+            {
+              "title": "CPU环境下的PyTorch安装",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-02.md"
+            },
+            {
+              "title": "GPU环境下的PyTorch安装",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-03.md"
+            },
+            {
+              "title": "Tensor",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-04.md"
+            },
+            {
+              "title": "计算图与自动求梯度",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-05.md"
+            },
+            {
+              "title": "用PyTorch实现线性回归",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-06.md"
+            },
+            {
+              "title": "优美的loss曲线",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-07.md"
+            },
+            {
+              "title": "Normalization",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-06/lesson-08",
+              "file": "/docs/learn-ai/deep-learning/chapter-06/lesson-08.md"
+            }
+          ]
+        },
+        {
+          "title": "逻辑回归",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-01.md",
+          "children": [
+            {
+              "title": "一元逻辑回归",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-01.md"
+            },
+            {
+              "title": "逻辑回归的损失函数",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-02.md"
+            },
+            {
+              "title": "多元逻辑回归",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-03.md"
+            },
+            {
+              "title": "数据集的划分",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-04.md"
+            },
+            {
+              "title": "欠拟合和过拟合",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-05.md"
+            },
+            {
+              "title": "二分类模型的评价指标",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-06.md"
+            },
+            {
+              "title": "梯度下降算法的改进",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-07.md"
+            },
+            {
+              "title": "泰坦尼克号生存预测",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-08",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-08.md"
+            },
+            {
+              "title": "PyTorch里的Dataset和DataLoader",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-09",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-09.md"
+            },
+            {
+              "title": "利用PyTorch定义逻辑回归模型",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-10",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-10.md"
+            },
+            {
+              "title": "用逻辑回归对Titanic数据进行训练",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-07/lesson-11",
+              "file": "/docs/learn-ai/deep-learning/chapter-07/lesson-11.md"
+            }
+          ]
+        },
+        {
+          "title": "神经网络",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-01.md",
+          "children": [
+            {
+              "title": "从逻辑回归到神经网络",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-01.md"
+            },
+            {
+              "title": "大脑与神经网络",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-02.md"
+            },
+            {
+              "title": "神经网络与矩阵运算",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-03.md"
+            },
+            {
+              "title": "激活函数",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-04.md"
+            },
+            {
+              "title": "神经网络的多分类",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-05.md"
+            },
+            {
+              "title": "多分类神经网络的反向传播",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-06.md"
+            },
+            {
+              "title": "梯度消失和梯度爆炸",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-07.md"
+            },
+            {
+              "title": "手动实现多分类神经网络",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-08",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-08.md"
+            },
+            {
+              "title": "用PyTorch实现多分类神经网络",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-09",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-09.md"
+            },
+            {
+              "title": "为什么神经网络可以拟合任意函数",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-08/lesson-10",
+              "file": "/docs/learn-ai/deep-learning/chapter-08/lesson-10.md"
+            }
+          ]
+        },
+        {
+          "title": "优化深度神经网络",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-01.md",
+          "children": [
+            {
+              "title": "L1和L2正则化",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-01.md"
+            },
+            {
+              "title": "指数加权平均",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-02.md"
+            },
+            {
+              "title": "动量梯度下降",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-03.md"
+            },
+            {
+              "title": "RMSProp优化器",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-04.md"
+            },
+            {
+              "title": "Adam优化器",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-05.md"
+            },
+            {
+              "title": "权重衰减",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-06.md"
+            },
+            {
+              "title": "Dropout",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-07.md"
+            },
+            {
+              "title": "批量归一化",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-09/lesson-08",
+              "file": "/docs/learn-ai/deep-learning/chapter-09/lesson-08.md"
+            }
+          ]
+        },
+        {
+          "title": "卷积神经网络",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-01.md",
+          "children": [
+            {
+              "title": "视觉问题的特点",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-01.md"
+            },
+            {
+              "title": "卷积操作",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-02.md"
+            },
+            {
+              "title": "进阶的卷积操作",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-03.md"
+            },
+            {
+              "title": "池化层",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-04.md"
+            },
+            {
+              "title": "一个完整的卷积神经网络",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-05.md"
+            },
+            {
+              "title": "1乘1卷积和全局平均池化层",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-06.md"
+            },
+            {
+              "title": "用PyTorch实现卷积神经网络",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-07.md"
+            },
+            {
+              "title": "图像增强",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-10/lesson-08",
+              "file": "/docs/learn-ai/deep-learning/chapter-10/lesson-08.md"
+            }
+          ]
+        },
+        {
+          "title": "经典卷积神经网络",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-01.md",
+          "children": [
+            {
+              "title": "LeNet",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-01.md"
+            },
+            {
+              "title": "AlexNet",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-02.md"
+            },
+            {
+              "title": "GoogLeNet",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-03.md"
+            },
+            {
+              "title": "VGGNet",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-04.md"
+            },
+            {
+              "title": "ResNet原理",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-05.md"
+            },
+            {
+              "title": "ResNet实现",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-06.md"
+            },
+            {
+              "title": "迁移学习",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-07.md"
+            },
+            {
+              "title": "目标检测",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-08",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-08.md"
+            },
+            {
+              "title": "语义分割",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-09",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-09.md"
+            },
+            {
+              "title": "更多应用",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-11/lesson-10",
+              "file": "/docs/learn-ai/deep-learning/chapter-11/lesson-10.md"
+            }
+          ]
+        },
+        {
+          "title": "自然语言处理",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-12/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-12/lesson-01.md",
+          "children": [
+            {
+              "title": "自然语言处理的进化之路",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-12/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-12/lesson-01.md"
+            },
+            {
+              "title": "NLP常见任务",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-12/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-12/lesson-02.md"
+            },
+            {
+              "title": "词典生成",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-12/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-12/lesson-03.md"
+            },
+            {
+              "title": "Token编码",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-12/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-12/lesson-04.md"
+            },
+            {
+              "title": "语言模型采样",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-12/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-12/lesson-05.md"
+            }
+          ]
+        },
+        {
+          "title": "循环神经网络",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-13/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-13/lesson-01.md",
+          "children": [
+            {
+              "title": "RNN",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-13/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-13/lesson-01.md"
+            },
+            {
+              "title": "RNN的不同类型",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-13/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-13/lesson-02.md"
+            },
+            {
+              "title": "LSTM",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-13/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-13/lesson-03.md"
+            },
+            {
+              "title": "GRU",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-13/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-13/lesson-04.md"
+            },
+            {
+              "title": "双向循环神经网络",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-13/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-13/lesson-05.md"
+            },
+            {
+              "title": "深度循环神经网络",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-13/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-13/lesson-06.md"
+            },
+            {
+              "title": "注意力机制",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-13/lesson-07",
+              "file": "/docs/learn-ai/deep-learning/chapter-13/lesson-07.md"
+            }
+          ]
+        },
+        {
+          "title": "用RNN实现翻译模型",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-14/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-14/lesson-01.md",
+          "children": [
+            {
+              "title": "数据准备",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-14/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-14/lesson-01.md"
+            },
+            {
+              "title": "BLEU评价指标",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-14/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-14/lesson-02.md"
+            },
+            {
+              "title": "模型定义",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-14/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-14/lesson-03.md"
+            },
+            {
+              "title": "模型评估",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-14/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-14/lesson-04.md"
+            }
+          ]
+        },
+        {
+          "title": "Transformer",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-15/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-15/lesson-01.md",
+          "children": [
+            {
+              "title": "动机与影响",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-15/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-15/lesson-01.md"
+            },
+            {
+              "title": "注意力机制",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-15/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-15/lesson-02.md"
+            },
+            {
+              "title": "层归一化",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-15/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-15/lesson-03.md"
+            },
+            {
+              "title": "位置编码",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-15/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-15/lesson-04.md"
+            },
+            {
+              "title": "把这一切组装起来",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-15/lesson-05",
+              "file": "/docs/learn-ai/deep-learning/chapter-15/lesson-05.md"
+            },
+            {
+              "title": "利用Transformer实现翻译模型",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-15/lesson-06",
+              "file": "/docs/learn-ai/deep-learning/chapter-15/lesson-06.md"
+            }
+          ]
+        },
+        {
+          "title": "BERT和GPT",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-16/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-16/lesson-01.md",
+          "children": [
+            {
+              "title": "GPT1",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-16/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-16/lesson-01.md"
+            },
+            {
+              "title": "BERT",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-16/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-16/lesson-02.md"
+            },
+            {
+              "title": "GPT2",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-16/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-16/lesson-03.md"
+            },
+            {
+              "title": "GPT3和GPT4",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-16/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-16/lesson-04.md"
+            }
+          ]
+        },
+        {
+          "title": "Llama",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-17/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-17/lesson-01.md",
+          "children": [
+            {
+              "title": "Llama1",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-17/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-17/lesson-01.md"
+            },
+            {
+              "title": "旋转位置编码",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-17/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-17/lesson-02.md"
+            },
+            {
+              "title": "Llama2",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-17/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-17/lesson-03.md"
+            },
+            {
+              "title": "Llama3",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-17/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-17/lesson-04.md"
+            }
+          ]
+        },
+        {
+          "title": "DeepSeek",
+          "path": "/learn-ai/ai-course/deep-learning/chapter-18/lesson-01",
+          "file": "/docs/learn-ai/deep-learning/chapter-18/lesson-01.md",
+          "children": [
+            {
+              "title": "MOE",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-18/lesson-01",
+              "file": "/docs/learn-ai/deep-learning/chapter-18/lesson-01.md"
+            },
+            {
+              "title": "DeepSeekMOE",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-18/lesson-02",
+              "file": "/docs/learn-ai/deep-learning/chapter-18/lesson-02.md"
+            },
+            {
+              "title": "DeepSeekV2",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-18/lesson-03",
+              "file": "/docs/learn-ai/deep-learning/chapter-18/lesson-03.md"
+            },
+            {
+              "title": "DeepSeekV3",
+              "path": "/learn-ai/ai-course/deep-learning/chapter-18/lesson-04",
+              "file": "/docs/learn-ai/deep-learning/chapter-18/lesson-04.md"
+            }
+          ]
+        },
+        {
+          "title": "结语",
+          "path": "/learn-ai/ai-course/deep-learning/AFTER",
+          "file": "/docs/learn-ai/deep-learning/AFTER.md",
+          "children": [
+            {
+              "title": "旅程的终点，也是新的起点",
+              "path": "/learn-ai/ai-course/deep-learning/AFTER",
+              "file": "/docs/learn-ai/deep-learning/AFTER.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Agent Harness",
+      "path": "/learn-ai/ai-course/agent-harness/lesson-01",
+      "file": "/docs/learn-ai/ai-course/agent-harness/lesson-01.md",
+      "items": [
+        {
+          "title": "Agent Harness 剖析",
+          "path": "/learn-ai/ai-course/agent-harness/lesson-01",
+          "file": "/docs/learn-ai/ai-course/agent-harness/lesson-01.md"
+        }
+      ]
+    }
+  ]
+}

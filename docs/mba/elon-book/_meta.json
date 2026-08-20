@@ -1,0 +1,129 @@
+{
+  "id": "mba/elon-book",
+  "title": "埃隆之书",
+  "description": "目标与成功指南，基于埃隆·马斯克原话整理的中文书籍版 Docs",
+  "sections": [
+    {
+      "title": "埃隆之书",
+      "path": "/mba/elon-book/about",
+      "file": "/docs/mba/elon-book/about.md",
+      "items": [
+        {
+          "title": "本书说明",
+          "path": "/mba/elon-book/about",
+          "file": "/docs/mba/elon-book/about.md",
+          "tags": [
+            "埃隆之书",
+            "Elon Musk",
+            "Book"
+          ]
+        },
+        {
+          "title": "前言",
+          "path": "/mba/elon-book/foreword",
+          "file": "/docs/mba/elon-book/foreword.md",
+          "tags": [
+            "埃隆之书",
+            "Elon Musk",
+            "Book"
+          ]
+        },
+        {
+          "title": "埃里克为本书撰写序言",
+          "path": "/mba/elon-book/editor-preface",
+          "file": "/docs/mba/elon-book/editor-preface.md",
+          "tags": [
+            "埃隆之书",
+            "Elon Musk",
+            "Book"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "第一部分：追求目标",
+      "path": "/mba/elon-book/part-1-purpose",
+      "file": "/docs/mba/elon-book/part-1-purpose.md",
+      "items": [
+        {
+          "title": "第一部分：追求目标",
+          "path": "/mba/elon-book/part-1-purpose",
+          "file": "/docs/mba/elon-book/part-1-purpose.md",
+          "tags": [
+            "埃隆之书",
+            "Elon Musk",
+            "Book"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "第二部分：超硬核工作",
+      "path": "/mba/elon-book/part-2-hardcore-work",
+      "file": "/docs/mba/elon-book/part-2-hardcore-work.md",
+      "items": [
+        {
+          "title": "第二部分：超硬核工作",
+          "path": "/mba/elon-book/part-2-hardcore-work",
+          "file": "/docs/mba/elon-book/part-2-hardcore-work.md",
+          "tags": [
+            "埃隆之书",
+            "Elon Musk",
+            "Book"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "第三部分：构建公司",
+      "path": "/mba/elon-book/part-3-building-companies",
+      "file": "/docs/mba/elon-book/part-3-building-companies.md",
+      "items": [
+        {
+          "title": "第三部分：构建公司",
+          "path": "/mba/elon-book/part-3-building-companies",
+          "file": "/docs/mba/elon-book/part-3-building-companies.md",
+          "tags": [
+            "埃隆之书",
+            "Elon Musk",
+            "Book"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "第四部分：代表人类",
+      "path": "/mba/elon-book/part-4-for-humanity",
+      "file": "/docs/mba/elon-book/part-4-for-humanity.md",
+      "items": [
+        {
+          "title": "第四部分：代表人类",
+          "path": "/mba/elon-book/part-4-for-humanity",
+          "file": "/docs/mba/elon-book/part-4-for-humanity.md",
+          "tags": [
+            "埃隆之书",
+            "Elon Musk",
+            "Book"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "附录",
+      "path": "/mba/elon-book/appendix",
+      "file": "/docs/mba/elon-book/appendix.md",
+      "items": [
+        {
+          "title": "附录",
+          "path": "/mba/elon-book/appendix",
+          "file": "/docs/mba/elon-book/appendix.md",
+          "tags": [
+            "埃隆之书",
+            "Elon Musk",
+            "Book"
+          ]
+        }
+      ]
+    }
+  ]
+}

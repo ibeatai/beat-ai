@@ -1,0 +1,126 @@
+{
+  "id": "learn-ai/learn-claude-code",
+  "title": "Learn Claude Code",
+  "description": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制",
+  "sections": [
+    {
+      "title": "序言",
+      "path": "/learn-ai/learn-claude-code/preface",
+      "file": "/docs/llc-content/zh/preface.mdx",
+      "items": [
+        {
+          "title": "序言",
+          "path": "/learn-ai/learn-claude-code/preface",
+          "file": "/docs/llc-content/zh/preface.mdx"
+        }
+      ]
+    },
+    {
+      "title": "工具与执行",
+      "path": "/learn-ai/learn-claude-code/s01",
+      "file": "/docs/llc-content/zh/s01.mdx",
+      "items": [
+        {
+          "title": "S01 Agent 循环",
+          "path": "/learn-ai/learn-claude-code/s01",
+          "file": "/docs/llc-content/zh/s01.mdx"
+        },
+        {
+          "title": "S02 工具",
+          "path": "/learn-ai/learn-claude-code/s02",
+          "file": "/docs/llc-content/zh/s02.mdx"
+        }
+      ]
+    },
+    {
+      "title": "规划与协调",
+      "path": "/learn-ai/learn-claude-code/s03",
+      "file": "/docs/llc-content/zh/s03.mdx",
+      "items": [
+        {
+          "title": "S03 TodoWrite",
+          "path": "/learn-ai/learn-claude-code/s03",
+          "file": "/docs/llc-content/zh/s03.mdx"
+        },
+        {
+          "title": "S04 子 Agent",
+          "path": "/learn-ai/learn-claude-code/s04",
+          "file": "/docs/llc-content/zh/s04.mdx"
+        },
+        {
+          "title": "S05 技能",
+          "path": "/learn-ai/learn-claude-code/s05",
+          "file": "/docs/llc-content/zh/s05.mdx"
+        },
+        {
+          "title": "S07 任务系统",
+          "path": "/learn-ai/learn-claude-code/s07",
+          "file": "/docs/llc-content/zh/s07.mdx"
+        }
+      ]
+    },
+    {
+      "title": "内存管理",
+      "path": "/learn-ai/learn-claude-code/s06",
+      "file": "/docs/llc-content/zh/s06.mdx",
+      "items": [
+        {
+          "title": "S06 上下文压缩",
+          "path": "/learn-ai/learn-claude-code/s06",
+          "file": "/docs/llc-content/zh/s06.mdx"
+        }
+      ]
+    },
+    {
+      "title": "并发",
+      "path": "/learn-ai/learn-claude-code/s08",
+      "file": "/docs/llc-content/zh/s08.mdx",
+      "items": [
+        {
+          "title": "S08 后台任务",
+          "path": "/learn-ai/learn-claude-code/s08",
+          "file": "/docs/llc-content/zh/s08.mdx"
+        }
+      ]
+    },
+    {
+      "title": "协作",
+      "path": "/learn-ai/learn-claude-code/s09",
+      "file": "/docs/llc-content/zh/s09.mdx",
+      "items": [
+        {
+          "title": "S09 Agent 团队",
+          "path": "/learn-ai/learn-claude-code/s09",
+          "file": "/docs/llc-content/zh/s09.mdx"
+        },
+        {
+          "title": "S10 团队协议",
+          "path": "/learn-ai/learn-claude-code/s10",
+          "file": "/docs/llc-content/zh/s10.mdx"
+        },
+        {
+          "title": "S11 自主 Agent",
+          "path": "/learn-ai/learn-claude-code/s11",
+          "file": "/docs/llc-content/zh/s11.mdx"
+        },
+        {
+          "title": "S12 Worktree + 任务隔离",
+          "path": "/learn-ai/learn-claude-code/s12",
+          "file": "/docs/llc-content/zh/s12.mdx"
+        }
+      ]
+    },
+    {
+      "title": "最佳实践",
+      "path": "/learn-ai/learn-claude-code/bp01",
+      "file": "/docs/llc-content/zh/bp01.mdx",
+      "items": [
+        {
+          "title": "BP01 Claude Code 最佳实践指南",
+          "path": "/learn-ai/learn-claude-code/bp01",
+          "file": "/docs/llc-content/zh/bp01.mdx"
+        }
+      ]
+    }
+  ]
+}

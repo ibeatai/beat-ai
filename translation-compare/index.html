@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>译文对比 · Code Is Not Cheap</title>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --panel: #fffdf8;
+    --ink: #2b2418;
+    --muted: #7a6f5c;
+    --rule: #e7dec9;
+    --accent: #b5651d;
+    --accent-soft: #f1e4d0;
+    --old-tag-bg: #efe6d6;
+    --old-tag-ink: #6f5a36;
+    --new-tag-bg: #dfeadf;
+    --new-tag-ink: #355c3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+                 Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.78;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--panel);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  header .meta {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  header a { color: var(--accent); text-decoration: none; }
+  header a:hover { text-decoration: underline; }
+  .article-select {
+    font: inherit;
+    font-size: 13px;
+    padding: 4px 8px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--ink);
+    cursor: pointer;
+    max-width: 360px;
+  }
+  #cold-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #e6f0e6;
+    color: #355c3a;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border: 1px solid #cfe1cf;
+    cursor: help;
+  }
+  #cold-badge:empty { display: none; }
+  .controls {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .controls label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+
+  main {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    overflow: hidden;
+  }
+  .col {
+    overflow-y: auto;
+    padding: 0 0 80px 0;
+    scroll-behavior: auto;
+  }
+  .col + .col { border-left: 1px solid var(--rule); }
+  .col-head {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--panel);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .tag-old { background: var(--old-tag-bg); color: var(--old-tag-ink); }
+  .tag-new { background: var(--new-tag-bg); color: var(--new-tag-ink); }
+
+  .article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px 32px 64px;
+  }
+  .article h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 8px 0 6px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+  .article h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 36px 0 14px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--rule);
+    line-height: 1.45;
+  }
+  .article h2:first-of-type { border-top: none; padding-top: 0; }
+  .article h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; }
+  .article p { margin: 12px 0; }
+  .article blockquote {
+    margin: 18px 0;
+    padding: 6px 16px;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    color: #5b4626;
+    font-style: italic;
+  }
+  .article blockquote p { margin: 6px 0; }
+  .article ul, .article ol { padding-left: 24px; }
+  .article li { margin: 4px 0; }
+  .article a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  .article a:hover { border-bottom-color: var(--accent); }
+  .article img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 18px auto 6px;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+  }
+  .article img + em,
+  .article p > em:only-child {
+    display: block;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 14px;
+  }
+  .article code {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.92em;
+    background: #f1e7d4;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+  .article strong { color: #1f1a10; }
+
+  .frontmatter {
+    color: var(--muted);
+    font-size: 13px;
+    border: 1px solid var(--rule);
+    background: #fffaf0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 22px;
+    line-height: 1.6;
+  }
+  .frontmatter b { color: var(--ink); font-weight: 600; }
+
+  .loading {
+    padding: 60px 24px;
+    text-align: center;
+    color: var(--muted);
+  }
+
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+    .col + .col { border-left: none; border-top: 1px solid var(--rule); }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>译文对比</h1>
+  <select id="article-select" class="article-select"></select>
+  <a id="origin-link" class="meta" target="_blank" rel="noopener">原文 ↗</a>
+  <div class="controls">
+    <label id="cold-badge" title="冷启动：翻译时未参考旧译，自然反映两边规则执行差异。"></label>
+    <label><input type="checkbox" id="sync" checked /> 同步滚动</label>
+  </div>
+</header>
+<main>
+  <section class="col" id="col-old">
+    <div class="col-head">
+      <span class="tag tag-old">旧译</span>
+      <span id="byline-old">by Codex · 2026-05-23</span>
+    </div>
+    <article class="article" id="art-old"><div class="loading">加载中…</div></article>
+  </section>
+  <section class="col" id="col-new">
+    <div class="col-head">
+      <span class="tag tag-new">新译</span>
+      <span id="byline-new">by Claude · 2026-05-23</span>
+    </div>
+    <article class="article" id="art-new"><div class="loading">加载中…</div></article>
+  </section>
+</main>
+<script>
+  marked.setOptions({ gfm: true, breaks: false });
+
+  // very small frontmatter extractor: take first --- ... --- block
+  function splitFrontmatter(src) {
+    const m = src.match(/^---\n([\s\S]*?)\n---\n?/);
+    if (!m) return { fm: null, body: src };
+    return { fm: m[1], body: src.slice(m[0].length) };
+  }
+  function renderFrontmatter(fm) {
+    if (!fm) return '';
+    const lines = fm.split('\n');
+    const data = {};
+    let key = null;
+    for (const line of lines) {
+      if (/^\s*-\s+/.test(line) && key) {
+        (data[key] = Array.isArray(data[key]) ? data[key] : []).push(line.replace(/^\s*-\s+/, '').trim());
+        continue;
+      }
+      const km = line.match(/^([A-Za-z_][\w]*):\s*(.*)$/);
+      if (km) {
+        key = km[1];
+        const v = km[2].trim();
+        data[key] = v === '' ? [] : v;
+      }
+    }
+    const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    const tags = Array.isArray(data.tags) ? data.tags.map(esc).join(' · ') : '';
+    return `<div class="frontmatter">
+      <div><b>标题：</b>${esc(data.title || '')}</div>
+      <div><b>作者：</b>${esc(data.author || '')}　<b>译文日期：</b>${esc(data.translated || '')}</div>
+      ${tags ? `<div><b>标签：</b>${tags}</div>` : ''}
+    </div>`;
+  }
+
+  async function load(url, target) {
+    const res = await fetch(url, { cache: 'no-store' });
+    const src = await res.text();
+    const { fm, body } = splitFrontmatter(src);
+    // marked: render
+    const html = marked.parse(body);
+    target.innerHTML = renderFrontmatter(fm) + html;
+  }
+
+  const colOld = document.getElementById('col-old');
+  const colNew = document.getElementById('col-new');
+  const sync = document.getElementById('sync');
+
+  let syncing = null; // which column initiated current sync
+  function bindSync(a, b) {
+    a.addEventListener('scroll', () => {
+      if (!sync.checked) return;
+      if (syncing && syncing !== a) return;
+      syncing = a;
+      const ratio = a.scrollTop / Math.max(1, a.scrollHeight - a.clientHeight);
+      b.scrollTop = ratio * (b.scrollHeight - b.clientHeight);
+      requestAnimationFrame(() => { syncing = null; });
+    });
+  }
+  bindSync(colOld, colNew);
+  bindSync(colNew, colOld);
+
+  // Article catalog: id, label, file basenames, origin url, cold-start flag
+  const ARTICLES = [
+    {
+      id: 'code-is-not-cheap',
+      label: 'Code Is Not Cheap',
+      old: './old.md',
+      new: './new.md',
+      origin: 'https://ai.gopubby.com/code-is-not-cheap-how-to-multiply-your-ais-output-with-software-fundamentals-40fff5a00f9f',
+      coldStart: false,
+    },
+    {
+      id: 'your-ai-agent',
+      label: "Your AI agent can read your codebase. It doesn't know your product.",
+      old: './your-ai-agent-old.md',
+      new: './your-ai-agent-new.md',
+      origin: 'https://uxdesign.cc/your-ai-agent-can-read-your-codebase-it-doesnt-know-your-product-b5ea0cd77989',
+      coldStart: true,
+    },
+    {
+      id: 'ai-pm-menu',
+      label: "The AI PM's Menu: A Field Guide to Cost-Quality Tradeoffs",
+      old: './ai-pm-menu-old.md',
+      new: './ai-pm-menu-new.md',
+      origin: 'https://generativeai.pub/the-ai-pms-menu-a-field-guide-to-cost-quality-tradeoffs-d897c9da746b',
+      coldStart: true,
+    },
+    {
+      id: 'training-ais',
+      label: 'Training AIs for a Millionth of the Cost',
+      old: './training-ais-old.md',
+      new: './training-ais-new.md',
+      origin: 'https://medium.com/@ignacio.de.gregorio.noblejas/training-ais-for-a-millionth-of-the-cost-93ca0357690a',
+      coldStart: true,
+    },
+    {
+      id: 'thor-benchmark',
+      label: 'Why I Built My Own LLM Benchmark for THOR Finding Triage',
+      old: './thor-benchmark-old.md',
+      new: './thor-benchmark-new.md',
+      origin: 'https://cyb3rops.medium.com/why-i-built-my-own-llm-benchmark-for-thor-finding-triage-c8492e3997dc',
+      coldStart: true,
+    },
+    {
+      id: 'building-agent-harness',
+      label: 'Building a Production Agent Harness（translate × rewrite 模式对比）',
+      old: './building-agent-harness-old.md',
+      new: './building-agent-harness-new.md',
+      origin: 'https://licaomeng.medium.com/building-a-production-agent-harness-turning-claude-code-into-a-multi-agent-engineering-pipeline-1db4e242d08a',
+      coldStart: false,
+      oldBy: '原文翻译模式 · translate',
+      newBy: '原文重写模式 · rewrite',
+    },
+    {
+      id: 'building-agent-harness-spicy',
+      label: 'Building a Production Agent Harness（原文重写 × 高保真辣评 对比）',
+      old: './building-agent-harness-new.md',
+      new: './building-agent-harness-spicy.md',
+      origin: 'https://licaomeng.medium.com/building-a-production-agent-harness-turning-claude-code-into-a-multi-agent-engineering-pipeline-1db4e242d08a',
+      coldStart: false,
+      oldBy: '原文重写模式 · rewrite',
+      newBy: '高保真辣评 · hi-fi spicy（辣评度高 / 趣味度中）',
+    },
+  ];
+
+  const selectEl = document.getElementById('article-select');
+  const linkEl = document.getElementById('origin-link');
+  const coldEl = document.getElementById('cold-badge');
+  for (const a of ARTICLES) {
+    const opt = document.createElement('option');
+    opt.value = a.id;
+    opt.textContent = a.label;
+    selectEl.appendChild(opt);
+  }
+
+  function pickInitial() {
+    const hash = (location.hash || '').replace(/^#/, '');
+    const found = ARTICLES.find(a => a.id === hash);
+    return found || ARTICLES[ARTICLES.length - 1]; // default to most-recent
+  }
+
+  async function loadArticle(a) {
+    selectEl.value = a.id;
+    linkEl.href = a.origin;
+    coldEl.textContent = a.coldStart ? '冷启动公平对比' : '';
+    document.getElementById('byline-old').textContent = a.oldBy || 'by Codex · 2026-05-23';
+    document.getElementById('byline-new').textContent = a.newBy || 'by Claude · 2026-05-23';
+    document.getElementById('art-old').innerHTML = '<div class="loading">加载中…</div>';
+    document.getElementById('art-new').innerHTML = '<div class="loading">加载中…</div>';
+    try {
+      await Promise.all([
+        load(a.old, document.getElementById('art-old')),
+        load(a.new, document.getElementById('art-new')),
+      ]);
+    } catch (err) {
+      document.querySelectorAll('.loading').forEach(el => {
+        el.textContent = '加载失败：' + err.message;
+      });
+    }
+    // scroll both back to top on article switch
+    colOld.scrollTop = 0;
+    colNew.scrollTop = 0;
+  }
+
+  selectEl.addEventListener('change', () => {
+    const a = ARTICLES.find(x => x.id === selectEl.value);
+    if (a) {
+      history.replaceState(null, '', '#' + a.id);
+      loadArticle(a);
+    }
+  });
+
+  loadArticle(pickInitial());
+</script>
+</body>
+</html>

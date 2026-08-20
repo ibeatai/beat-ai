@@ -1,0 +1,100 @@
+## 8.4激活函数
+
+激活函数在神经网络里很重要。如果没有激活函数，不论几层的神经网络都是一个线性回归。激活函数的作用是引入非线性。
+
+### 8.4.1引入非线性
+
+![图片1](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/0813.png)
+
+以上边1个隐藏层，一个输出层的简单神经网络为例，如果没有激活函数，只进行线性回归。那么第一个隐藏层输出为：
+
+$$
+z_1^1=x_1w_{11}^1+x_2w_{21}^1+b_1^1
+$$
+
+$$
+z_2^1=x_1w_{12}^1+x_2w_{22}^1+b_2^1
+$$
+
+输出层的输出为：
+
+$$
+z_1^2=z_1^1w_{11}^2+z_2^1w_{21}^2+b_1^2
+$$
+
+联立并带入上式，可以得到：
+
+$$
+z_1^2=(w_{11}^1w_{12}^1+w_{12}^1w_{21}^2)x_1+(w_{21}^1w_{11}^2+w_{22}^1w_{21}^2)x_2+b_1^1w_{11}^2+b_2^1w_{21}^2+b_1^2
+$$
+
+可以将参数w和b的组合看成是一个新的参数。最终输出$z_1^2$还是输入$x_1$和$x_2$的一个线性组合。
+
+这说明，如果没有激活函数，不论有几层线性回归，最终都等价于一层的线性回归。
+
+正是因为引入激活函数，模拟了大脑神经元里的抑制和激活。才让神经网络可以拟合任意函数。下边我们就来看一下常见的激活函数。
+
+### 8.4.2Sigmoid
+
+我们之前讲过Simgoid函数，它的公式为：
+
+$$
+sigmoid(x)=\frac{1}{1+e^{-x}}
+$$
+
+函数图像为：
+
+![图片2](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/0814.png)
+
+它可以将x映射到0到1之间。这样有一个好处是0-1自然映射到概率值范围。它非常适合作为二分类问题的神经网络的最后一层唯一神经元的激活函数。
+
+### 8.4.3Tanh
+
+下边我们接着介绍另一种常用的激活函数。
+
+它的函数公式为：
+
+$$
+tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
+$$
+
+函数图像为：
+
+![图片3](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/0815.png)
+
+可以看到tanh函数的值域是-1到1之间。
+
+### 8.4.4Relu
+
+ReLU函数是目前深度学习里最常用的激活函数。它的函数形式非常简单：
+
+$$
+ReLU(x)=max(x,0)
+$$
+
+也就是说，当输入当x>0 时，输出为 x；当输入 x≤0 时，输出为 0。
+它的函数图像为：
+
+![图片4](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/0816.png)
+
+为什么ReLU会成为深度学习里默认的激活函数呢？后边我们会详细介绍。
+
+### 8.4.5Leaky ReLU
+
+ReLU函数有个问题，就是当x小于0时，ReLU(x)值为0，它的梯度为0，参数无法更新。所有人们提出了Leaky ReLU：
+
+当x大于0时：
+
+$$
+LeakyReLU(x)=x
+$$
+
+当x小于等于0时：
+
+$$
+LeakyReLU(x)=\alpha x
+$$
+
+其中$\alpha$一般取小于1的数，比如0.1。这样当x取负值是也会有一个微小的梯度，可以更新参数。它的函数图像为：
+
+![图片5](https://cdn.jsdelivr.net/gh/genesislab-io/beatai-assets@d636560ddb58a0d75173d1977cf7a323f1319997/learn-ai/deep-learning/imgs/0820.png)
