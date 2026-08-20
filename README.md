@@ -4,8 +4,14 @@
 
 ### 2026-08-20
 
+- [“上下文工程：悄然取代 prompt 工程的学科”](https://beatai.org/ai-insights/context-engineering-the-discipline-that-quietly-replaced-prompt-engineering?mode=read)  
+  prompt 工程旨在找到合适的词语。上下文工程则旨在决定模型究竟能看到什么——这是 Agentic AI 中最关键的技能。这是一份深入全面的指南。
 - [Agent 的经济学：token 计费、缓存和路由](https://beatai.org/ai-insights/the-economics-of-agents-token-accounting-caching-and-routing?mode=read)  
   你的 agent 没有性能问题，而是有单位经济效益问题——解决之道在于工程设计，而非增加预算。
+- [飞行记录仪：AI agent 追踪与可观测性端到端指南](https://beatai.org/ai-insights/the-flight-recorder-an-end-to-end-guide-to-tracing-and-observability-for-ai-agents?mode=read)  
+  你无法修复看不见的问题。如何为 LLM 应用和 agent 添加插桩、追踪和评估，并真正加以改进——从第一个 span 到生产级质量循环。
+- [框架即产品：智能体 AI 框架端到端指南](https://beatai.org/ai-insights/the-harness-is-the-product-an-end-to-end-guide-to-harnessing-in-agentic-ai?mode=read)  
+  这是一个困扰了我很久的难题，也是几乎所有开始使用人工智能进行开发的人都会遇到的难题。
 
 ### 2026-08-06
 
